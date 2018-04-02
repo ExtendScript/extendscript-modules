@@ -7,24 +7,23 @@ A package name generally consists of these three parts:
 
 The first element in a package name is the 'Package Target'. If your script does not fit inside the targets below, please submit an issue request as we might need to add a missing category.
 
-    es      : Targets ExtendScript
+    aes     : Targets ExtendScript (or all)
     ind     : Targets InDesign
     ps      : Targets Photoshop
     ai      : Targets Illustrator
     afx     : Targets After Effects
     bridge  : Targets Bridge
     acrobat : Targets Acrobat
-    sui     : Targets ScriptUI    
+    sui     : Targets ScriptUI  
 
 ## 2. Package Subject (Target Object)
 
 Following the Package Target, we add a 'Package Subject' (target object). Or whatever is affected by this module. You can follow the naming convention of the ExtendScript SDK.
 
-    shim   : Shims
-    proto  : Prototypes
+    patch  : Polyfills
     util   : Utilities
+    tools  : Tools
     bundle : Bundle of different modules packaged as one
-
 
 ## 3. Package Verb (Action)
 The name of your object or module. It is generally preferable to use an active verb.
