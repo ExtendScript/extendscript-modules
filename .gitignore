@@ -1,0 +1,15 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+package-lock.json
