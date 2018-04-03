@@ -1,0 +1,24 @@
+{
+  "name": "@extendscript/aes.patch.array.filter",
+  "version": "0.1.0",
+  "description": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+  "main": "array.filter.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@extendscript/aes.patch.bundle.es5",
+  "version": "0.1.0",
+  "description": "A collection of useful array shims for Extendscript",
+  "main": "bundle.es5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es5.source.js -o ./bundle.es5.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "es5"
+  ],
+  "contributers": [
+    "extendscript.org"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "@extendscript/patch.array.every": "^1.0.0",
+    "@extendscript/patch.array.filter": "^1.0.0",
+    "@extendscript/patch.array.foreach": "^1.0.0",
+    "@extendscript/patch.array.indexof": "^1.0.0",
+    "@extendscript/patch.array.isarray": "^1.0.0",
+    "@extendscript/patch.array.lastindexof": "^1.0.0",
+    "@extendscript/patch.array.map": "^1.0.0",
+    "@extendscript/patch.array.reduce": "^1.0.0",
+    "@extendscript/patch.array.some": "^1.0.0",
+    "@extendscript/patch.function.bind": "^1.0.0",
+    "@extendscript/patch.object.create": "^1.0.0",
+    "@extendscript/patch.object.defineproperties": "^1.0.0",
+    "@extendscript/patch.object.defineproperty": "^1.0.0",
+    "@extendscript/patch.object.freeze": "^1.0.0",
+    "@extendscript/patch.object.getownpropertydescriptor": "^1.0.0",
+    "@extendscript/patch.object.getownpropertynames": "^1.0.0",
+    "@extendscript/patch.object.getprototypeof": "^1.0.0",
+    "@extendscript/patch.object.isextensible": "^1.0.0",
+    "@extendscript/patch.object.isfrozen": "^1.0.0",
+    "@extendscript/patch.object.issealed": "^1.0.0",
+    "@extendscript/patch.object.keys": "^1.0.0",
+    "@extendscript/patch.object.preventextensions": "^1.0.0",
+    "@extendscript/patch.object.seal": "^1.0.0",
+    "@extendscript/patch.string.trim": "^1.0.0",
+    "extendscript-bundlr": "^0.3.1"
+  }
+}

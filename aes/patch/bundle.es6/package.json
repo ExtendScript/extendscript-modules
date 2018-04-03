@@ -1,0 +1,33 @@
+{
+  "name": "@extendscript/aes.patch.bundle.es6",
+  "version": "0.1.0",
+  "description": "A collection of useful array shims for Extendscript",
+  "main": "bundle.es6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.source.js -o ./bundle.es6.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "es6"
+  ],
+  "contributers": [
+    "extendscript.org"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "@extendscript/patch.array.from": "^1.0.0",
+    "@extendscript/patch.object.assign": "^1.0.0",
+    "extendscript-bundlr": "^0.3.1"
+  }
+}

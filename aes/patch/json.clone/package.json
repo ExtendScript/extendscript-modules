@@ -1,0 +1,29 @@
+{
+  "name": "@extendscript/aes.patch.json.clone",
+  "version": "0.1.0",
+  "description": "Adds a clone() function to JSON",
+  "main": "json.clone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "json",
+    "clone"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "peerDependencies": {
+    "@extendscript/patch.json": "1.x"
+  }
+}

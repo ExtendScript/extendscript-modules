@@ -1,0 +1,31 @@
+{
+  "name": "@extendscript/aes.patch.json.file",
+  "version": "0.1.0",
+  "description": "Adds the openFile and saveFile() methods to JSON",
+  "main": "json.file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "json",
+    "file",
+    "open",
+    "read"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "peerDependencies": {
+    "@extendscript/patch.json": "1.x"
+  }
+}

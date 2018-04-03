@@ -1,0 +1,24 @@
+{
+  "name": "@extendscript/aes.patch.array.map",
+  "version": "0.1.0",
+  "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
+  "main": "array.map.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme"
+}

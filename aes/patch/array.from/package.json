@@ -1,0 +1,24 @@
+{
+  "name": "@extendscript/aes.patch.array.from",
+  "version": "0.1.0",
+  "description": "The Array.from() method creates a new Array instance from an array-like or iterable object.",
+  "main": "array.from.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme"
+}

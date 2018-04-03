@@ -1,0 +1,24 @@
+{
+  "name": "@extendscript/aes.patch.object.defineproperty",
+  "version": "0.1.0",
+  "description": "The Object.create() method creates a new object, using an existing object to provide the newly created object's __proto__",
+  "main": "object.defineProperty.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme"
+}

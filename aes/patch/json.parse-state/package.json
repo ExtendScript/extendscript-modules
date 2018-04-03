@@ -1,0 +1,30 @@
+{
+  "name": "@extendscript/aes.patch.json.parse-state",
+  "version": "0.1.0",
+  "description": "An alternate parse() function that uses a state machine instead of eval.",
+  "main": "json.parse-state.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "json",
+    "parse",
+    "state"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "peerDependencies": {
+    "@extendscript/patch.json": "1.x"
+  }
+}

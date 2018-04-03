@@ -1,0 +1,46 @@
+{
+  "name": "@extendscript/aes.patch.bundle.object",
+  "version": "0.1.0",
+  "description": "A collection of useful object shims for Extendscript",
+  "main": "bundle.object.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.object.source.js -o ./bundle.object.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "es5",
+    "object"
+  ],
+  "contributers": [
+    "extendscript.org"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "@extendscript/patch.object.create": "^1.0.0",
+    "@extendscript/patch.object.defineproperties": "^1.0.0",
+    "@extendscript/patch.object.defineproperty": "^1.0.0",
+    "@extendscript/patch.object.freeze": "^1.0.0",
+    "@extendscript/patch.object.getownpropertydescriptor": "^1.0.0",
+    "@extendscript/patch.object.getownpropertynames": "^1.0.0",
+    "@extendscript/patch.object.getprototypeof": "^1.0.0",
+    "@extendscript/patch.object.isextensible": "^1.0.0",
+    "@extendscript/patch.object.isfrozen": "^1.0.0",
+    "@extendscript/patch.object.issealed": "^1.0.0",
+    "@extendscript/patch.object.keys": "^1.0.0",
+    "@extendscript/patch.object.preventextensions": "^1.0.0",
+    "@extendscript/patch.object.seal": "^1.0.0",
+    "@extendscript/patch.object.assign": "^1.0.0",
+    "extendscript-bundlr": "^0.3.1"
+  }
+}
