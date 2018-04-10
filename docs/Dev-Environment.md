@@ -11,20 +11,34 @@ I prefer to use the [`nodeenv`](https://github.com/ekalinin/nodeenv). A tool tha
 
 There is a great guide on how to setup your virtual environment at [python-guide.org](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
-After your Python environment is setup we can start to create our ExtendScript development environment. I'll name mine `esdev` but you can call it anything you like:
+After your Python environment is setup we can visit our project folder and create a new environment for this project at the top level (next to your version control directory):
 
-    $ virtualenv esdev
+    $ virtualenv .venv
+
+So your project folder looks roughly like this:
+
+	 yourProject
+	 ├── .git
+	 │   ├── HEAD
+	 │   ├── config
+	 │   ├── ...
+	 └── .venv
+	     ├── bin
+	     ├── include
+	     └── lib
 
 Now we are inside the virtual Python environment we can install the Node components.
 
     $ pip install nodeenv
     $ nodeenv -p
 
-That's all! Now all your Node modules will be installed into your virtual `esdev` environment. Adding a polyfill is a good start.
+> The Python Package Index no longer supports http connections. You can ignore SSL errors by setting pypi.python.org as the trusted source: `pip install --trusted-host pypi.python.org nodeenv`
 
-    $ workon esdev
-    $ npm install @extendscript/aes.fill.bundle.es5
+That's all, Now get to work!
 
+    $ workon yourProject
+
+> To make things even easier you can install [virtualenv-auto-activate.sh](https://gist.github.com/GitBruno/f384e39ec9c54cf4c203e73fb40b224f) so the virtual environment is automatically started when entering the folder.
 
 ## Setup using Docker
 
