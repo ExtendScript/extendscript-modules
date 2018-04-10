@@ -4,7 +4,8 @@
   "description": "The Array.isArray() function determines whether the passed value is an Array.",
   "main": "array.isarray.js",
   "scripts": {
-    "test": "tape ./test/test.js"
+    "test-cc2017": "tape ./test/test.js indesign-12 photoshop-18",
+    "test": "npm run test-cc2017"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,9 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "add-local-binaries-to-path": "^1.1.3",
-    "estktap": "git+https://github.com/ExtendScript/estktap.git",
-    "make-arrow-function": "^1.1.0",
-    "make-generator-function": "^1.1.0",
-    "tape": "^4.9.0"
+    "estktap": "git+https://github.com/ExtendScript/estktap"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
