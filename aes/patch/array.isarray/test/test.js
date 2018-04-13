@@ -1,15 +1,8 @@
 var argv    = require('minimist')(process.argv.slice(3)); // Remove nodePath, tapePath, scriptpath
-var test    = require('tape');
-var estktap = require('estktap');
-var path    = require('path');
+var shell   = require('shelljs');
 
 var targets = argv._;
-console.log("Starting tests for targets: " + targets);
 
-test('extendscript array.isarray test',function(t){
-  
-  estktap('isarray Test', path.join(__dirname, '/test.jsx'), true, targets);
-  
-  t.end();
-
-});
+shell.exec('tape ./test/testTargets.js ' + targets.join(" ") + " | tap-markdown")
+     .to('./test/Results.md')
+     .sed('-i', '# Tests', '# Test ' + targets.join(", "), './test/Results.md');

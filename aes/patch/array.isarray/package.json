@@ -25,9 +25,11 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "estktap": "git+https://github.com/ExtendScript/estktap"
+    "estktap": "git+https://github.com/GitBruno/estktap.git"
   },
   "dependencies": {
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.1",
+    "tap-markdown": "git+https://github.com/GitBruno/tap-markdown.git"
   }
 }

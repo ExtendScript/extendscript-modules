@@ -5,7 +5,7 @@ This is a collection of polyfills for [ExtendScript](https://en.wikipedia.org/wi
 
 
 ## Shims
-This is a collection of shims for [ExtendScript](https://en.wikipedia.org/wiki/ExtendScript) that faithfully represent newer ECMAScript features.
+Modules that faithfully represent newer ECMAScript features.
 
   - [ ] Array.isArray
   - [ ] Array.prototype.filter
@@ -20,7 +20,7 @@ This is a collection of shims for [ExtendScript](https://en.wikipedia.org/wiki/E
 
 
 ## Shams
-This is a collection of shams for [ExtendScript](https://en.wikipedia.org/wiki/ExtendScript) that partially implements newer ECMAScript features.
+Modules that partially implements newer ECMAScript features.
 
   - [ ] Object.defineProperties
   - [ ] Object.defineProperty
@@ -36,7 +36,7 @@ This is a collection of shams for [ExtendScript](https://en.wikipedia.org/wiki/E
 
 
 ## Fills
-This is a collection of methods for [ExtendScript](https://en.wikipedia.org/wiki/ExtendScript) that we get used to in other environments.
+Modules that we get used to in other environments.
 
   - [ ] clearInterval
   - [ ] clearTimeout
@@ -47,4 +47,7 @@ This is a collection of methods for [ExtendScript](https://en.wikipedia.org/wiki
   - [ ] setTimeout
 
 
-Read [the docs](../../docs/README.md)
+## More info
+
+Read [the docs](../docs/README.md)
+

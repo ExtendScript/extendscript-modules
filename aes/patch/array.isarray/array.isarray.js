@@ -3,7 +3,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 */
 if (!Array.isArray) {
   Array.isArray = function(arg) {
-
     if (arg === void 0 || arg === null) {
       return false;
     };
