@@ -4,8 +4,10 @@
   "description": "The Array.isArray() function determines whether the passed value is an Array.",
   "main": "array.isarray.js",
   "scripts": {
-    "test-cc2017": "tape ./test/test.js indesign-12 photoshop-18",
-    "test": "npm run test-cc2017"
+    "test-cc2017": "node ./test/test.js indesign-12 photoshop-18",
+    "test-cc2018": "node ./test/test.js indesign-13 photoshop-19",
+    "test-all": "npm run test-cc2017 && npm run test-cc2018",
+    "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",

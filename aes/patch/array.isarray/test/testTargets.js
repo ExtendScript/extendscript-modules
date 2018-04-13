@@ -1,14 +1,11 @@
-var argv    = require('minimist')(process.argv.slice(3)); // Remove nodePath, tapePath, scriptpath
-var test    = require('tape');
+var argv    = require('minimist')(process.argv.slice(3)); // Remove nodePath, tape, scriptpath
 var estktap = require('estktap');
 var path    = require('path');
-var fakestk = require('fakestk');
 
-var targets = argv._;
+var targets = (argv._.length === 0) ? ["undefined"] : argv._;
+var tLen = targets.length, tI = 0;
 
-test('extendscript array.isarray test',function(t){
-
-  estktap('isarray Test', path.join(__dirname, '/test.jsx'), true, targets);
-
-  t.end();
-});
+for (tI = 0; tI < tLen; tI++) { 
+    var myTarget = targets.pop();
+    estktap(myTarget + ' isarray Test', path.join(__dirname, '/test.jsx'), true, [myTarget]);
+};
