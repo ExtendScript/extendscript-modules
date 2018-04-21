@@ -4,7 +4,7 @@ As tests may be run by different people on different platforms the results are l
 
 ## Array.isArray.js
 
-> Version 0.1.0
+> Version 0.1
 
 - ✔ Darwin photoshop-18 array.isarray [pass: 1, fail: 0, duration: 188ms]
 - ✔ Darwin photoshop-19 array.isarray [pass: 1, fail: 0, duration: 8.7s]

@@ -26,8 +26,10 @@ Following the Package Target, we add a 'Package Subject' (target object). Or wha
     bundle : Bundle of different modules packaged as one
 
 ## 3. Package Verb (Action)
+
 The name of your object or module. It is generally preferable to use an active verb.
 
 ## Sample
-Now from the above let's say we have created a generic document builder for InDesign. In that case, the package name should be: `id.document.builder` so the complete [scoped name](https://docs.npmjs.com/misc/scope) becomes `@extendscript/id.document.builder`
+
+Now from the above let's say we have created a generic document builder for InDesign. In that case, the package name should be: `ind.tools.documentBuilder` so the complete [scoped name](https://docs.npmjs.com/misc/scope) becomes `@extendscript/ind.tools.documentBuilder`
 

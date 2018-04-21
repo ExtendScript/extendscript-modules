@@ -1,7 +1,5 @@
-var argv    = require('minimist')(process.argv.slice(2)); // Remove nodePath, scriptpath
-var shell   = require('shelljs');
+var argv = require('minimist')(process.argv.slice(2)); // Remove nodePath, scriptpath
+var tapes = require("tap-es"), targets = argv._, d = require('path').resolve(__dirname);
 
-var targets = argv._;
-
-shell.exec('tape ./test/testTargets.js ' + targets.join(" ") + " | tap-markdown")
-     .to('./test/results.md');
+tapes.add('array.isarray', d+'/test.jsx', targets, true);
+tapes.run(d+'/results.md');
