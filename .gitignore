@@ -9,6 +9,7 @@ build-node-venv.sh
 logs
 *.log
 npm-debug.log*
+results.md
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
