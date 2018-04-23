@@ -1,4 +1,4 @@
-# Array.isArray
+# array.isarray
 
 > ES5 Shim
 

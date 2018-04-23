@@ -2,7 +2,7 @@
   "name": "@extendscript/aes.patch.object.issealed",
   "version": "0.1.0",
   "description": "The Object.isSealed() method determines if an object is sealed.",
-  "main": "object.isSealed.js",
+  "main": "object.issealed.js",
   "scripts": {
   "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""

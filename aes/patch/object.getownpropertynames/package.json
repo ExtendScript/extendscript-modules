@@ -2,7 +2,7 @@
   "name": "@extendscript/aes.patch.object.getownpropertynames",
   "version": "0.1.0",
   "description": "The Object.getOwnPropertyNames() method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly upon a given object.",
-  "main": "object.getOwnPropertyNames.js",
+  "main": "object.getownpropertynames.js",
   "scripts": {
   "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""

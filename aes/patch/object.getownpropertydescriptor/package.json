@@ -2,7 +2,7 @@
   "name": "@extendscript/aes.patch.object.getownpropertydescriptor",
   "version": "0.1.0",
   "description": "The Object.getOwnPropertyDescriptor() method returns a property descriptor for an own property (that is, one directly present on an object and not in the object's prototype chain) of a given object.",
-  "main": "object.getOwnPropertyDescriptor.js",
+  "main": "object.getownpropertydescriptor.js",
   "scripts": {
   "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""

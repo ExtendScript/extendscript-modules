@@ -1,8 +1,22 @@
-# ExtendScript ES5 Fills
+# bundle.es5
+
+> Bundle
 
 A collection of ES5 polyfills for Exendscript.
 
-- Install the devDependencies by running `npm install`
 - Create bundle.es5.js by running `npm run bundle`
 
-[@extendscript](https://www.npmjs.com/org/extendscript-modules)
+## Test
+
+    npm run test myTarget
+
+We keep [a log of test results](./test/results_log.md)
+
+## Contributers
+
+  * [ExtendScript.org](https://github.com/ExtendScript)
+
+
+## More info
+
+Read [the docs](../docs/README.md)
