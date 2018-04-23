@@ -1,5 +1,8 @@
 .DS_Store
 .*.jsx
+
+# virtual env (As defined in package)
+build-node-venv.sh
 .venv/
 
 # Logs

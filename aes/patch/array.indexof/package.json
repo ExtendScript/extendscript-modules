@@ -4,6 +4,7 @@
   "description": "The indexOf() method searches the array for the specified item, and returns its position.",
   "main": "array.indexOf.js",
   "scripts": {
+  "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""
   },
   "repository": {

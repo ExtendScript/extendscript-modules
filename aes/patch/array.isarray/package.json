@@ -4,6 +4,7 @@
   "description": "The Array.isArray() function determines whether the passed value is an Array.",
   "main": "array.isarray.js",
   "scripts": {
+  "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test-cc2017": "node ./test/array.isarray.test.js indesign-12 photoshop-18",
     "test-cc2018": "node ./test/array.isarray.test.js indesign-13 photoshop-19",
     "test": "node ./test/test.js"

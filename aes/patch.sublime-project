@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "patch",
+			"folder_exclude_patterns":
+            [
+                ".git",
+                "node_modules",
+            ]
+		}
+	]
+}

