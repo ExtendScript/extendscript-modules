@@ -5,3 +5,4 @@
   * [API Registry](./API-Registry.md)
   * [Dev Environment](./Dev-Environment.md)
   * [Package Naming Conventions](./Package-Naming-Conventions.md)
+  * [Testing](./Testing.md)
