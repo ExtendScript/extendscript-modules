@@ -40,6 +40,10 @@ That's all, Now get to work!
 
 > To make things even easier you can install [virtualenv-auto-activate.sh](https://gist.github.com/GitBruno/f384e39ec9c54cf4c203e73fb40b224f) so the virtual environment is automatically started when entering the folder.
 
+## .gitignore your .venv
+
+We don't want to commit our virtual environment to git. Therefore to finbish it off we need to add the `.venv` folder to our global ignore file. Feel free to fork my [.gitignore_global](https://github.com/GitBruno/.gitignore_global).
+
 ## Setup using Docker
 
 [Download](https://store.docker.com/) and install Docker if you have not allready and pull the official [docker-node](https://github.com/nodejs/docker-node). The git has some great documentation but if you're after a nicer read  check the write-up from [Azat Mardan](https://webapplog.com/node-docker/).
