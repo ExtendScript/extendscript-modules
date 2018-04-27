@@ -42,7 +42,7 @@ That's all, Now get to work!
 
 ## .gitignore your .venv
 
-We don't want to commit our virtual environment to git. Therefore to finbish it off we need to add the `.venv` folder to our global ignore file. Feel free to fork my [.gitignore_global](https://github.com/GitBruno/.gitignore_global).
+We don't want to commit our virtual environment to git. Therefore it is advised to add the `.venv` folder to your global ignore file. Feel free to fork my [.gitignore_global](https://github.com/GitBruno/.gitignore_global).
 
 ## Setup using Docker
 
