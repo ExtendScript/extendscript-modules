@@ -7,7 +7,8 @@ This is a collection of polyfills for [ExtendScript](https://en.wikipedia.org/wi
 ## Shims
 Modules that faithfully represent newer ECMAScript features.
 
-  - [ ] Array.isArray
+  - [x] Array.indexOf
+  - [x] Array.isArray
   - [ ] Array.prototype.filter
   - [ ] Array.prototype.find
   - [ ] Array.prototype.forEach

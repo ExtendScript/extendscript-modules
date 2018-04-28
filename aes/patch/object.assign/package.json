@@ -4,8 +4,8 @@
   "description": "The assign() method is used to copy values of all enumerable own properties from one or more source objects to a target object. It will return the target object.",
   "main": "object.assign.js",
   "scripts": {
-  "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
-    "test": ""
+    "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
+    "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/ExtendScript/extendscript-modules/issues"
   },
-  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme"
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  }
 }
