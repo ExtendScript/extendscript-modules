@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.array.foreach",
   "version": "0.1.0",
-  "description": "The forEach() method executes a provided function once for each array element.",
+  "description": "The `forEach()` method executes a provided function once for each array element.",
   "main": "array.foreach.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

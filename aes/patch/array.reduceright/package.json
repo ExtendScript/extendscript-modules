@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.array.reduceright",
   "version": "0.1.0",
-  "description": "The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+  "description": "The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
   "main": "array.reduceright.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

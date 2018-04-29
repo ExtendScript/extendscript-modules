@@ -2,7 +2,7 @@
 
 > Bundle
 
-A collection of Object polyfills for Exendscript.
+A collection of `Object` polyfills for Exendscript.
 
 - Create bundle.object.js by running `npm run bundle`
 

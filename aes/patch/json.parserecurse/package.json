@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/aes.patch.json.parse-state",
+  "name": "@extendscript/aes.patch.json.parserecurse",
   "version": "0.1.0",
-  "description": "An alternate parse() function that uses a state machine instead of eval.",
-  "main": "json.parse-state.js",
+  "description": "An alternate `parse()` function that uses recursive descent instead of eval.",
+  "main": "json.parse-recurse.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,8 +16,7 @@
     "polyfill",
     "shim",
     "json",
-    "parse",
-    "state"
+    "parse"
   ],
   "author": "extendscript.org",
   "license": "MIT",

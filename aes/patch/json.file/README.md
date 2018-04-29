@@ -1,7 +1,8 @@
 # json.file
 
-> Type
+> Extension
 
+Adds the `openFile()` and `saveFile()` methods to JSON
 
 ## Test
 

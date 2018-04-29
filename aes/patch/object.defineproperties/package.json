@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.object.defineproperties",
   "version": "0.1.0",
-  "description": "The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.",
+  "description": "The `Object.defineProperties()` method defines new or modifies existing properties directly on an object, returning the object.",
   "main": "object.defineproperties.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

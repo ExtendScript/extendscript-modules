@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.array.from",
   "version": "0.1.0",
-  "description": "The Array.from() method creates a new Array instance from an array-like or iterable object.",
+  "description": "The `from()` method creates a new Array instance from an array-like or iterable object.",
   "main": "array.from.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

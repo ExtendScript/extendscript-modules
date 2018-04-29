@@ -1,5 +1,7 @@
-
-// JSON is a peer dependency so will be loaded
+// Create a JSON object only if one does not already exist.
+if (typeof JSON !== 'object') {
+    JSON = {};
+};
 
 /*
     json_parse.js
@@ -56,7 +58,7 @@
     prototype, push, r, t, text
 */
 
-JSON.parse = (function () {
+JSON.parseRecurse = (function () {
     "use strict";
 
 // This is a function that can parse a JSON text, producing a JavaScript

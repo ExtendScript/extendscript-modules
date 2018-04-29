@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.bundle.es5",
   "version": "0.1.0",
-  "description": "A collection of useful array shims for Extendscript",
+  "description": "A collection of ES5 polyfills for Exendscript.",
   "main": "bundle.es5.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

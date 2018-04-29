@@ -1,7 +1,10 @@
 # string.trim
 
-> Type
+> ES5 Shim
 
+The trim() method removes whitespace from both ends of a string.
+
+Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/String/trim.js)
 
 ## Test
 

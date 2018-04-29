@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.object.keys",
   "version": "0.1.0",
-  "description": "The Object.keys() method returns an array of a given object's own enumerable properties.",
+  "description": "The `Object.keys()` method returns an array of a given object's own enumerable properties.",
   "main": "object.keys.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

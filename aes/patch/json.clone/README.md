@@ -1,6 +1,8 @@
 # json.clone
 
-> Type
+> Extension
+
+Adds the `clone()` method to JSON
 
 
 ## Test

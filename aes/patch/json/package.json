@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.json",
   "version": "0.1.0",
-  "description": "Adds JSON to ExtendScript. (JSON is a light-weight, language independent, data interchange format.)",
+  "description": "Adds the light-weight, language independent, data interchange format `JSON` to ExtendScript.",
   "main": "json.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

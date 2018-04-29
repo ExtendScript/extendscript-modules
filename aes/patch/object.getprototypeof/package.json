@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.object.getprototypeof",
   "version": "0.1.0",
-  "description": "The Object.getPrototypeOf() method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.",
+  "description": "The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.",
   "main": "object.getprototypeof.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

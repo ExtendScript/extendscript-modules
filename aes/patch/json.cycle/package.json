@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.json.cycle",
   "version": "0.1.0",
-  "description": "Adds decycle() and retrocycle() to JSON, which make it possible to encode cyclical structures and dags in JSON, and to then recover them.",
+  "description": "Adds `decycle()` and `retrocycle()` to JSON, which make it possible to encode cyclical structures and dags in JSON, and to then recover them.",
   "main": "json.cycle.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "peerDependencies": {
-    "@extendscript/patch.json": "1.x"
+    "@extendscript/aes.patch.json": "^1.0.0"
   }
 }

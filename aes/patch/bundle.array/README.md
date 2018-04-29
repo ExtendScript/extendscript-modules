@@ -2,7 +2,7 @@
 
 > Bundle
 
-A collection of Array polyfills for Exendscript.
+A collection of `Array` polyfills for Exendscript.
 
 - Create bundle.array.js by running `npm run bundle`
 

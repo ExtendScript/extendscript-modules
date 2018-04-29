@@ -1,7 +1,10 @@
 # json.cycle
 
-> Type
+> Extension
 
+Adds `decycle()` and `retrocycle()` to JSON, which make it possible to encode cyclical structures and dags in JSON, and to then recover them.
+
+Source: [JSON-js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
 
 ## Test
 

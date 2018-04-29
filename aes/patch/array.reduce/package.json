@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/aes.patch.array.reduce",
   "version": "0.1.0",
-  "description": "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
+  "description": "The `Array.reduce()` method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
   "main": "array.reduce.js",
   "scripts": {
     "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",

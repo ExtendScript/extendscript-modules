@@ -1,3 +1,3 @@
-#include "../<moduleName>.js"
+#include "../<name>.js"
 
 $.writeln( undefined === true);

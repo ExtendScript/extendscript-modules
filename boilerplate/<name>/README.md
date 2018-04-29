@@ -1,7 +1,8 @@
-# <moduleName>
+# <name>
 
-> Type
+> <type>
 
+<description>
 
 ## Test
 
