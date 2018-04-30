@@ -6,7 +6,7 @@ As tests may be run by different people on different platforms the results are l
 
 > Version 0
 
-- ✔ Darwin photoshop-18 array.isarray [pass: 1, fail: 0, duration: 188ms]
-- ✔ Darwin photoshop-19 array.isarray [pass: 1, fail: 0, duration: 8.7s]
-- ✔ Darwin indesign-12 array.isarray [pass: 1, fail: 0, duration: 174ms]
-- ✔ Darwin indesign-13 array.isarray test [pass: 1, fail: 0, duration: 668ms]
+- ✔ Darwin photoshop-18 array.isarray [pass: 1, fail: 0]
+- ✔ Darwin photoshop-19 array.isarray [pass: 1, fail: 0]
+- ✔ Darwin indesign-12 array.isarray [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 array.isarray test [pass: 1, fail: 0]

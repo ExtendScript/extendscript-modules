@@ -1,3 +1,7 @@
-#include "../array.from.js"
+#include '../../json/json.js'
+#include '../array.from.js'
 
-$.writeln( undefined === true);
+var x = Array.from('foo');
+var expected = ['f','o','o'];
+
+$.writeln( JSON.stringify(x) === JSON.stringify(expected) );

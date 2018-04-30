@@ -15,12 +15,12 @@ A couple of bundles of modules often used together.
 ## Shims
 Modules that faithfully represent newer ECMAScript features.
 
-  - [ ] Array.from
-  - [ ] Array.isArray
+  - [x] Array.from
+  - [x] Array.isArray
   - [ ] Array.prototype.filter
   - [ ] Array.prototype.find
   - [ ] Array.prototype.forEach
-  - [ ] Array.prototype.indexOf
+  - [x] Array.prototype.indexOf
   - [ ] Array.prototype.lastIndexOf
   - [ ] Array.prototype.map
   - [ ] Array.prototype.reduce

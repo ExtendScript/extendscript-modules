@@ -6,5 +6,8 @@ As tests may be run by different people on different platforms the results are l
 
 > Version 0
 
+- ✔ Darwin photoshop-18: array.indexof [pass: 1, fail: 0]
 - ✔ Darwin photoshop-19: array.indexof [pass: 1, fail: 0]
+- ✔ Darwin indesign-12: array.indexof [pass: 1, fail: 0]
 - ✔ Darwin indesign-13: array.indexof [pass: 1, fail: 0]
+
