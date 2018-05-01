@@ -6,68 +6,68 @@ This is a collection of polyfills for [ExtendScript](https://en.wikipedia.org/wi
 ## Bundles
 A couple of bundles of modules often used together.
 
-  - [ ] bundle.array
-  - [ ] bundle.es3-6
-  - [ ] bundle.es5
-  - [ ] bundle.es6
-  - [ ] bundle.object
+  - [ ] [bundle.array](bundle.array)
+  - [ ] [bundle.es3-6](bundle.es3-6)
+  - [ ] [bundle.es5](bundle.es5)
+  - [ ] [bundle.es6](bundle.es6)
+  - [ ] [bundle.object](bundle.object)
 
 ## Shims
 Modules that faithfully represent newer ECMAScript features.
 
-  - [x] Array.every
-  - [x] Array.from
-  - [x] Array.isArray
-  - [x] Array.prototype.filter
-  - [ ] Array.prototype.find
-  - [x] Array.prototype.forEach
-  - [x] Array.prototype.indexOf
-  - [x] Array.prototype.lastIndexOf
-  - [x] Array.prototype.map
-  - [x] Array.prototype.reduce
-  - [x] Array.prototype.reduceRight
-  - [x] Array.prototype.some
-  - [ ] JSON
-  - [ ] Number.isFinite
-  - [ ] Object.assign
-  - [ ] Object.create
-  - [ ] Object.keys
-  - [ ] String.trim
+  - [x] [Array.every](array.every)
+  - [x] [Array.from](array.from)
+  - [x] [Array.isArray](array.isarray)
+  - [x] [Array.filter](array.filter)
+  - [x] [Array.find](array.find)
+  - [x] [Array.forEach](array.foreach)
+  - [x] [Array.indexOf](array.indexof)
+  - [x] [Array.lastIndexOf](array.lastindexof)
+  - [x] [Array.map](array.map)
+  - [x] [Array.reduce](array.reduce)
+  - [x] [Array.reduceRight](array.reduceright)
+  - [x] [Array.some](array.some)
+  - [ ] [JSON](json)
+  - [ ] [Number.isFinite](number.isfinite)
+  - [ ] [Object.assign](object.assign)
+  - [ ] [Object.create](object.create)
+  - [ ] [Object.keys](object.keys)
+  - [ ] [String.trim](string.trim)
 
 ## Shams
 Modules that partially implements newer ECMAScript features.
 
-  - [ ] Function.bind
-  - [ ] Object.defineProperties
-  - [ ] Object.defineProperty
-  - [ ] Object.freeze
-  - [ ] Object.getOwnPropertyDescriptor
-  - [ ] Object.getOwnPropertyNames
-  - [ ] Object.getPrototypeOf
-  - [ ] Object.isExtensible
-  - [ ] Object.isFrozen
-  - [ ] Object.isSealed
-  - [ ] Object.preventExtensions
-  - [ ] Object.seal
-  - [ ] Object.setPrototypeOf
+  - [ ] [Function.bind](function.bind)
+  - [ ] [Object.defineProperties](object.defineproperties)
+  - [ ] [Object.defineProperty](object.defineproperty)
+  - [ ] [Object.freeze](object.freeze)
+  - [ ] [Object.getOwnPropertyDescriptor](object.getownpropertydescriptor)
+  - [ ] [Object.getOwnPropertyNames](object.getownpropertynames)
+  - [ ] [Object.getPrototypeOf](object.getprototypeof)
+  - [ ] [Object.isExtensible](object.isextensible)
+  - [ ] [Object.isFrozen](object.isfrozen)
+  - [ ] [Object.isSealed](object.issealed)
+  - [ ] [Object.preventExtensions](object.preventrxtensions)
+  - [ ] [Object.seal](object.seal)
+  - [ ] [Object.setf](object.setf)
 
 ## Fills
 Modules that we get used to in other environments.
 
-  - [ ] clearInterval
-  - [ ] clearTimeout
-  - [ ] console.log
-  - [ ] setInterval
-  - [ ] setTimeout
+  - [ ] [clearInterval](clearinterval)
+  - [ ] [clearTimeout](cleartimeout)
+  - [ ] [console.log](console.log)
+  - [ ] [setInterval](setinterval)
+  - [ ] [setTimeout](settimeout)
 
 ## Extensions
 Extensions to existing objects
 
-  - [ ] JSON.clone
-  - [ ] JSON.cycle
-  - [ ] JSON.file
-  - [ ] JSON.parseRecurse
-  - [ ] JSON.parseState
+  - [ ] [JSON.clone](json.clone)
+  - [ ] [JSON.cycle](json.cycle)
+  - [ ] [JSON.file](json.file)
+  - [ ] [JSON.parseRecurse](json.parserecurse)
+  - [ ] [JSON.parseState](json.parsestate)
 
 
 ## More info
