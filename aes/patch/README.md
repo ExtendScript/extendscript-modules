@@ -19,7 +19,7 @@ Modules that faithfully represent newer ECMAScript features.
   - [x] Array.isArray
   - [ ] Array.prototype.filter
   - [ ] Array.prototype.find
-  - [ ] Array.prototype.forEach
+  - [x] Array.prototype.forEach
   - [x] Array.prototype.indexOf
   - [ ] Array.prototype.lastIndexOf
   - [ ] Array.prototype.map
