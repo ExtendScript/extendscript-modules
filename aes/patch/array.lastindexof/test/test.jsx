@@ -1,3 +1,5 @@
 #include "../array.lastindexof.js"
 
-$.writeln( undefined === true);
+var animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+$.writeln( animals.lastIndexOf('Dodo') === 3);

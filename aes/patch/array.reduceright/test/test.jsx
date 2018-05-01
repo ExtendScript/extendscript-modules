@@ -1,3 +1,7 @@
 #include "../array.reduceright.js"
 
-$.writeln( undefined === true);
+var sum = [0, 1, 2, 3].reduceRight(function(a, b) {
+  return a + b;
+});
+
+$.writeln( sum === 6);

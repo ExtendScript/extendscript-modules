@@ -1,3 +1,9 @@
-#include "../array.map.js"
+#include '../array.map.js'
+#include '../../json/json.js'
 
-$.writeln( undefined === true);
+var numbers = [1, 4, 9];
+var doubles = numbers.map(function(num) {
+  return num * 2;
+});
+
+$.writeln( JSON.stringify(doubles) === '[2,8,18]' );

@@ -1,0 +1,31 @@
+{
+  "name": "@extendscript/aes.patch.array.find",
+  "version": "0.1.0",
+  "description": "The `find()` method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.",
+  "main": "array.find.js",
+  "scripts": {
+    "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "array",
+    "find"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  }
+}
