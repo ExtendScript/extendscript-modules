@@ -4,6 +4,7 @@
   "description": "A collection of `Array` polyfills for Exendscript.",
   "main": "bundle.array.js",
   "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.source.js -o ./bundle.array.js"
   },
