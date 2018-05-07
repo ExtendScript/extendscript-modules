@@ -4,7 +4,6 @@
   "description": "The Object.isFrozen() determines if an object is frozen.",
   "main": "object.isfrozen.js",
   "scripts": {
-    "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": "node ./test/test.js"
   },
   "repository": {
@@ -23,6 +22,7 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
+    "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
     "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
   }

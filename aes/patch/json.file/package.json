@@ -4,7 +4,6 @@
   "description": "Adds the `openFile()` and `saveFile()` methods to JSON",
   "main": "json.file.js",
   "scripts": {
-    "env": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-CPP/bashnips/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh && # npm install && npm update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
