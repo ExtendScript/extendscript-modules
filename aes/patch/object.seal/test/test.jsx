@@ -1,3 +1,3 @@
-#include "../object.seal.js"
+#include '../object.seal.js'
 
 $.writeln( undefined === true);

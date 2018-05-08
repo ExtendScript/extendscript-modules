@@ -1,3 +1,3 @@
-#include "../object.defineproperty.js"
+#include '../object.defineproperty.js'
 
 $.writeln( undefined === true);

@@ -1,3 +1,3 @@
-#include "../bundle.array.js"
+#include '../bundle.array.js'
 
 $.writeln( undefined === true);

@@ -1,3 +1,3 @@
-#include "../function.bind.js"
+#include '../function.bind.js'
 
 $.writeln( undefined === true);

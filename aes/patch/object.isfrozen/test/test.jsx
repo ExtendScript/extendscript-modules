@@ -1,3 +1,3 @@
-#include "../object.isfrozen.js"
+#include '../object.isfrozen.js'
 
 $.writeln( undefined === true);

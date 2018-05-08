@@ -4,7 +4,7 @@
 
 The `assign()` method is used to copy values of all enumerable own properties from one or more source objects to a target object. It will return the target object.
 
-Source: [extendscript-es6-shim](https://github.com/ExtendScript/extendscript-es6-shim/blob/master/Object/assign.js)
+Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
 ## Test
 

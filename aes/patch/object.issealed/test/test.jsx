@@ -1,3 +1,3 @@
-#include "../object.issealed.js"
+#include '../object.issealed.js'
 
 $.writeln( undefined === true);

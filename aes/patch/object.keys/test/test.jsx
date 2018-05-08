@@ -1,3 +1,3 @@
-#include "../object.keys.js"
+#include '../object.keys.js'
 
 $.writeln( undefined === true);

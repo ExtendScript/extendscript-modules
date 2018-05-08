@@ -1,3 +1,3 @@
-#include "../object.getprototypeof.js"
+#include '../object.getprototypeof.js'
 
 $.writeln( undefined === true);

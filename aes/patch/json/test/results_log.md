@@ -5,3 +5,6 @@ As tests may be run by different people on different platforms the results are l
 ## json.js
 
 > Version 0
+
+- ✔ Darwin photoshop-18: json [pass: 1, fail: 0]
+- ✔ Darwin indesign-12: json [pass: 1, fail: 0]

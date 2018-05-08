@@ -1,3 +1,3 @@
-#include "../json.cycle.js"
+#include '../json.cycle.js'
 
 $.writeln( undefined === true);

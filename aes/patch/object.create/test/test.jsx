@@ -1,3 +1,3 @@
-#include "../object.create.js"
+#include '../object.create.js'
 
 $.writeln( undefined === true);

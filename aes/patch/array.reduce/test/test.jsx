@@ -1,4 +1,4 @@
-#include "../array.reduce.js"
+#include '../array.reduce.js'
 
 var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
   return accumulator + currentValue;

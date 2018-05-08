@@ -5,7 +5,7 @@
   "main": "json.parse-state.js",
   "scripts": {
     "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,11 @@
     "url": "https://github.com/ExtendScript/extendscript-modules/issues"
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "build-node-venv": "^1.0.3",
+    "minimist": "^1.2.0",
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  },
   "peerDependencies": {
     "@extendscript/patch.json": "1.x"
   }

@@ -1,3 +1,3 @@
-#include "../json.file.js"
+#include '../json.file.js'
 
 $.writeln( undefined === true);

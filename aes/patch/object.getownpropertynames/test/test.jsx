@@ -1,3 +1,3 @@
-#include "../object.getownpropertynames.js"
+#include '../object.getownpropertynames.js'
 
 $.writeln( undefined === true);

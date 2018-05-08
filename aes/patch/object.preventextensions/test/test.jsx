@@ -1,3 +1,3 @@
-#include "../object.preventextensions.js"
+#include '../object.preventextensions.js'
 
 $.writeln( undefined === true);

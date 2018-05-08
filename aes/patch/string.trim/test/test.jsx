@@ -1,3 +1,3 @@
-#include "../string.trim.js"
+#include '../string.trim.js'
 
 $.writeln( undefined === true);
