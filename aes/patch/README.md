@@ -28,7 +28,7 @@ Modules that faithfully represent newer ECMAScript features.
   - [x] [Array.reduceRight](array.reduceright)
   - [x] [Array.some](array.some)
   - [x] [JSON](json)
-  - [ ] [Number.isFinite](number.isfinite)
+  - [x] [Number.isFinite](number.isfinite)
   - [ ] [Object.assign](object.assign)
   - [ ] [Object.create](object.create)
   - [ ] [Object.keys](object.keys)

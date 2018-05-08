@@ -1,12 +1,11 @@
 {
-  "name": "@extendscript/aes.patch.bundle.es6",
+  "name": "@extendscript/aes.patch.number.isfinite",
   "version": "0.1.0",
-  "description": "A collection of ES6 polyfills for Exendscript.",
-  "main": "bundle.es6.js",
+  "description": "The `Number.isFinite()` method determines whether the passed value is a finite number.",
+  "main": "number.isfinite.js",
   "scripts": {
     "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
-    "test": "node ./test/test.js",
-    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.source.js -o ./bundle.es6.js"
+    "test": "node ./test/test.js"
   },
   "repository": {
     "type": "git",
@@ -16,11 +15,10 @@
     "extendscript",
     "polyfill",
     "shim",
-    "es6"
+    "number",
+    "isfinite"
   ],
-  "contributers": [
-    "extendscript.org"
-  ],
+  "author": "extendscript.org",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExtendScript/extendscript-modules/issues"
@@ -29,10 +27,6 @@
   "devDependencies": {
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
-    "tap-es": "git+https://github.com/ExtendScript/tap-es.git",
-    "@extendscript/patch.array.from": "^1.0.0",
-    "@extendscript/patch.object.assign": "^1.0.0",
-    "@extendscript/patch.number.isfinite": "^1.0.0",
-    "extendscript-bundlr": "^0.3.1"
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
   }
 }
