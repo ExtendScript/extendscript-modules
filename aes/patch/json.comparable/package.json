@@ -1,0 +1,36 @@
+{
+  "name": "@extendscript/aes.patch.json.comparable",
+  "version": "0.1.0",
+  "description": "Adds the `comparable()` method to JSON, which make it possible to compare two values on equality. It sorts arrays and objects before doing a `JSON.stringify()` comparison.",
+  "main": "json.comparable.js",
+  "scripts": {
+    "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "json",
+    "comparable"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "build-node-venv": "^1.0.3",
+    "minimist": "^1.2.0",
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  },
+  "peerDependencies": {
+    "@extendscript/aes.patch.json": "^1.0.0",
+    "@extendscript/aes.patch.object.keys": "^1.0.0"
+  }
+}

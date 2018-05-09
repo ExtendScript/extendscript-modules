@@ -29,7 +29,7 @@ Modules that faithfully represent newer ECMAScript features.
   - [x] [Array.some](array.some)
   - [x] [JSON](json)
   - [x] [Number.isFinite](number.isfinite)
-  - [ ] [Object.assign](object.assign)
+  - [x] [Object.assign](object.assign)
   - [ ] [Object.create](object.create)
   - [ ] [Object.keys](object.keys)
   - [ ] [String.trim](string.trim)
@@ -66,6 +66,7 @@ Extensions to existing objects
   - [ ] [JSON.clone](json.clone)
   - [ ] [JSON.cycle](json.cycle)
   - [ ] [JSON.file](json.file)
+  - [ ] [JSON.equals](json.equals)
   - [ ] [JSON.parseRecurse](json.parserecurse)
   - [ ] [JSON.parseState](json.parsestate)
 
