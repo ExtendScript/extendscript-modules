@@ -4,7 +4,7 @@
 
 The trim() method removes whitespace from both ends of a string.
 
-Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/String/trim.js)
+Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
 
 ## Test
 

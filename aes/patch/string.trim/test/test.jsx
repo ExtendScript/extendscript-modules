@@ -1,3 +1,5 @@
 #include '../string.trim.js'
 
-$.writeln( undefined === true);
+var orig = '   foo  ';
+
+$.writeln( orig.trim() === 'foo');

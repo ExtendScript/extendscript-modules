@@ -30,9 +30,9 @@ Modules that faithfully represent newer ECMAScript features.
   - [x] [JSON](json)
   - [x] [Number.isFinite](number.isfinite)
   - [x] [Object.assign](object.assign)
-  - [ ] [Object.create](object.create)
-  - [ ] [Object.keys](object.keys)
-  - [ ] [String.trim](string.trim)
+  - [x] [Object.create](object.create)
+  - [x] [Object.keys](object.keys)
+  - [x] [String.trim](string.trim)
 
 ## Shams
 Modules that partially implements newer ECMAScript features.
