@@ -9,14 +9,10 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
   - Properties in __bold__ are open to sub methods (preferred)
   - The registry is case-insensitive
 
-## All
-  * __module__
-  * __util__
-
-### Adobe ExtendScript (aes)
+## Adobe ExtendScript (aes)
   * [__patch__](../aes/patch) (A collection of polyfills)
 
-### Script UI (sui)
+## Script UI (sui)
   * __module__
 
 ## InDesign (ind)
