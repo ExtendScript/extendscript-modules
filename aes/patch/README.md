@@ -37,10 +37,10 @@ Modules that faithfully represent newer ECMAScript features.
 ## Shams
 Modules that partially implements newer ECMAScript features.
 
-  - [ ] [Function.bind](function.bind)
-  - [ ] [Object.defineProperties](object.defineproperties)
-  - [ ] [Object.defineProperty](object.defineproperty)
-  - [ ] [Object.freeze](object.freeze)
+  - [x] [Function.bind](function.bind)
+  - [x] [Object.defineProperties](object.defineproperties)
+  - [x] [Object.defineProperty](object.defineproperty)
+  - [x] [Object.freeze](object.freeze)
   - [ ] [Object.getOwnPropertyDescriptor](object.getownpropertydescriptor)
   - [ ] [Object.getOwnPropertyNames](object.getownpropertynames)
   - [ ] [Object.getPrototypeOf](object.getprototypeof)

@@ -4,6 +4,8 @@
 
 The `bind()` method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
+> __WARNING!__ Bound functions used as constructors NOT supported by this polyfill!
+
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Function/bind.js)
 
 ## Test
