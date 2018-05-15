@@ -223,12 +223,12 @@ if (!Object.getOwnPropertyNames) {
     };
 }
 if (!Object.getPrototypeOf) {
-	Object.getPrototypeOf = function(object) {
-		if (Object(object) !== object) {
-			throw new TypeError('Object.getPrototypeOf can only be called on Objects.');
-		}
-		return object.__proto__;
-	}
+    Object.getPrototypeOf = function(object) {
+        if (Object(object) !== object) {
+            throw new TypeError('Object.getPrototypeOf can only be called on Objects.');
+        }
+        return object.__proto__;
+    }
 }
 // ES5 15.2.3.13
 // http://es5.github.com/#x15.2.3.13

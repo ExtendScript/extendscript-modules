@@ -6,6 +6,6 @@ if (!Array.isArray) {
     if (arg === void 0 || arg === null) {
       return false;
     };
-  	return (arg.__class__ === 'Array');
+      return (arg.__class__ === 'Array');
   };
 };

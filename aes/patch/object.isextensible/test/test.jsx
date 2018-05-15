@@ -1,3 +1,5 @@
 #include '../object.isextensible.js'
 
-$.writeln( undefined === true);
+var object1 = {};
+
+$.writeln( Object.isExtensible(object1) === true);

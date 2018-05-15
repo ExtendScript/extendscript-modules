@@ -2,7 +2,7 @@
 
 > ES5 Sham
 
-The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.
+The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal `Prototype` property) of the specified object.
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/getPrototypeOf.js)
 

@@ -1,14 +1,14 @@
 {
-	"folders":
-	[
-		{
-			"path": "./",
-			"folder_exclude_patterns":
+    "folders":
+    [
+        {
+            "path": "./",
+            "folder_exclude_patterns":
             [
                 ".git",
                 ".venv",
                 "node_modules",
             ]
-		}
-	]
+        }
+    ]
 }

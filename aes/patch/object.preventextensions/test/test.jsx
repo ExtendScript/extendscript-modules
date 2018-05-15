@@ -1,3 +1,6 @@
 #include '../object.preventextensions.js'
 
-$.writeln( undefined === true);
+var obj = {};
+var obj2 = Object.preventExtensions(obj);
+
+$.writeln( obj === obj2 );

@@ -43,13 +43,13 @@ Modules that partially implements newer ECMAScript features.
   - [x] [Object.freeze](object.freeze)
   - [x] [Object.getOwnPropertyDescriptor](object.getownpropertydescriptor)
   - [x] [Object.getOwnPropertyNames](object.getownpropertynames)
-  - [ ] [Object.getPrototypeOf](object.getprototypeof)
-  - [ ] [Object.isExtensible](object.isextensible)
-  - [ ] [Object.isFrozen](object.isfrozen)
-  - [ ] [Object.isSealed](object.issealed)
-  - [ ] [Object.preventExtensions](object.preventrxtensions)
-  - [ ] [Object.seal](object.seal)
-  - [ ] [Object.setf](object.setf)
+  - [x] [Object.getPrototypeOf](object.getprototypeof)
+  - [x] [Object.isExtensible](object.isextensible)
+  - [x] [Object.isFrozen](object.isfrozen)
+  - [x] [Object.isSealed](object.issealed)
+  - [x] [Object.preventExtensions](object.preventExtensions)
+  - [x] [Object.seal](object.seal)
+  - [x] [Object.setPrototypeOf](object.setprototypeof)
 
 ## Fills
 Modules that we get used to in other environments.
