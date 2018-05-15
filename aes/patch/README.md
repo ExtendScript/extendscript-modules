@@ -54,11 +54,7 @@ Modules that partially implements newer ECMAScript features.
 ## Fills
 Modules that we get used to in other environments.
 
-  - [ ] [clearInterval](clearinterval)
-  - [ ] [clearTimeout](cleartimeout)
   - [ ] [console.log](console.log)
-  - [ ] [setInterval](setinterval)
-  - [ ] [setTimeout](settimeout)
 
 ## Extensions
 Extensions to existing objects
