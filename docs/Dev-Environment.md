@@ -1,17 +1,17 @@
 # Dev Environment
 
-When you are developing with npm modules it is always a good idea to work in a segregated or virtual environment. This provides a quick way to get set-up and run existing projects, it also makes it possible to install specific versions of modules without affecting your other projects and machine in general.
+When developing npm modules it is a good idea to work in a segregated (virtual) environment. This provides a quick way to get set up without affecting your other projects and machine in general.
 
-After you have set up your environment as described below you can kick of your project by clone our [extendscriptr boilerplate](https://github.com/ExtendScript/extendscriptr-boilerplate) template.
+This is an optional guide on how you could set up your environment. Once you’re good to go, feel free to clone our [extendscriptr boilerplate](https://github.com/ExtendScript/extendscriptr-boilerplate) template.
 
     $ git clone https://github.com/ExtendScript/extendscriptr-boilerplate.git
 
 ## Setup using NodeEnv
-I prefer to use the [`nodeenv`](https://github.com/ekalinin/nodeenv). A tool that integrates with [`virtualenvwrapper`](https://github.com/pypa/virtualenv) to manage my isolated [`nodejs`](https://nodejs.org/en/) (ExtendScript) environment.
+I recommend using [`nodeenv`](https://github.com/ekalinin/nodeenv). A tool that integrates with [`virtualenvwrapper`](https://github.com/pypa/virtualenv) to manage isolated [`nodejs`](https://nodejs.org/en/) environments.
 
 There is a great guide on how to setup your virtual environment at [python-guide.org](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 
-After your Python environment is setup we can visit our project folder and create a new environment for this project at the top level (next to your version control directory):
+When your `virtualenv` is installed we can create a new environment for a project at the top level (next to your version control directory):
 
     $ virtualenv .venv
 
@@ -38,7 +38,7 @@ That's all, Now get to work!
 
     $ workon yourProject
 
-> To make things even easier you can install [virtualenv-auto-activate.sh](https://gist.github.com/GitBruno/f384e39ec9c54cf4c203e73fb40b224f) so the virtual environment is automatically started when entering the folder.
+> To make things even easier you can install and use our [build-node-venv](https://github.com/ESCPP/build-node-venv) module.
 
 ## .gitignore your .venv
 
