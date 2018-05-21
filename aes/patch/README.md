@@ -69,5 +69,5 @@ Extensions to existing objects
 
 ## More info
 
-Read [the docs](../docs/README.md)
+Read [the docs](../../docs/README.md)
 
