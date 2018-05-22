@@ -69,18 +69,18 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
 
 ## InDesign (ind)
   * __module__
-    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder) (General Document Builder)
+    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
   * __util__
     * [util.menuloader](../ind/util/menuloader)
 
 ## Photoshop (ps)
   * __module__
-    * module.docBuilder ([General Document Builder](https://github.com/GitBruno/General-Document-Builder))
+    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
   * __util__
 
 ## Illustrator (ai)
   * __module__
-    * module.docBuilder ([General Document Builder](https://github.com/GitBruno/General-Document-Builder))
+    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
   * __util__
 
 ## After Effects (afx)
