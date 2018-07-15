@@ -1,10 +1,11 @@
 {
   "name": "@extendscript/aes.patch.array.every",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `every()` method tests whether all elements in the array pass the test implemented by the provided function.",
   "main": "array.every.js",
   "scripts": {
     "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },
   "repository": {

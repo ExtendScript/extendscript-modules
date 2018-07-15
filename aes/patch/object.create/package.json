@@ -5,6 +5,7 @@
   "main": "object.create.js",
   "scripts": {
     "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },
   "repository": {

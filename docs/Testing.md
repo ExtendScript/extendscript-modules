@@ -1,6 +1,6 @@
 # Testing
 
-All modules are tested in ExtendScript. We run our tests with [tap-es](https://github.com/ExtendScript/tap-es). Please check the `results_log.md` file inside the `test` folder of each module. If you can't see your version/app we would for you to run the test using your platform and app version. See [Running Tests](#running-tests) below.
+All modules are tested in ExtendScript using the intended target application. We can run our tests with [tap-es](https://github.com/ExtendScript/tap-es). Please check the `results_log.md` file inside the `test` folder of each module. If you can't see your version/app we would for you to run the test using your platform and app version. See [Running Tests](#running-tests) below.
 
 
 # Running Tests

@@ -5,6 +5,7 @@
   "main": "bundle.es6.js",
   "scripts": {
     "preinstall": "curl https://raw.githubusercontent.com/ESCPP/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
     "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.source.js -o ./bundle.es6.js"
   },

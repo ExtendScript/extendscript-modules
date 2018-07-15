@@ -5,9 +5,7 @@ Here you can find some modules we host inside our [@extendscript](https://www.np
 
 ## Contributing
 
-All **modules** are published in the `@extendscript` scope. Please make sure you have read our [Code of Conduct](https://github.com/ExtendScript/organisation-rules/blob/master/CODE_OF_CONDUCT.md), [Contributing Guidelines](https://github.com/ExtendScript/organisation-rules/blob/master/CONTRIBUTING.md) and [Package Naming Conventions](./docs/Package-Naming-Conventions.md). Then publish using the `--access public` flag:
-
-    npm publish --access public
+Any contribution is very welcome and much appreaciated. Please read our [Code of Conduct](https://github.com/ExtendScript/organisation-rules/blob/master/CODE_OF_CONDUCT.md) and [Contributing Guidelines](https://github.com/ExtendScript/organisation-rules/blob/master/CONTRIBUTING.md) before you get started. Thanks!
 
 
 ## More info
