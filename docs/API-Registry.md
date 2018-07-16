@@ -10,7 +10,7 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
   * The registry is case-insensitive
 
 ## Adobe ExtendScript (aes)
-  * [__patch__](../aes/patch) (A collection of polyfills)
+  * [__patch__](../aes/patch)
     * __patch.array__
       * [patch.array.every](../aes/patch/array.every)
       * [patch.array.filter](../aes/patch/array.filter)
@@ -68,6 +68,8 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
   * __util__
 
 ## InDesign (ind)
+  * [__schema__](../aes/schema)
+    * [schema.document](../ind/schema/document)
   * __module__
     * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
   * __util__
