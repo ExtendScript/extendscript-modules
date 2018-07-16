@@ -4,7 +4,7 @@
   "description": "An alternate `parse()` function that uses recursive descent instead of eval.",
   "main": "json.parse-recurse.js",
   "scripts": {
-    "preinstall": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },

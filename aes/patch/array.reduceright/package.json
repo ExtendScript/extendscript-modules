@@ -4,7 +4,7 @@
   "description": "The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
   "main": "array.reduceright.js",
   "scripts": {
-    "preinstall": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },

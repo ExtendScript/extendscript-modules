@@ -4,7 +4,7 @@
   "description": "A collection of `Object` polyfills for Exendscript.",
   "main": "bundle.object.js",
   "scripts": {
-    "preinstall": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
     "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.object.source.js -o ./bundle.object.js"

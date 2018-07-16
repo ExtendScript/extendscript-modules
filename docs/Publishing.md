@@ -22,6 +22,7 @@ A couple of things to double check:
 Some things to look out for if you did not use our [Boilerplate Module](../boilerplate):
 
   * The `package.json` contains a `prepublishOnly` script set to `npm config set scope extendscript`
+  * The package contains a `.npmignore` file that exclude all files that should be excluded from the package
 
 ## 4. Publish your code
 

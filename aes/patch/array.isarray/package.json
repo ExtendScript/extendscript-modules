@@ -4,7 +4,7 @@
   "description": "The `isArray()` method determines whether the passed value is an Array.",
   "main": "array.isarray.js",
   "scripts": {
-    "preinstall": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test-cc2017": "node ./test/array.isarray.test.js indesign-12 photoshop-18",
     "test-cc2018": "node ./test/array.isarray.test.js indesign-13 photoshop-19",
     "prepublishOnly": "npm config set scope extendscript",

@@ -4,7 +4,7 @@
   "description": "A collection of ES5 polyfills for Exendscript.",
   "main": "bundle.es5.js",
   "scripts": {
-    "preinstall": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
     "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es5.source.js -o ./bundle.es5.js"
