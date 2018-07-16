@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.getownpropertynames",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Object.getOwnPropertyNames()` method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly upon a given object.",
   "main": "object.getownpropertynames.js",
   "scripts": {

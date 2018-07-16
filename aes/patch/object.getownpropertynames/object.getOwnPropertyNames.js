@@ -1,26 +1,34 @@
-if (!Object.getOwnPropertyNames) {
-    Object.getOwnPropertyNames = function getOwnPropertyNames(object) {
+// Source: https://github.com/ExtendScript/extendscript-es5-shim/blob/master/Object/getOwnPropertyNames.js
 
-        if (Object(object) !== object) {
+if (!Object.getOwnPropertyNames) {
+    Object.getOwnPropertyNames = function(obj) {
+
+        if (Object(obj) !== obj) {
             throw new TypeError('Object.getOwnPropertyNames can only be called on Objects.');
         }
-        var names = [];
+
+        var result = [];
+
         var hasOwnProperty = Object.prototype.hasOwnProperty;
         var propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-        for (var prop in object) {
-            if (hasOwnProperty.call(object, prop)) {
-                names.push(prop);
+
+        for (var prop in obj) {
+            if (hasOwnProperty.call(obj, prop)) {
+                result.push(prop);
             }
         }
-        var properties = object.reflect.properties;
-        var methods = object.reflect.methods;
+
+        var properties = obj.reflect.properties;
+        var methods = obj.reflect.methods;
         var all = methods.concat(properties);
+
         for (var i = 0; i < all.length; i++) {
             var prop = all[i].name;
-            if (hasOwnProperty.call(object, prop) && !(propertyIsEnumerable.call(object, prop))) {
-                names.push(prop);
+            if (hasOwnProperty.call(obj, prop) && !(propertyIsEnumerable.call(obj, prop))) {
+                result.push(prop);
             }
-        }
-        return names;
+        };
+
+        return result;
     };
 }

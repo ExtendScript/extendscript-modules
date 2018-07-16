@@ -1,6 +1,6 @@
 #include '../object.seal.js'
 
-const object1 = {
+var object1 = {
   property1: 42,
   property2: 84
 };

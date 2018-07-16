@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.preventextensions",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Object.preventExtensions()` method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).",
   "main": "object.preventextensions.js",
   "scripts": {

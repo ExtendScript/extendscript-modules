@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.getprototypeof",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.",
   "main": "object.getprototypeof.js",
   "scripts": {

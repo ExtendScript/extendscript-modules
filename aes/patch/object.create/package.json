@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.create",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `create()` method creates a new object with the specified prototype.",
   "main": "object.create.js",
   "scripts": {

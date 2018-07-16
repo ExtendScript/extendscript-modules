@@ -4,7 +4,8 @@ As tests may be run by different people on different platforms the results are l
 
 ## array.filter.js
 
-> Version 0
+> Version 1.0.0
 
 - ✔ Darwin photoshop-18: array.filter [pass: 1, fail: 0]
 - ✔ Darwin indesign-12: array.filter [pass: 1, fail: 0]
+- ✔ Darwin illustrator-21: array.filter [pass: 1, fail: 0]

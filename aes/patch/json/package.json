@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.json",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Adds the light-weight, language independent, data interchange format `JSON` to ExtendScript.",
   "main": "json.js",
   "scripts": {

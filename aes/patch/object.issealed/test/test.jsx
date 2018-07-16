@@ -1,7 +1,7 @@
 #include '../object.issealed.js'
 
-const object1 = {
-  property1: 42
+const obj = {
+  prop: 42
 };
 
-$.writeln( Object.isSealed(object1) === false);
+$.writeln( Object.isSealed(obj) === false);

@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.array.from",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `from()` method creates a new Array instance from an array-like or iterable object.",
   "main": "array.from.js",
   "scripts": {

@@ -1,9 +1,9 @@
 #include '../object.getownpropertydescriptor.js'
 
-var object1 = {
-  property1: 42
+var obj = {
+  prop1: 42
 }
 
-var descriptor1 = Object.getOwnPropertyDescriptor(object1, 'property1');
+var descr = Object.getOwnPropertyDescriptor(obj, 'prop1');
 
-$.writeln( descriptor1.value === 42);
+$.writeln( descr.value === 42);

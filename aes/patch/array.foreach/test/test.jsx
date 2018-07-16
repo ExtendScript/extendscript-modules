@@ -2,10 +2,10 @@
 #include '../../json/json.js'
 
 var items = ['item1', 'item2', 'item3'];
-var copy = [];
+var myCopy = new Array();
 
 items.forEach(function(item){
-  copy.push(item)
+  myCopy.push(item)
 });
 
-$.writeln(JSON.stringify(items) === JSON.stringify(copy));
+$.writeln(JSON.stringify(items) === JSON.stringify(myCopy));

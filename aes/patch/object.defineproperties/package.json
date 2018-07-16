@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.defineproperties",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Object.defineProperties()` method defines new or modifies existing properties directly on an object, returning the object.",
   "main": "object.defineproperties.js",
   "scripts": {

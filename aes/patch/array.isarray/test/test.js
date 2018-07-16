@@ -2,5 +2,5 @@ var argv = require('minimist')(process.argv.slice(2)); // Remove nodePath, scrip
 var tapes = require("tap-es"), targets = argv._, d = require('path').resolve(__dirname);
 
 tapes.reportDuration(false);
-tapes.add('array.isarray', d+'/*.test.jsx', targets, true);
+tapes.add('array.isarray', d+'/*.jsx', targets, true);
 tapes.run(d+'/results.md');

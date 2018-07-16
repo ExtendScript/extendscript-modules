@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.keys",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Object.keys()` method returns an array of a given object's own enumerable properties.",
   "main": "object.keys.js",
   "scripts": {

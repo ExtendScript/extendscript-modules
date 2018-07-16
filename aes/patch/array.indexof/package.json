@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.array.indexof",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `indexOf()` method searches the array for the specified item, and returns its position.",
   "main": "array.indexof.js",
   "scripts": {

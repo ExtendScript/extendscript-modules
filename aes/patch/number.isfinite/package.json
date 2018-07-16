@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.number.isfinite",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `Number.isFinite()` method determines whether the passed value is a finite number.",
   "main": "number.isfinite.js",
   "scripts": {

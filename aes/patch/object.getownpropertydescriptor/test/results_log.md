@@ -4,7 +4,8 @@ As tests may be run by different people on different platforms the results are l
 
 ## object.getownpropertydescriptor.js
 
-> Version 0
+> Version 1.0.0
 
 - ✔ Darwin photoshop-18 [pass: 2, fail: 0]
 - ✔ Darwin indesign-12 [pass: 2, fail: 0]
+- ✔ Darwin illustrator-21 [pass: 2, fail: 0]

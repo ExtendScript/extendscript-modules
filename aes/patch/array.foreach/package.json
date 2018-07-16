@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.array.foreach",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The `forEach()` method executes a provided function once for each array element.",
   "main": "array.foreach.js",
   "scripts": {

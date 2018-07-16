@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.object.issealed",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The Object.isSealed() method determines if an object is sealed.",
   "main": "object.issealed.js",
   "scripts": {
