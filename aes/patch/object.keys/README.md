@@ -6,6 +6,10 @@ The `Object.keys()` method returns an array of a given object's own enumerable p
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/keys.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.keys
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

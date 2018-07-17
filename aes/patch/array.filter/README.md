@@ -6,6 +6,10 @@ The `filter()` method creates a new array with all elements that pass the test i
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Array/filter.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.array.filter
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

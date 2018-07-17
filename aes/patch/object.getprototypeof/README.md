@@ -6,6 +6,10 @@ The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of th
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/getPrototypeOf.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.getprototypeof
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

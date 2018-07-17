@@ -6,6 +6,10 @@ The trim() method removes whitespace from both ends of a string.
 
 Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim)
 
+## Install
+
+    npm install @extendscript/aes.patch.string.trim
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

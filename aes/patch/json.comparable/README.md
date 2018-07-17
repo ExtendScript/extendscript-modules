@@ -6,6 +6,10 @@ Adds the `comparable()` method to JSON, which make it possible to compare two va
 
 Source: [jib:stackoverflow](https://stackoverflow.com/questions/201183/how-to-determine-equality-for-two-javascript-objects)
 
+## Install
+
+    npm install @extendscript/aes.patch.json.comparable
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

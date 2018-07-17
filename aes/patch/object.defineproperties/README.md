@@ -6,6 +6,10 @@ The `Object.defineProperties()` method defines new or modifies existing properti
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/defineProperties.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.defineproperties
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

@@ -6,6 +6,10 @@ The `forEach()` method executes a provided function once for each array element.
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Array/forEach.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.array.foreach
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

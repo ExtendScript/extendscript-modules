@@ -6,6 +6,10 @@ The `Number.isFinite()` method determines whether the passed value is a finite n
 
 Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite)
 
+## Install
+
+    npm install @extendscript/aes.patch.number.isfinite
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

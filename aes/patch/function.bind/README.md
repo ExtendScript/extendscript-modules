@@ -8,6 +8,10 @@ The `bind()` method creates a new function that, when called, has its this keywo
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Function/bind.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.function.bind
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

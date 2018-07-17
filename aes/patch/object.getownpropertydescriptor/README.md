@@ -6,6 +6,10 @@ The `Object.getOwnPropertyDescriptor()` method returns a property descriptor for
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/getOwnPropertyDescriptor.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.getownpropertydescriptor
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

@@ -6,6 +6,10 @@ The `lastIndexOf()` method returns the last index at which a given element can b
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Array/lastIndexOf.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.array.lastindexof
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

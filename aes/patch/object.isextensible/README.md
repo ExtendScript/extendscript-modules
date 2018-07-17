@@ -6,6 +6,10 @@ The Object.isExtensible() method determines if an object is extensible (whether 
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/isExtensible.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.isextensible
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

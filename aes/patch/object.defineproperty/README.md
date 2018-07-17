@@ -6,6 +6,10 @@ The static method `Object.defineProperty()` defines a new property directly on a
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/defineProperty.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.defineproperty
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

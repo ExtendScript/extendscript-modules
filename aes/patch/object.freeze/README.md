@@ -8,6 +8,10 @@ The `Object.freeze()` method freezes an object: that is, prevents new properties
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/freeze.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.freeze
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

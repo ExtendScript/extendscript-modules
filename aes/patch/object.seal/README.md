@@ -8,6 +8,10 @@ The Object.seal() method seals an object, preventing new properties from being a
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Object/seal.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.seal
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

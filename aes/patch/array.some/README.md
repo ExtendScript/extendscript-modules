@@ -6,6 +6,10 @@ The `Array.some()` method tests whether at least one element in the array passes
 
 Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shim/blob/master/lib/Array/some.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.array.some
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

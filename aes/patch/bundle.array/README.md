@@ -10,6 +10,10 @@ A collection of `Array` polyfills for Exendscript.
 
     npm run bundle
 
+## Install
+
+    npm install @extendscript/aes.patch.bundle.array
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

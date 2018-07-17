@@ -6,6 +6,10 @@ The `assign()` method is used to copy values of all enumerable own properties fr
 
 Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
+## Install
+
+    npm install @extendscript/aes.patch.object.assign
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

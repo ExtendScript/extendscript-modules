@@ -4,6 +4,10 @@
 
 <description>
 
+# Install
+
+    npm install @extendscript/<name>
+
 ## Test
 
     npm run test myTarget

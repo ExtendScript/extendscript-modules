@@ -6,6 +6,10 @@ The `JSON.parseState()` method is an alternate `JSON.parse()` that uses a state 
 
 Source: [JSON-js](https://github.com/douglascrockford/JSON-js/blob/master/json_parse_state.js)
 
+## Install
+
+    npm install @extendscript/aes.patch.json.parsestate
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):
