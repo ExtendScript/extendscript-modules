@@ -54,7 +54,7 @@ Modules that partially implements newer ECMAScript features.
 ## Fills
 Modules that we get used to in other environments.
 
-  - [ ] [console.log](console.log)
+  - [x] [console.log](console.log)
 
 ## Extensions
 Extensions to existing objects

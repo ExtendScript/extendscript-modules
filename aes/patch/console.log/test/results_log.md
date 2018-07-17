@@ -4,5 +4,8 @@ As tests may be run by different people on different platforms the results are l
 
 ## console.log.js
 
-> Version 0
+> Version 1.0.0
 
+- ✔ Darwin illustrator-21: console.log [pass: 1, fail: 0]
+- ✔ Darwin photoshop-18: console.log [pass: 1, fail: 0]
+- ✔ Darwin indesign-12: console.log [pass: 1, fail: 0]
