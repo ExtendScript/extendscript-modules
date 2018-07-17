@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.bundle.object",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A collection of `Object` polyfills for Exendscript.",
   "main": "bundle.object.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "es5",
     "object"
   ],
-  "contributers": [
+  "contributors": [
     "extendscript.org"
   ],
   "license": "MIT",
@@ -32,20 +32,21 @@
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
     "tap-es": "git+https://github.com/ExtendScript/tap-es.git",
-    "@extendscript/patch.object.create": "^1.0.0",
-    "@extendscript/patch.object.defineproperties": "^1.0.0",
-    "@extendscript/patch.object.defineproperty": "^1.0.0",
-    "@extendscript/patch.object.freeze": "^1.0.0",
-    "@extendscript/patch.object.getownpropertydescriptor": "^1.0.0",
-    "@extendscript/patch.object.getownpropertynames": "^1.0.0",
-    "@extendscript/patch.object.getprototypeof": "^1.0.0",
-    "@extendscript/patch.object.isextensible": "^1.0.0",
-    "@extendscript/patch.object.isfrozen": "^1.0.0",
-    "@extendscript/patch.object.issealed": "^1.0.0",
-    "@extendscript/patch.object.keys": "^1.0.0",
-    "@extendscript/patch.object.preventextensions": "^1.0.0",
-    "@extendscript/patch.object.seal": "^1.0.0",
-    "@extendscript/patch.object.assign": "^1.0.0",
+    "@extendscript/aes.patch.object.assign": "^1.0.0",
+    "@extendscript/aes.patch.object.create": "^1.0.0",
+    "@extendscript/aes.patch.object.defineproperties": "^1.0.0",
+    "@extendscript/aes.patch.object.defineproperty": "^1.0.0",
+    "@extendscript/aes.patch.object.freeze": "^1.0.0",
+    "@extendscript/aes.patch.object.getownpropertydescriptor": "^1.0.0",
+    "@extendscript/aes.patch.object.getownpropertynames": "^1.0.0",
+    "@extendscript/aes.patch.object.getprototypeof": "^1.0.0",
+    "@extendscript/aes.patch.object.isextensible": "^1.0.0",
+    "@extendscript/aes.patch.object.isfrozen": "^1.0.0",
+    "@extendscript/aes.patch.object.issealed": "^1.0.0",
+    "@extendscript/aes.patch.object.keys": "^1.0.0",
+    "@extendscript/aes.patch.object.preventextensions": "^1.0.0",
+    "@extendscript/aes.patch.object.seal": "^1.0.0",
+    "@extendscript/aes.patch.object.setprototypeof": "^1.0.0",
     "extendscript-bundlr": "^0.3.1"
   }
 }

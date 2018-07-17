@@ -26,7 +26,6 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
       * [patch.array.some](../aes/patch/array.some)
     * __patch.bundle__
       * [patch.bundle.array](../aes/patch/bundle.array)
-      * [patch.bundle.es3-6](../aes/patch/bundle.es3-6)
       * [patch.bundle.es5](../aes/patch/bundle.es5)
       * [patch.bundle.es6](../aes/patch/bundle.es6)
     * __patch.console__

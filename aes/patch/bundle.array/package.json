@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.patch.bundle.array",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A collection of `Array` polyfills for Exendscript.",
   "main": "bundle.array.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "es5",
     "array"
   ],
-  "contributers": [
+  "contributors": [
     "extendscript.org"
   ],
   "license": "MIT",
@@ -32,16 +32,18 @@
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
     "tap-es": "git+https://github.com/ExtendScript/tap-es.git",
-    "@extendscript/patch.array.every": "^1.0.0",
-    "@extendscript/patch.array.filter": "^1.0.0",
-    "@extendscript/patch.array.foreach": "^1.0.0",
-    "@extendscript/patch.array.indexof": "^1.0.0",
-    "@extendscript/patch.array.isarray": "^1.0.0",
-    "@extendscript/patch.array.lastindexof": "^1.0.0",
-    "@extendscript/patch.array.map": "^1.0.0",
-    "@extendscript/patch.array.reduce": "^1.0.0",
-    "@extendscript/patch.array.some": "^1.0.0",
-    "@extendscript/patch.array.from": "^1.0.0",
+    "@extendscript/aes.patch.array.every": "^1.0.0",
+    "@extendscript/aes.patch.array.filter": "^1.0.0",
+    "@extendscript/aes.patch.array.find": "^1.0.0",
+    "@extendscript/aes.patch.array.foreach": "^1.0.0",
+    "@extendscript/aes.patch.array.from": "^1.0.0",
+    "@extendscript/aes.patch.array.indexof": "^1.0.0",
+    "@extendscript/aes.patch.array.isarray": "^1.0.0",
+    "@extendscript/aes.patch.array.lastindexof": "^1.0.0",
+    "@extendscript/aes.patch.array.map": "^1.0.0",
+    "@extendscript/aes.patch.array.reduce": "^1.0.0",
+    "@extendscript/aes.patch.array.reduceright": "^1.0.0",
+    "@extendscript/aes.patch.array.some": "^1.0.0",
     "extendscript-bundlr": "^0.3.1"
   }
 }

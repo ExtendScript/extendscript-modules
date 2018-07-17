@@ -6,6 +6,10 @@ A collection of `Object` polyfills for Exendscript.
 
 - Create bundle.object.js by running `npm run bundle`
 
+## Update Bundle
+
+    npm run bundle
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

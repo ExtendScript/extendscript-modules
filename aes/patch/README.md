@@ -6,11 +6,11 @@ This is a collection of polyfills for [ExtendScript](https://en.wikipedia.org/wi
 ## Bundles
 A couple of bundles of modules often used together.
 
-  - [ ] [bundle.array](bundle.array)
-  - [ ] [bundle.es3-6](bundle.es3-6)
-  - [ ] [bundle.es5](bundle.es5)
-  - [ ] [bundle.es6](bundle.es6)
-  - [ ] [bundle.object](bundle.object)
+  - [x] [bundle.array](bundle.array)
+  - [x] [bundle.es3-6](bundle.es3-6)
+  - [x] [bundle.es5](bundle.es5)
+  - [x] [bundle.es6](bundle.es6)
+  - [x] [bundle.object](bundle.object)
 
 ## Shims
 Modules that faithfully represent newer ECMAScript features.

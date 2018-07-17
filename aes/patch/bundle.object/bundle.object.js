@@ -2,6 +2,35 @@
 // ExtendScript Polyfill Object bundle
 // https://github.com/ExtendScript/extendscript-modules
 
+/**
+ * Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+ */
+
+if (typeof Object.assign != 'function') {
+  Object.prototype.assign = function(target, varArgs) {
+      'use strict';
+      if (target == null) { // TypeError if undefined or null
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      var to = Object(target);
+
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        if (nextSource != null) { // Skip over if undefined or null
+          for (var nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    };
+};
+
 if (!Object.create) {
   // Production steps of ECMA-262, Edition 5, 15.2.3.5
   // Reference: http://es5.github.io/#x15.2.3.5
@@ -171,6 +200,7 @@ if (!Object.freeze) {
         return object;
     };
 }
+
 if (!Object.getOwnPropertyDescriptor) {
 
     Object.getOwnPropertyDescriptor = function getOwnPropertyDescriptor(object, property) {
@@ -196,32 +226,42 @@ if (!Object.getOwnPropertyDescriptor) {
         return descriptor;
     }
 }
-if (!Object.getOwnPropertyNames) {
-    Object.getOwnPropertyNames = function getOwnPropertyNames(object) {
 
-        if (Object(object) !== object) {
+// Source: https://github.com/ExtendScript/extendscript-es5-shim/blob/master/Object/getOwnPropertyNames.js
+
+if (!Object.getOwnPropertyNames) {
+    Object.getOwnPropertyNames = function(obj) {
+
+        if (Object(obj) !== obj) {
             throw new TypeError('Object.getOwnPropertyNames can only be called on Objects.');
         }
-        var names = [];
+
+        var result = [];
+
         var hasOwnProperty = Object.prototype.hasOwnProperty;
         var propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-        for (var prop in object) {
-            if (hasOwnProperty.call(object, prop)) {
-                names.push(prop);
+
+        for (var prop in obj) {
+            if (hasOwnProperty.call(obj, prop)) {
+                result.push(prop);
             }
         }
-        var properties = object.reflect.properties;
-        var methods = object.reflect.methods;
+
+        var properties = obj.reflect.properties;
+        var methods = obj.reflect.methods;
         var all = methods.concat(properties);
+
         for (var i = 0; i < all.length; i++) {
             var prop = all[i].name;
-            if (hasOwnProperty.call(object, prop) && !(propertyIsEnumerable.call(object, prop))) {
-                names.push(prop);
+            if (hasOwnProperty.call(obj, prop) && !(propertyIsEnumerable.call(obj, prop))) {
+                result.push(prop);
             }
-        }
-        return names;
+        };
+
+        return result;
     };
 }
+
 if (!Object.getPrototypeOf) {
     Object.getPrototypeOf = function(object) {
         if (Object(object) !== object) {
@@ -230,6 +270,7 @@ if (!Object.getPrototypeOf) {
         return object.__proto__;
     }
 }
+
 // ES5 15.2.3.13
 // http://es5.github.com/#x15.2.3.13
 if (!Object.isExtensible) {
@@ -240,8 +281,9 @@ if (!Object.isExtensible) {
         return true;
     };
 }
+
 /*
-https://github.com/es-shims/es5-shim/blob/master/es5-sham.js
+    https://github.com/es-shims/es5-shim/blob/master/es5-sham.js
 */
 // ES5 15.2.3.12
 // http://es5.github.com/#x15.2.3.12
@@ -253,6 +295,7 @@ if (!Object.isFrozen) {
         return false;
     };
 }
+
 /*
 https://github.com/es-shims/es5-shim/blob/master/es5-sham.js
 */
@@ -266,6 +309,7 @@ if (!Object.isSealed) {
         return false;
     };
 }
+
 if (!Object.keys) {
     Object.keys = function(object) {
         if (Object(object) !== object) {
@@ -281,6 +325,7 @@ if (!Object.keys) {
         return result;
     };
 }
+
 /*
 https://github.com/es-shims/es5-shim/blob/master/es5-sham.js
 */
@@ -298,6 +343,7 @@ if (!Object.preventExtensions) {
         return object;
     };
 }
+
 /*
 https://github.com/es-shims/es5-shim/blob/master/es5-sham.js
 */
@@ -314,29 +360,10 @@ if (!Object.seal) {
         return object;
     };
 }
-/**
- * Source: https://gist.github.com/WebReflection/10404826
- */
 
-if (!Object.assign) {
-  (function() {
-    Object.assign = (function(has) {
-      'use strict';
-      return assign;
-      function assign(target, source) {
-        for (var i = 1; i < arguments.length; i++) {
-          copy(target, arguments[i]);
-        }
-        return target;
-      }
-      function copy(target, source) {
-        for (var key in source) {
-          if (has.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-    }({}.hasOwnProperty));
-  }());
+// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
+  obj.__proto__ = proto;
+  return obj; 
 }
 

@@ -1,3 +1,31 @@
 #include '../bundle.es5.js'
 
-$.writeln( undefined === true);
+var loaded = false;
+
+if ( Array.prototype.every &&
+     Array.prototype.filter &&
+     Array.prototype.forEach &&
+     Array.prototype.indexOf &&
+     Array.isArray &&
+     Array.prototype.lastIndexOf &&
+     Array.prototype.map &&
+     Array.prototype.reduce &&
+     Array.prototype.some &&
+     Function.prototype.bind &&
+     Object.create &&
+     Object.defineProperties &&
+     Object.defineProperty &&
+     Object.freeze &&
+     Object.getOwnPropertyDescriptor &&
+     Object.getOwnPropertyNames &&
+     Object.getPrototypeOf &&
+     Object.isExtensible &&
+     Object.isFrozen &&
+     Object.isSealed &&
+     Object.keys &&
+     Object.preventExtensions &&
+     Object.seal ){
+    loaded = true;
+}
+
+$.writeln( loaded === true );
