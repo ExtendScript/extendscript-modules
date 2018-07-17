@@ -4,15 +4,14 @@
 
 A collection of ES5 polyfills for Exendscript.
 
-- Create bundle.es5.js by running `npm run bundle`
-
-## Update Bundle
-
-    npm run bundle
 
 ## Install
 
     npm install @extendscript/aes.patch.bundle.es5
+
+## Update Bundle
+
+    npm run bundle
 
 ## Test
 

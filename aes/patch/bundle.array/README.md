@@ -4,15 +4,14 @@
 
 A collection of `Array` polyfills for Exendscript.
 
-- Create bundle.array.js by running `npm run bundle`
-
-## Update Bundle
-
-    npm run bundle
 
 ## Install
 
     npm install @extendscript/aes.patch.bundle.array
+
+## Update Bundle
+
+    npm run bundle
 
 ## Test
 
