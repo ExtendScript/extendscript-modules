@@ -1,9 +1,9 @@
 # API Registry
-To not pollute the global scope, and make it easy for modules to talk to eachother, it is recommended to attach methods to a shared global variable. We keep a registry of properties that might be loaded into the shared API called `myApp`.
+To not pollute the global scope, and make it easy for modules to talk to eachother, it is recommended to attach methods to a shared global variable. We keep a registry of properties that might be loaded into the shared API called `Sky`.
 
-    $.myApp
+    $.Sky
 
-The `myApp` object is managed by the user. All modules will be loaded under the `myApp.module` and `myApp.util` property.
+The `Sky` object is managed by the user. All modules will be loaded under the `$.sky.module` and `$.Sky.util` property.
 
   * Properties in _italic_ do not exist but are reserved.
   * Properties in __bold__ are open to sub methods (preferred)
@@ -61,6 +61,8 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
       * [patch.string.trim](../aes/patch/string.trim)
   * __module__
   * __util__
+      * [__util.schema__](../aes/util/schema)
+        * [util.schema.document](../aes/util/schema/document)
 
 ## Script UI (sui)
   * __module__
@@ -68,22 +70,31 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
 
 ## InDesign (ind)
   * __module__
-    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
+    * [module.docbuilder](https://github.com/CoverBuilder/General-Document-Builder)
+    * [module.slugs](https://github.com/CoverBuilder/Slug-Tools)
   * __util__
-    * [__util.schema__](../aes/schema)
-      * [util.schema.document](../ind/schema/document)
+    * [__util.layer__](../ind/util/layer)
+      * [util.layer.locked](../ind/util/layer.locked)
+      * [util.layer.getSelect](../ind/util/layer.getSelect)
     * [util.menuloader](../ind/util/menuloader)
+    * [__util.page__](../ind/util/page)
+      * [util.page.getInfo](../ind/util/page/getInfo)
+    * [__util.pStyle__](../ind/util/pStyle)
+      * [util.pStyle.create](../ind/util/pStyle/create)
+      * [util.pStyle.get](../ind/util/pStyle/get)
     * [__util.ruler__](../ind/util/ruler)
       * [util.ruler.set](../ind/util/ruler/set)
+    * [__util.textFrame__](../ind/util/create)
+      * [util.textFrame.create](../ind/util/textFrame/create)
 
 ## Photoshop (ps)
   * __module__
-    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
+    * [_module.docbuilder_](https://github.com/GitBruno/General-Document-Builder)
   * __util__
 
 ## Illustrator (ai)
   * __module__
-    * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
+    * [_module.docbuilder_](https://github.com/GitBruno/General-Document-Builder)
   * __util__
 
 ## After Effects (afx)
