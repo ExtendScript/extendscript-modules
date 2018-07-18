@@ -67,12 +67,14 @@ The `myApp` object is managed by the user. All modules will be loaded under the 
   * __util__
 
 ## InDesign (ind)
-  * [__schema__](../aes/schema)
-    * [schema.document](../ind/schema/document)
   * __module__
     * [module.docbuilder](https://github.com/GitBruno/General-Document-Builder)
   * __util__
+    * [__util.schema__](../aes/schema)
+      * [util.schema.document](../ind/schema/document)
     * [util.menuloader](../ind/util/menuloader)
+    * [__util.ruler__](../ind/util/ruler)
+      * [util.ruler.set](../ind/util/ruler/set)
 
 ## Photoshop (ps)
   * __module__
