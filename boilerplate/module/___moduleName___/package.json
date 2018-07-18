@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/<path>.<name>",
+  "name": "@extendscript/<path>.___moduleName___",
   "version": "0.1.0",
-  "description": "<description>",
-  "main": "<name>.js",
+  "description": "___description___",
+  "main": "___moduleName___.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "test": "node ./test/test.js"

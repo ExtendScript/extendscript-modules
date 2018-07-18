@@ -1,12 +1,12 @@
-# <name>
+# ___moduleName___
 
-> <type>
+> ___type___
 
-<description>
+___description___
 
 # Install
 
-    npm install @extendscript/<name>
+    npm install @extendscript/___moduleName___
 
 ## Test
 
