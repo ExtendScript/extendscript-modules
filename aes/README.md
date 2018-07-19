@@ -3,6 +3,7 @@
 Here you can find all the modules that target Adobe ExtendScript.
 
   * [`patch`](./patch/README.md)
+  * [`util`](./util/README.md)
 
 ## About ExtendScript
 Adobe ExtendScript implements the [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (JavaScript) language according to the ECMA-262 (ECMAScript 3) and ECMA-357 (XML) specification.

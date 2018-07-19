@@ -1,6 +1,6 @@
-# ind.schema
+# aes.schema
 
-Here you can find schema's that relate to Adobe InDesign.
+Some ExtendScript related JSON schemas.
 
   - [ ] [`document`](./document/README.md)
 

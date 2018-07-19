@@ -2,7 +2,9 @@
 
 Here you can find all the modules that target InDesign.
 
-  * [`schema`](./schema/README.md)
+  * [`modules`](./modules/README.md)
+
+## About InDesign
 
 ## More info
 
