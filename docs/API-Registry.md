@@ -3,7 +3,7 @@ To not pollute the global scope, and make it easy for modules to talk to eachoth
 
     $.Sky
 
-The `Sky` object is managed by the user. All modules will be loaded under the `$.sky.module` and `$.Sky.util` property.
+The `Sky` object is created by the [`Main Module`](../main). All sub-modules will be loaded under `Sky.module` and `Sky.util`. The main module should therefore be a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of any ExtendScript Module.
 
   * Properties in _italic_ do not exist but are reserved.
   * Properties in __bold__ are open to sub methods (preferred)
