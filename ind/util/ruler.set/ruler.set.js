@@ -1,10 +1,6 @@
 
 function setRuler(doc, myNewUnits){
 
-    // This function sets the rulers to the disired measure units
-    // and returns the original setting so that you can send these 
-    // back to this function to reset the rulers to original state
-
     var myOldUnits = { xruler    : doc.viewPreferences.horizontalMeasurementUnits, 
                        yruler    : doc.viewPreferences.verticalMeasurementUnits, 
                        origin    : doc.viewPreferences.rulerOrigin, 

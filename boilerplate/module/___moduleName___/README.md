@@ -14,10 +14,6 @@ ___description___
 
 We keep [a log of test results](./test/results_log.md)
 
-## Contributers
-
-  * [ExtendScript.org](https://github.com/ExtendScript)
-
 
 ## More info
 

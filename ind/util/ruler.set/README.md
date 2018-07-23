@@ -1,10 +1,17 @@
-# AES.UTIL scope
+# ruler.set
 
-This is a collection of utilities for [ExtendScript](https://en.wikipedia.org/wiki/ExtendScript).
+> InDesign Utility
 
-  * __`ruler`__
-    * [ruler.set](./ruler.set)
+The `ruler.set()` method sets both rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.
 
-## More info
+## Install
 
-Read [the docs](../docs/README.md)
+    npm install @extendscript/aes.ind.util.ruler.set
+
+## Test
+
+You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):
+
+    npm run test target-1 target-2
+
+We keep [a log of test results](./test/results_log.md)
