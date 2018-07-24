@@ -1,0 +1,27 @@
+{
+  "name": "@extendscript/modules.init",
+  "version": "1.0.0",
+  "description": "This module creates the shared `Sky` object. A peer-dependency for all ExtendScript Modules.",
+  "main": "modules.init.js",
+  "scripts": {
+    "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "extendscript-modules"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  }
+}

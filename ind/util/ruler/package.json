@@ -1,10 +1,11 @@
 {
-  "name": "@extendscript/extendscript-modules.setup",
+  "name": "@extendscript/ind.util.ruler",
   "version": "0.1.0",
-  "description": "This module creates the shared `Sky` object. A peer-dependency for all ExtendScript Modules.",
-  "main": "extendscript-modules.setup.js",
+  "description": "The ruler.set() method sets both rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.",
+  "main": "ruler.set.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },
   "repository": {
@@ -14,7 +15,8 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
-    "setup"
+    "indesign",
+    "ruler"
   ],
   "author": "extendscript.org",
   "license": "MIT",

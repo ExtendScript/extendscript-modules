@@ -1,4 +1,4 @@
-#include "../extendscript-modules.setup.js"
+#include "../modules.init.js"
 
 var loaded = false;
 var unloaded = false;
@@ -9,7 +9,7 @@ if (typeof Sky.unload === "function") {
 };
 
 if( typeof Sky === null ) {
-	unloaded = true;
+    unloaded = true;
 };
 
 // Sky should be loaded and unloaded

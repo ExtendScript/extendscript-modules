@@ -1,6 +1,6 @@
 /*
 
-    ExtendScript Modules
+    ExtendScript Modules Init
     https://github.com/ExtendScript/extendscript-modules
 
 */
@@ -8,7 +8,7 @@
 $.global.hasOwnProperty('Sky')||(function(HOST, SELF) {  
     // The HOST/SELF setup was suggested by Marc Autret
     // https://forums.adobe.com/thread/1111415
-    var VERSION = 0.1;
+    var VERSION = 1.0;
 
     if(HOST[SELF] && HOST[SELF].version > VERSION) return HOST[SELF];  
     HOST[SELF] = SELF;
@@ -47,7 +47,7 @@ $.global.hasOwnProperty('Sky')||(function(HOST, SELF) {
     };
 
     INNER.set = function ( hanger, path, value, callback ) {
-        var pathArr = path && path.split(delim) || [];
+        var pathArr = path && path.split(".") || [];
         var depth = pathArr.length - 1;
         var lastKey = pathArr[depth];
         var upsert = true;
