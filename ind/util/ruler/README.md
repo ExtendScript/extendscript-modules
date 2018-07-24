@@ -6,7 +6,7 @@ The `ruler.set()` method sets both rulers to the desired units. It returns the o
 
 ## Install
 
-    npm install @extendscript/aes.ind.util.ruler
+    npm install @extendscript/ind.util.ruler
 
 ## Test
 
