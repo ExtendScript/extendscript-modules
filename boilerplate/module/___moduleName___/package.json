@@ -24,5 +24,8 @@
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
     "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+  },
+  "peerDependencies": {
+    "@extendscript/modules.init": "1.x"
   }
 }
