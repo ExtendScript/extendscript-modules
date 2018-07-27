@@ -1,34 +1,33 @@
 (function () {
-
     var VERSION = 0.1;
     var MODULE_PATH = "ruler";
 
-    var module = Sky.getUtil(MODULE_PATH);
-    if( module && module.version >= VERSION) {
+    var ruler = Sky.getUtil(MODULE_PATH);
+    if( ruler && ruler.version >= VERSION) {
       return;
     };
 
     //--------------------------
-    // start module
+    // start ruler
 
-    module = {
+    ruler = {
       "version" : VERSION
     };
 
-    module.set = function (doc, myNewUnits) {
-        var myOldUnits = { xruler    : doc.viewPreferences.horizontalMeasurementUnits, 
-                           yruler    : doc.viewPreferences.verticalMeasurementUnits, 
-                           origin    : doc.viewPreferences.rulerOrigin, 
-                           zeroPoint : doc.zeroPoint };
+    ruler.set = function (Doc, NewUnits) {
+        var OldUnits = { xruler    : Doc.viewPreferences.horizontalMeasurementUnits, 
+                         yruler    : Doc.viewPreferences.verticalMeasurementUnits, 
+                         origin    : Doc.viewPreferences.rulerOrigin, 
+                         zeroPoint : Doc.zeroPoint };
 
-        if (myNewUnits.hasOwnProperty('xruler') && myNewUnits.hasOwnProperty('yruler')){
-            doc.viewPreferences.horizontalMeasurementUnits = myNewUnits.xruler;
-            doc.viewPreferences.verticalMeasurementUnits   = myNewUnits.yruler;
-        } else if( myNewUnits.hasOwnProperty('units')) {
+        if (NewUnits.hasOwnProperty('xruler') && NewUnits.hasOwnProperty('yruler')){
+            Doc.viewPreferences.horizontalMeasurementUnits = NewUnits.xruler;
+            Doc.viewPreferences.verticalMeasurementUnits   = NewUnits.yruler;
+        } else if( NewUnits.hasOwnProperty('units')) {
             // Set both rulers to the same unit
-            // We will cast everything to string so it can parse a wide variaty of input including the MeasurementUnits object
-            var stringUnits = String(myNewUnits.units).toLowerCase();
-            with(doc.viewPreferences){
+            // We will cast everything to string so it can parse a wide variety of input including the MeasurementUnits object
+            var stringUnits = String(NewUnits.units).toLowerCase();
+            with(Doc.viewPreferences){
                 switch(stringUnits) {
                     case "0":
                     case "millimeters":
@@ -143,29 +142,29 @@
                         verticalMeasurementUnits   = MeasurementUnits.U;
                         break;
                     default:
-                        alert("Function setRuler:\nCould not parse MeasurementUnits: " + typeof(myNewUnits) + " " + myNewUnits );
+                        alert("ExtendScript Modules ind.util.ruler.set:\nCould not parse MeasurementUnits: " + typeof(NewUnits) + " " + NewUnits );
                         break;
                 }
             }
         }
 
-        if(myNewUnits.hasOwnProperty('origin')){
-            doc.viewPreferences.rulerOrigin = myNewUnits.origin;
+        if(NewUnits.hasOwnProperty('origin')){
+            Doc.viewPreferences.rulerOrigin = NewUnits.origin;
         } else { // Use page origin if not defined
-            doc.viewPreferences.rulerOrigin = RulerOrigin.pageOrigin;
+            Doc.viewPreferences.rulerOrigin = RulerOrigin.pageOrigin;
         };
 
-        if(myNewUnits.hasOwnProperty('zeroPoint')) {
-            doc.zeroPoint = myNewUnits.zeroPoint;
+        if(NewUnits.hasOwnProperty('zeroPoint')) {
+            Doc.zeroPoint = NewUnits.zeroPoint;
         } else { // Use zero point if not defined
-            doc.zeroPoint = [0,0];
+            Doc.zeroPoint = [0,0];
         };
 
-        return myOldUnits;
+        return OldUnits;
     };
     //--------------------------
-    // End module
+    // End ruler
 
-    Sky.setUtil(MODULE_PATH, module);
+    Sky.setUtil(MODULE_PATH, ruler);
 
 })();
