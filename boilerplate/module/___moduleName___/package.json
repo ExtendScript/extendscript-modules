@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+    "@extendscript/tap-es": ">=1.0.4"
   },
   "peerDependencies": {
-    "@extendscript/modules.init": "2.x"
+    "@extendscript/modules.init": ">=2.0.0"
   }
 }
