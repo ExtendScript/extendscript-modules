@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/ind.util.ruler",
+  "name": "@extendscript/ind.util.rulers",
   "version": "1.0.0",
-  "description": "The ruler utility adds the `ruler.set()` method. This method sets both rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.",
-  "main": "ruler.js",
+  "description": "An InDesign ruler utility that adds the `rulers.set()` method. This method sets both rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.",
+  "main": "rulers.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -17,7 +17,7 @@
     "extendscript-modules",
     "indesign",
     "utility",
-    "ruler"
+    "rulers"
   ],
   "author": "extendscript.org",
   "license": "MIT",

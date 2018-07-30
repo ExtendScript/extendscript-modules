@@ -1,9 +1,9 @@
 #include "../node_modules/@extendscript/modules.init/modules.init.js"
-#include "../ruler.js"
+#include "../rulers.js"
 
 var Doc = app.documents.add();
 
-var originalUnits = Sky.getUtil("ruler").set( Doc, {units: "ciceros"} );
+var originalUnits = Sky.getUtil("rulers").set( Doc, {units: "ciceros"} );
 
 var newUnits = Doc.viewPreferences.horizontalMeasurementUnits
 

@@ -88,7 +88,7 @@ The `Sky` object is created by the [`Main Module`](../main). All sub-modules wil
     * [__util.pStyle__](../ind/util/pStyle)
       * [util.pStyle.create](../ind/util/pStyle/create)
       * [util.pStyle.get](../ind/util/pStyle/get)
-    * [__util.ruler__](../ind/util/ruler)
+    * [__util.rulers__](../ind/util/rulers)
     * [__util.textFrame__](../ind/util/create)
       * [util.textFrame.create](../ind/util/textFrame/create)
 

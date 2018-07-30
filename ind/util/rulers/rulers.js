@@ -1,20 +1,20 @@
 (function () {
-    var VERSION = 0.1;
-    var MODULE_PATH = "ruler";
+    var VERSION = 1.0;
+    var MODULE_PATH = "rulers";
 
-    var ruler = Sky.getUtil(MODULE_PATH);
-    if( ruler && ruler.version >= VERSION) {
+    var rulers = Sky.getUtil(MODULE_PATH);
+    if( rulers && rulers.version >= VERSION) {
       return;
     };
 
     //--------------------------
-    // start ruler
+    // start rulers
 
-    ruler = {
+    rulers = {
       "version" : VERSION
     };
 
-    ruler.set = function (Doc, NewUnits) {
+    rulers.set = function (Doc, NewUnits) {
         var OldUnits = { xruler    : Doc.viewPreferences.horizontalMeasurementUnits, 
                          yruler    : Doc.viewPreferences.verticalMeasurementUnits, 
                          origin    : Doc.viewPreferences.rulerOrigin, 
@@ -142,7 +142,7 @@
                         verticalMeasurementUnits   = MeasurementUnits.U;
                         break;
                     default:
-                        alert("ExtendScript Modules ind.util.ruler.set:\nCould not parse MeasurementUnits: " + typeof(NewUnits) + " " + NewUnits );
+                        alert("ExtendScript Modules ind.util.rulers.set:\nCould not parse MeasurementUnits: " + typeof(NewUnits) + " " + NewUnits );
                         break;
                 }
             }
@@ -163,8 +163,8 @@
         return OldUnits;
     };
     //--------------------------
-    // End ruler
+    // End rulers
 
-    Sky.setUtil(MODULE_PATH, ruler);
+    Sky.setUtil(MODULE_PATH, rulers);
 
 })();

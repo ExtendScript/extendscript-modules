@@ -10,7 +10,7 @@ A couple of bundles of modules often used together.
 ## Measurements
 Modules that are related to measurements.
 
-  - [ ] [Ruler](ruler)
+  - [x] [Rulers](rulers)
 
 ## More info
 
