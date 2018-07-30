@@ -1,4 +1,4 @@
-#include "../modules.init.js"
+#include "../init.js"
 
 var loaded = false;
 var unloaded = false;

@@ -1,4 +1,4 @@
-#include "../node_modules/@extendscript/modules.init/modules.init.js"
+#include "../node_modules/@extendscript/modules.init/init.js"
 #include "../rulers.js"
 
 var loaded = (typeof Sky.getUtil("rulers").set === "function")

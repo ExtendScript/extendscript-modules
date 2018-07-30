@@ -4,7 +4,7 @@ As tests may be run by different people on different platforms the results are l
 
 ## rulers.js
 
-> Version 1.0.0
+> Version 3.0.0
 
 - ✔ Darwin indesign-12 set_test.jsx: rulers [pass: 1, fail: 0]
 - ✔ Darwin indesign-12 load_test.jsx: rulers [pass: 1, fail: 0]

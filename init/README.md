@@ -5,7 +5,7 @@ This module creates the shared `Sky` object. A peer-dependency for all [ExtendSc
 
 # Install
 
-    npm install @extendscript/modules.init
+    npm install @extendscript/modules.init --no-save
 
 
 ## Test
