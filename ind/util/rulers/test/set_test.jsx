@@ -5,7 +5,7 @@ var Doc = app.documents.add();
 
 var originalUnits = Sky.getUtil("rulers").set( Doc, {units: "ciceros"} );
 
-var newUnits = Doc.viewPreferences.horizontalMeasurementUnits
+var newUnits = Doc.viewPreferences.horizontalMeasurementUnits;
 
 Doc.close(SaveOptions.NO);
 
