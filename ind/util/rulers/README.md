@@ -14,7 +14,7 @@ Load the module
 
     var Rulers = Sky.getUtil("rulers");
 
-### set()
+### set
 
     Rulers.set( app.activeDocument, "INCHES");
 
@@ -29,7 +29,7 @@ The `set()` function returns the state of the rulers BEFORE the update, making i
     // Revert to original ruler units
     Rulers.set( Doc, PrevState );
 
-### get()
+### get
 
 With the `get` function you can get the current ruler state:
 
@@ -42,16 +42,16 @@ Returns an object with the following keys:
   * origin
   * zeroPoint
 
-### indUnitsFrom()
+### indUnitsFrom
 
 You can get the indesign `MeasurementUnits` value from a string or number:
 
     // MeasurementUnits.MILLIMETERS
     Rulers.indUnitsFrom( mm ); // returns 2054188905
 
-### niceNameFor()
+### niceNameFor
 
-And as those unit values are generallt not nice to use in user interfaces we add a niceNameFor function that can return the nice name in long and short form:
+As unit values are generally not nicely formatted for user interfaces we added the `niceNameFor()` function that return the user friendly name in long or short form:
 
     // Returns "points"
     Rulers.niceNameFor(MeasurementUnits.POINTS)
@@ -61,23 +61,23 @@ And as those unit values are generallt not nice to use in user interfaces we add
     Rulers.niceNameFor(MeasurementUnits.POINTS, true)
     Rulers.niceNameFor("Points", true)
 
-### convert()
+### convert
 
-The module can also convert unit values.
+The Rulers module can also convert unit values:
 
     var value = Rulers.mm2inch( 10 ) // returns 0.393701
 
 Here is a list of some that are supported right now: `q2mm`, `q2inch`, `inch2q`, `ha2mm`, `apt2mm`, `mm2pt`, `mil2inch`, `inch2mil`, `mm2inch`, `inch2mm`, `inch2u`, `u2inch`, `inch2cm`, `cm2inch`, `inch2pt`, `inch2ag`, `ag2inch`, `pt2inch`, `c2inch`, `p2inch`, `inch2p`, `p2pt`, `pt2p`, `inch2c`, `pt2apt`, `pt2mm`, `inch2px`, `mm2px`, `cm2px`, `pt2px`, `apt2px`, `ag2px`, `c2px`, `mil2px`, `p2px`, `ha2px`, `q2px`, `u2px`. 
 
-Sometimes it is easier to use the convert function.
+Sometimes it might be easier to use the convert function.
 
-    // Convert measure to points
+    // Convert any measure to points
     Ruler.measure2pt = function(10, "mm")
-    
+
     // Or use the general convert funtion
     Ruler.convert( measure, currentUnit, toUnit, roundDec)
 
-### numToGridStep()
+### numToGridStep
 
 You can also round values to closest grid value for grid bases work.
 
