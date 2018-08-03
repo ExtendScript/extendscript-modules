@@ -446,6 +446,8 @@
 
         // This function returns InDesign MeasurementUnits or null if not valid
         Rulers.indUnitsFrom = function( measureUnit, failCallBack ) {
+            
+            // TODO: Add international string values (translations)
 
             // If no callback is defined return null
             if( typeof failCallBack !== 'function') {
@@ -464,7 +466,7 @@
                 case "millimeter":
                 case "zmms":
                 case "2053991795":
-                    return 2054188905; //MeasurementUnits.MILLIMETERS;
+                    return 2053991795; //MeasurementUnits.MILLIMETERS;
                     break;
                 case "1":
                 case "inchesdecimal":
