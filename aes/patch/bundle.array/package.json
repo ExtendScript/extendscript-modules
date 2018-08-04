@@ -31,7 +31,7 @@
   "devDependencies": {
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
-    "tap-es": "git+https://github.com/ExtendScript/tap-es.git",
+    "@extendscript/tap-es": ">=1.0.5",
     "@extendscript/aes.patch.array.every": "^1.0.0",
     "@extendscript/aes.patch.array.filter": "^1.0.0",
     "@extendscript/aes.patch.array.find": "^1.0.0",

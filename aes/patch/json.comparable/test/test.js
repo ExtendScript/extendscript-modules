@@ -1,5 +1,5 @@
 var argv = require('minimist')(process.argv.slice(2)); // Remove nodePath, scriptpath
-var tapes = require("tap-es"), targets = argv._, d = require('path').resolve(__dirname);
+var tapes = require("@extendscript/tap-es"), targets = argv._, d = require('path').resolve(__dirname);
 
 tapes.reportDuration(false);
 tapes.add('json.comparable', d+'/*.jsx', targets, true);

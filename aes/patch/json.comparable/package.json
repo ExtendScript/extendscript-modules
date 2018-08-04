@@ -28,7 +28,7 @@
   "devDependencies": {
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
-    "tap-es": "git+https://github.com/ExtendScript/tap-es.git"
+    "@extendscript/tap-es": ">=1.0.5"
   },
   "peerDependencies": {
     "@extendscript/aes.patch.json": "^1.0.0",
