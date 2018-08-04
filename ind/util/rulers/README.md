@@ -71,11 +71,8 @@ Here is a list of some that are supported right now: `q2mm`, `q2inch`, `inch2q`,
 
 Sometimes it might be easier to use the convert function.
 
-    // Convert any measure to points
-    Ruler.measure2pt = function(10, "mm")
+    Ruler.convert( measure, fromUnit, toUnit )
 
-    // Or use the general convert funtion
-    Ruler.convert( measure, currentUnit, toUnit, roundDec)
 
 ### numToGridStep
 
