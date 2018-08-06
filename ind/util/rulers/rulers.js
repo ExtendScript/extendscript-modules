@@ -55,75 +55,15 @@
         // MEASUREMENT CONVERSION
         //-----------------------
 
-        Rulers.q2mm = function( num ) {
-            // Each unit has a value of 0.25mm
-            return num * 0.25;
-        };
+        // Let's use points as an internal conversion step
+        // this is the same as InDesign custom
 
-        Rulers.q2inch = function( num ) {
-            // Each unit has a value of 0.25mm
-            return (num * 0.25) / 25.4;
-        };
-
-        Rulers.inch2q = function( num ) {
-            // Each unit has a value of 0.25mm
-            return (num * 25.4)*0.25;
-        };
-
-        Rulers.ha2mm = function( num ) {
-            // Each unit has a value of 0.25mm
-            return num * 0.25;
-        };
-
-        Rulers.apt2mm = function( num ) {
-            // One American point is 0.35146 millimeters
-            return num * 0.35146;
-        };
+        //  T O / F R O M   P O I N T S
+        //  - - - - - - - - - - - - - -
 
         Rulers.mm2pt = function( num ) {
-            // 1 millimetre = 2.83464567 PostScript points
+            // 1 millimeter = 2.83464567 PostScript points
             return num * 2.83464567;
-        };
-
-        Rulers.mil2inch = function( num ) {
-            // Thousands of an inch
-            // 1 inch = 1000 mils, thou
-            return num / 1000;
-        };
-
-        Rulers.inch2mil = function( num ) {
-            // 1 inch = 1000 mil
-            return num * 1000;
-        };
-
-        Rulers.mm2inch = function( num ) {
-            //1 inch = 25.4 millimetres
-            return num / 25.4;
-        };
-
-        Rulers.inch2mm = function( num ) {
-            //1 inch = 25.4 millimetres
-            return num * 25.4;
-        };
-
-        Rulers.inch2u = function( num ) {
-            //1 inch = 1.75 u
-            return num * 1.75;
-        };
-
-        Rulers.u2inch = function( num ) {
-            //1 inch = 1.75 u
-            return num / 1.75;
-        };
-
-        Rulers.inch2cm = function( num ) {
-            //1 inch = 2.54 millimetres
-            return num * 2.54;
-        };
-
-        Rulers.cm2inch = function( num ) {
-            //1 inch = 2.54 millimetres
-            return num / 2.54;
         };
 
         Rulers.inch2pt = function( num ) {
@@ -131,33 +71,46 @@
             return num * 72;
         };
 
-        Rulers.inch2ag = function( num ) {
-            //1 inch = 14 agate
-            return num * 14;
+        Rulers.ap2pt = function( num ) {
+            // 1 American Point = 0.99626401 points
+            return num * 0.99626401;
         };
 
-        Rulers.ag2inch = function( num ) {
-            return num / 14;
+        Rulers.ag2pt = function( num ) {
+            // 1 Agate = 5.142857143 points
+            return num * 5.142857143;
         };
 
-        Rulers.pt2inch = function( num ) {
-            // 1 inch = 72 postscript points
-            return num / 72;
+        Rulers.bai2pt = function( num ) {
+            // Bai means `100` and I believe this is 1 millimeter
+            return Rulers.mm2pt( num );
         };
 
-        Rulers.c2inch = function( num ) {
-            // 1 inch = 5.62985 cicero
-            return num / 5.62985;
+        Rulers.cm2pt = function( num ) {
+            // 1 cm = 28.346456693 points
+            return num * 28.346456693;
         };
 
-        Rulers.p2inch = function( num ) {
-            // 1 inch = 6.00005 pica
-            return num / 6.00005;
+        Rulers.c2pt = function( num ) {
+            // 1 ciceros = 12.7889764 points
+            return num * 12.7889764;
         };
 
-        Rulers.inch2p = function( num ) {
-            // 1 inch = 6.00005 pica
-            return num * 6.00005;
+        Rulers.cstm2pt = function( num ) {
+            // Custom values are entered in points
+            return num;
+        };
+
+        Rulers.h2pt = function( num ) {
+            // 1 Q = 1 Ha = 0.25 millimeter
+            return Rulers.mm2pt( num * 0.25 );
+        };
+
+        Rulers.mil2pt = function( num ) {
+            // Thousands of an inch
+            // 1 inch = 1000 mils, thou
+            // 1 mil = 0.072 points
+            return num * 0.072;
         };
 
         Rulers.p2pt = function( num ) {
@@ -165,247 +118,98 @@
             return num * 12;
         };
 
+        Rulers.px2pt = function( num, ppi ) {
+            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
+            return Rulers.inch2pt( num / ppi );
+        };
+
+        Rulers.q2pt = function( num ) {
+            // 1 Q = 1 Ha = 0.25 millimeter
+            return Rulers.mm2pt( num * 0.25 );
+        };
+
+        Rulers.u2pt = function( num ) {
+            // I assume that U is a micrometer
+            // 1 micrometer = 0.00283465 points
+            return num * 0.00283465;
+        };
+
+        Rulers.pt2mm = function( num ) {
+            // 1 millimeter = 2.83464567 PostScript points
+            return num / 2.83464567;
+        };
+
+        Rulers.pt2inch = function( num ) {
+            //1 inch = 72 postscript points
+            return num / 72;
+        };
+
+        Rulers.pt2ap = function( num ) {
+            // 1 American Point = 0.99626401 points
+            return num / 0.99626401;
+        };
+
+        Rulers.pt2ag = function( num ) {
+            // 1 Agate = 5.142857143 points
+            return num / 5.142857143;
+        };
+
+        Rulers.pt2bai = function( num ) {
+            // Bai means `100` I believe this is 1 millimeter
+            return Rulers.pt2mm( num );
+        };
+
+        Rulers.pt2cm = function( num ) {
+            // 1 cm = 28.346456693 points
+            return num / 28.346456693;
+        };
+
+        Rulers.pt2c = function( num ) {
+            // 1 ciceros = 12.7889764 points
+            return num / 12.7889764;
+        };
+
+        Rulers.pt2cstm = function( num ) {
+            // Custom values are entered in points
+            return num;
+        };
+
+        Rulers.pt2h = function( num ) {
+            // 1 Q = 1 Ha = 0.25 millimeter
+            return Rulers.pt2mm( num / 0.25 );
+        };
+
+        Rulers.pt2mil = function( num ) {
+            // Thousands of an inch
+            // 1 inch = 1000 mils, thou
+            // 1 mil = 0.072 points
+            return num / 0.072;
+        };
+
         Rulers.pt2p = function( num ) {
             // 1 pica = 12 points
             return num / 12;
         };
 
-        Rulers.inch2c = function( num ) {
-            // 1 inch = 5.62985 cicero
-            return num * 5.62985;
-        };
-
-        Rulers.pt2apt = function( num ) {
-            // 1 inch = 72.27 American points
-            return num / 72.27;
-        };
-
-        Rulers.pt2mm = function( num ) {
-            // 1 millimetre = 2.83464567 PostScript points
-            return num / 2.83464567;
-        };
-
-        Rulers.inch2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return num * ppi;
-        };
-
-        Rulers.mm2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            //convert mm to inch, then gets multiplied by PPI to get pixels.
-            return (num / 25.4) * ppi;
-        };
-
-        Rulers.cm2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            //convert cm to inch, then gets multiplied by PPI to get pixels.
-            return (num / 2.54) * ppi;
-        };
-
         Rulers.pt2px = function( num, ppi ) {
             var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 72) * ppi;
+            var rounded = Math.round( ( num / 72 ) * ppi );
+            return ( rounded > 0 ) ? rounded : 1;
         };
 
-        Rulers.apt2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 72.27) * ppi;
+        Rulers.pt2q = function( num ) {
+            // 1 Q = 1 Ha = 0.25 millimeter
+            return Rulers.pt2mm( num / 0.25 );
         };
 
-        Rulers.ag2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 14) * ppi;
+        Rulers.pt2u = function( num ) {
+            // I assume that U is a micrometer
+            // 1 micrometer = 0.00283465 points
+            return num / 0.00283465;
         };
 
-        Rulers.c2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 5.62985) * ppi;
-        };
-
-        Rulers.mil2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 1000) * ppi;
-        };
-
-        Rulers.p2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 6.00005) * ppi;
-        };
-
-        Rulers.ha2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return ((num / 25.4)*0.25) * ppi;
-        };
-
-        Rulers.q2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return ((num / 25.4)*0.25) * ppi;
-        };
-
-        Rulers.u2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            return (num / 1.75) * ppi;
-        };
-        
-        Rulers.bai2px = function( num, ppi ) {
-            var ppi = (typeof ppi === 'number') ? ppi : Rulers._ppi;
-            throw new Error("Bai is not supported. If you happen to know the size of Bai, please submit a ticket on GitHub: https://github.com/ExtendScript/extendscript-modules/issues");
-            return null;
-        };
-        
-        Rulers.measure2mm = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
-        };
-
-        Rulers.measure2inch = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
-        };
+        //  M E A S U R E  2  P O I N T S
+        //  - - - - - - - - - - - - - - -
 
         Rulers.measure2pt = function( num, mUnit, roundDec, failCallBack ){
             // Shift args, if no callback is defined return null
@@ -424,913 +228,168 @@
             var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
 
             switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
+                case 2053991795: // MeasurementUnits.MILLIMETERS
+                    measure = Rulers.mm2pt( num );
                     break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
+                case 2053729892: // MeasurementUnits.INCHES_DECIMAL
+                    measure = Rulers.inch2pt( num );
                     break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
+                case 2053729891: // MeasurementUnits.INCHES
+                    measure = Rulers.inch2pt( num );
                     break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
+                case 2054188905: // MeasurementUnits.POINTS
+                    measure = num;
                     break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
+                case 1514238068: // MeasurementUnits.AMERICAN_POINTS
+                    measure = Rulers.ap2pt( num );
                     break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
+                case 2051106676: // MeasurementUnits.AGATES
+                    measure = Rulers.ag2pt( num );
                     break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
+                case 2051170665: // MeasurementUnits.BAI
+                    measure = Rulers.bai2pt( num );
                     break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
+                case 2053336435: // MeasurementUnits.CENTIMETERS
+                    measure = Rulers.cm2pt( num );
                     break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
+                case 2053335395: // MeasurementUnits.CICEROS
+                    measure = Rulers.c2pt( num );
                     break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
+                case 1131639917: // MeasurementUnits.CUSTOM
+                    measure = Rulers.cstm2pt( num );
                     break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
+                case 1516790048: // MeasurementUnits.HA
+                    measure = Rulers.h2pt( num );
                     break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
+                case 2051893612: // MeasurementUnits.MILS
+                    measure = Rulers.mil2pt( num );
                     break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
+                case 2054187363: // MeasurementUnits.PICAS
+                    measure = Rulers.p2pt( num );
                     break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
+                case 2054187384: // MeasurementUnits.PIXELS
+                    measure = Rulers.px2pt( num );
                     break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
+                case 2054255973: // MeasurementUnits.Q
+                    measure = Rulers.q2pt( num );
                     break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
+                case 2051691808: // MeasurementUnits.U
+                    measure = Rulers.u2pt( num );
                     break;
                 default:
                     return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
                     measure = null;
                     break;
             };
+
+            if( typeof(measure) !== 'number' ) {
+                return measure;
+            };
+
             if(roundDec > 0) {
               return Rulers.roundNum(measure, roundDec);
             } else {
               return measure; 
             };
+        };
+
+        // C O N V E R T  V I A  P O I N T S
+        // - - - - - - - - - - - - - - - - -
+
+        Rulers._resolveConvert = function ( toUnit, convertFromPoints, num, fromUnit, roundDec, failCallBack ) {
+            // Shift arguments, if no callback is defined return null
+            if( typeof failCallBack !== 'function') {
+                if( typeof roundDec === 'function' ) {
+                    var failCallBack = roundDec, roundDec = undefined;
+                } else {
+                    var failCallBack = function( err ) {
+                        return null;
+                    };
+                };
+            };
+
+            var fromIndUnits = Rulers.indUnitsFrom( fromUnit );
+            var toIndUnits   = Rulers.indUnitsFrom( toUnit   );
+            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
+
+            // If already in the same units
+            if( fromIndUnits === toIndUnits ) {
+                if(roundDec > 0) {
+                    return Rulers.roundNum(num, roundDec);
+                } else {
+                    return num; 
+                };
+            };
+
+            var pointMeasure = Rulers.measure2pt( num, fromIndUnits);
+            if( typeof(pointMeasure) !== 'number' ) {
+                return pointMeasure;
+            };
+
+            var measure = convertFromPoints( pointMeasure );
+
+            if(roundDec > 0) {
+              return Rulers.roundNum(measure, roundDec);
+            } else {
+              return measure; 
+            };
+        };
+
+        Rulers.measure2mm = function( num, mUnit, roundDec, failCallBack ){
+            return Rulers._resolveConvert("mm", Rulers.pt2mm, num, mUnit, roundDec, failCallBack );
+        };
+
+        Rulers.measure2inch = function( num, mUnit, roundDec, failCallBack ){
+            return Rulers._resolveConvert("inch", Rulers.pt2inch, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2ap = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("ap", Rulers.pt2ap, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2ag = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("ag", Rulers.pt2ag, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2bai = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("bai", Rulers.pt2bai, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2cm = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("cm", Rulers.pt2cm, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2c = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("c", Rulers.pt2c, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2h = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("h", Rulers.pt2h, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2mil = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-           
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("mil", Rulers.pt2mil, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2p = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("p", Rulers.pt2p, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2px = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = Rulers.mm2px( num );
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = Rulers.inch2px( num );
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = Rulers.inch2px( num );
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = Rulers.pt2px( num );
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = Rulers.apt2px( num ); 
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = Rulers.ag2px( num );
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = Rulers.bai2px( num );
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = Rulers.cm2px( num );
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = Rulers.c2px( num );
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = Rulers.pt2px( num );
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = Rulers.ha2px( num ); 
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = Rulers.mil2px( num ); 
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = Rulers.p2px( num );
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = num;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = Rulers.q2px( num );
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = Rulers.u2px( num );
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("px", Rulers.pt2px, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2q = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+            return Rulers._resolveConvert("q", Rulers.pt2q, num, mUnit, roundDec, failCallBack );
         };
 
         Rulers.measure2u = function( num, mUnit, roundDec, failCallBack ){
-            // Shift args, if no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                if( typeof roundDec === 'function' ) {
-                    var failCallBack = roundDec, roundDec = undefined;
-                } else {
-                    var failCallBack = function( err ) {
-                        return null;
-                    };
-                };
-            };
-
-            var measure = null;
-            var indUnits = Rulers.indUnitsFrom( mUnit );
-            var roundDec = (typeof roundDec === "number") ? parseInt(roundDec) : 0;
-
-            switch( indUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
-                    measure = null;
-                    break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
-                    measure = null;
-                    break;
-                case 2053729891: //MeasurementUnits.INCHES
-                    measure = null;
-                    break;
-                case 2054188905: //MeasurementUnits.POINTS
-                    measure = null;
-                    break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
-                    measure = null;
-                    break;
-                case 2051106676: //MeasurementUnits.AGATES
-                    measure = null;
-                    break;
-                case 2051170665: //MeasurementUnits.BAI
-                    measure = null;
-                    break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
-                    measure = null;
-                    break;
-                case 2053335395: //MeasurementUnits.CICEROS
-                    measure = null;
-                    break;
-                case 1131639917: //MeasurementUnits.CUSTOM
-                    measure = null;
-                    break;
-                case 1516790048: //MeasurementUnits.HA
-                    measure = null;
-                    break;
-                case 2051893612: //MeasurementUnits.MILS
-                    measure = null;
-                    break;
-                case 2054187363: //MeasurementUnits.PICAS
-                    measure = null;
-                    break;
-                case 2054187384: //MeasurementUnits.PIXELS
-                    measure = null;
-                    break;
-                case 2054255973: //MeasurementUnits.Q
-                    measure = null;
-                    break;
-                case 2051691808: //MeasurementUnits.U
-                    measure = null;
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    measure = null;
-                    break;
-            };
-            if(roundDec > 0) {
-              return Rulers.roundNum(measure, roundDec);
-            } else {
-              return measure; 
-            };
+        	return Rulers._resolveConvert("u", Rulers.pt2u, num, mUnit, roundDec, failCallBack );
         };
-        
+
+        // C O N V E R T 
+        // - - - - - - - 
+
         Rulers.convert = function( num, fromUnit, toUnit, roundDec, failCallBack ) {
             var fromIndUnits = Rulers.indUnitsFrom( fromUnit );
             var toIndUnits   = Rulers.indUnitsFrom( toUnit   );
@@ -1346,70 +405,68 @@
                 };
             };
             
-            /*
             if( fromIndUnits === null ) {
-                return failCallBack( new Error("Could not parse fromUnit: " + typeof(fromUnit) + " " + String(fromUnit) );
+                return failCallBack( new Error("Could not parse fromUnit: " + typeof(fromUnit) + " " + String(fromUnit) ));
             };
             
             if( toIndUnits === null ) {
-                return failCallBack( new Error("Could not parse toUnit: " + typeof(fromUnit) + " " + String(fromUnit) );
+                return failCallBack( new Error("Could not parse toUnit: " + typeof(fromUnit) + " " + String(fromUnit) ));
             };
-            */
-            
+
             switch( toIndUnits ) {
-                case 2053991795: //MeasurementUnits.MILLIMETERS
+                case 2053991795: // MeasurementUnits.MILLIMETERS
                     return Rulers.measure2mm( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2053729892: //MeasurementUnits.INCHES_DECIMAL
+                case 2053729892: // MeasurementUnits.INCHES_DECIMAL
                     return Rulers.measure2inch( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2053729891: //MeasurementUnits.INCHES
+                case 2053729891: // MeasurementUnits.INCHES
                     return Rulers.measure2inch( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2054188905: //MeasurementUnits.POINTS
+                case 2054188905: // MeasurementUnits.POINTS
                     return Rulers.measure2pt( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 1514238068: //MeasurementUnits.AMERICAN_POINTS
+                case 1514238068: // MeasurementUnits.AMERICAN_POINTS
                     return Rulers.measure2ap( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2051106676: //MeasurementUnits.AGATES
+                case 2051106676: // MeasurementUnits.AGATES
                     return Rulers.measure2ag( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2051170665: //MeasurementUnits.BAI
+                case 2051170665: // MeasurementUnits.BAI
                     return Rulers.measure2bai( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2053336435: //MeasurementUnits.CENTIMETERS
+                case 2053336435: // MeasurementUnits.CENTIMETERS
                     return Rulers.measure2cm( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2053335395: //MeasurementUnits.CICEROS
+                case 2053335395: // MeasurementUnits.CICEROS
                     return Rulers.measure2c( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 1131639917: //MeasurementUnits.CUSTOM
+                case 1131639917: // MeasurementUnits.CUSTOM
                     return Rulers.measure2pt( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 1516790048: //MeasurementUnits.HA
+                case 1516790048: // MeasurementUnits.HA
                     return Rulers.measure2h( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2051893612: //MeasurementUnits.MILS
+                case 2051893612: // MeasurementUnits.MILS
                     return Rulers.measure2mil( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2054187363: //MeasurementUnits.PICAS
+                case 2054187363: // MeasurementUnits.PICAS
                     return Rulers.measure2p( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2054187384: //MeasurementUnits.PIXELS
+                case 2054187384: // MeasurementUnits.PIXELS
                     return Rulers.measure2px( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2054255973: //MeasurementUnits.Q
+                case 2054255973: // MeasurementUnits.Q
                     return Rulers.measure2q( num, fromIndUnits, roundDec, failCallBack );
                     break;
-                case 2051691808: //MeasurementUnits.U
+                case 2051691808: // MeasurementUnits.U
                     return Rulers.measure2u( num, fromIndUnits, roundDec, failCallBack );
                     break;
                 default:
                     return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
                     break;
             };
-        }; // End Rulers.convert()
+        };
 
         Rulers.NaN20 = function( num ){
             if(isNaN(num)){
@@ -1420,7 +477,10 @@
         };
 
         Rulers.roundNum = function ( num, roundDec ){
-            var roundMulit = Math.pow(10,roundDec);
+            if( typeof num !== 'number') {
+                return NaN;
+            };
+            var roundMulit = Math.pow( 10, parseInt(roundDec) );
             return Math.round(num*roundMulit)/roundMulit;
         };
 
@@ -1464,7 +524,8 @@
                     return abbreviate ? "mm" : "millimeters";
                     break;
                 case "1":
-                case "inchesdecimal":
+                case "inches decimal":
+                case "inches_decimal":
                 case "inch": // shorthand to decimal
                 case "in":
                 case "i":
@@ -1487,6 +548,8 @@
                     return abbreviate ? "pt" : "points";
                     break;
                 case "american_points":
+                case "american points":
+                case "ap":
                 case "apt":
                 case "zapt":
                 case "1514238068":
@@ -1587,10 +650,11 @@
                 case "millimeter":
                 case "zmms":
                 case "2053991795":
-                    return 2053991795; //MeasurementUnits.MILLIMETERS;
+                    return 2053991795; // MeasurementUnits.MILLIMETERS;
                     break;
                 case "1":
-                case "inchesdecimal":
+                case "inches decimal":
+                case "inches_decimal":
                 case "inch": // shorthand to decimal
                 case "in":
                 case "i":
@@ -1598,91 +662,93 @@
                 case "pouce":
                 case "zind":
                 case "2053729892":
-                    return 2053729892; //MeasurementUnits.INCHES_DECIMAL;
+                    return 2053729892; // MeasurementUnits.INCHES_DECIMAL;
                     break;
                 case "inches":
                 case "zinc":
                 case "2053729891":
-                    return 2053729891; //MeasurementUnits.INCHES;
+                    return 2053729891; // MeasurementUnits.INCHES;
                     break;
                 case "2":
                 case "points":
                 case "pt":
                 case "zpoi":
                 case "2054188905":
-                    return 2054188905; //MeasurementUnits.POINTS;
+                    return 2054188905; // MeasurementUnits.POINTS;
                     break;
                 case "american_points":
+                case "american points":
+                case "ap":
                 case "apt":
                 case "zapt":
                 case "1514238068":
-                    return 1514238068; //MeasurementUnits.AMERICAN_POINTS;
+                    return 1514238068; // MeasurementUnits.AMERICAN_POINTS;
                     break;
                 case "agates":
                 case "zagt":
                 case "ag":
                 case "2051106676":
-                    return 2051106676; //MeasurementUnits.AGATES;
+                    return 2051106676; // MeasurementUnits.AGATES;
                     break;
                 case "bai":
                 case "zbai":
                 case "2051170665":
-                    return 2051170665; //MeasurementUnits.BAI;
+                    return 2051170665; // MeasurementUnits.BAI;
                     break;
                 case "cm":
                 case "centimeter":
                 case "centimeters":
                 case "zcms":
                 case "2053336435":
-                    return 2053336435; //MeasurementUnits.CENTIMETERS;
+                    return 2053336435; // MeasurementUnits.CENTIMETERS;
                     break;
                 case "ciceros":
                 case "c":
                 case "zcic":
                 case "2053335395":
-                    return 2053335395; //MeasurementUnits.CICEROS;
+                    return 2053335395; // MeasurementUnits.CICEROS;
                     break;
                 case "custom":
                 case "cstm":
                 case "1131639917":
-                    return 1131639917; //MeasurementUnits.CUSTOM;
+                    return 1131639917; // MeasurementUnits.CUSTOM;
                     break;
                 case "ha":
                 case "h":
                 case "zha":
                 case "1516790048":
-                    return 1516790048; //MeasurementUnits.HA;
+                    return 1516790048; // MeasurementUnits.HA;
                     break;
                 case "mils":
                 case "mil":
                 case "thou":
                 case "zmil":
                 case "2051893612":
-                    return 2051893612; //MeasurementUnits.MILS;
+                    return 2051893612; // MeasurementUnits.MILS;
                     break;
                 case "picas":
                 case "pica":
                 case "p":
                 case "zpic":
                 case "2054187363":
-                    return 2054187363; //MeasurementUnits.PICAS;
+                    return 2054187363; // MeasurementUnits.PICAS;
                     break;
                 case "pixels":
                 case "pixel":
                 case "px":
                 case "zpix":
                 case "2054187384":
-                    return 2054187384; //MeasurementUnits.PIXELS;
+                    return 2054187384; // MeasurementUnits.PIXELS;
                     break;
                 case "q":
                 case "zque":
                 case "2054255973":
-                    return 2054255973; //MeasurementUnits.Q;
+                    return 2054255973; // MeasurementUnits.Q;
                     break;
                 case "u":
                 case "zju":
                 case "2051691808":
-                    return 2051691808; //MeasurementUnits.U;
+                    return 2051691808; // MeasurementUnits.U;
                     break;
                 default:
                     return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );

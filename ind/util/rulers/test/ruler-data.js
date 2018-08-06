@@ -1,7 +1,7 @@
 
 var rulerUnits = [
     {names : ["millimeters", "mm"], indUnits : 2053991795, strVals : ["0","millimeters","mm","millimeter","zmms","2053991795"] },
-    {names : ["inches", "inch"], indUnits : 2053729892, strVals : ["1", "inchesdecimal", "inch", "in", "i", "zoll", "pouce", "zind", "2053729892"] },
+    {names : ["inches", "inch"], indUnits : 2053729892, strVals : ["1", "inches decimal", "inch", "in", "i", "zoll", "pouce", "zind", "2053729892"] },
     {names : ["inches", "inch"], indUnits : 2053729891, strVals : ["inches","zinc","2053729891"] },
     {names : ["points", "pt"], indUnits : 2054188905, strVals : ["2", "points", "pt", "zpoi", "2054188905"] },
     {names : ["American points", "ap"], indUnits : 1514238068, strVals : ["american_points", "apt", "zapt", "1514238068"] },

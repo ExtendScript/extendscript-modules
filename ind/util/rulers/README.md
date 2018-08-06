@@ -65,12 +65,6 @@ As unit values are generally not nicely formatted for user interfaces we added t
 
 The Rulers module can also convert unit values:
 
-    var value = Rulers.mm2inch( 10 ) // returns 0.393701
-
-Here is a list of some that are supported right now: `q2mm`, `q2inch`, `inch2q`, `ha2mm`, `apt2mm`, `mm2pt`, `mil2inch`, `inch2mil`, `mm2inch`, `inch2mm`, `inch2u`, `u2inch`, `inch2cm`, `cm2inch`, `inch2pt`, `inch2ag`, `ag2inch`, `pt2inch`, `c2inch`, `p2inch`, `inch2p`, `p2pt`, `pt2p`, `inch2c`, `pt2apt`, `pt2mm`, `inch2px`, `mm2px`, `cm2px`, `pt2px`, `apt2px`, `ag2px`, `c2px`, `mil2px`, `p2px`, `ha2px`, `q2px`, `u2px`. 
-
-Sometimes it might be easier to use the convert function.
-
     Ruler.convert( measure, fromUnit, toUnit )
 
 
