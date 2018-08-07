@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/ind.util.rulers",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "An InDesign ruler utility that adds the `rulers.set()` method. This method sets both rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.",
   "main": "rulers.js",
   "scripts": {

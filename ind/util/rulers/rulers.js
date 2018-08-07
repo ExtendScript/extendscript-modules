@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 1.1;
+    var VERSION = 2.0;
     var MODULE_PATH = "rulers";
 
     var rulers = Sky.getUtil(MODULE_PATH);
