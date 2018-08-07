@@ -27,4 +27,6 @@ for (var t = 0; t < testMeasures.length; t++) {
     };
 };
 
+// alert(failed);
+
 $.writeln( failed.length === 0 );

@@ -10,14 +10,14 @@ var testMeasures = [
         { value: 5.511811, unit: "agates" },
         { value: 10, unit: "bai" },
         { value: 1, unit: "cm" },
-        { value: 2.216476, unit: "ciceros" },
+        { value: 2.21648, unit: "ciceros" },
         { value: 28.346457, unit: "custom" },
         { value: 40, unit: "ha" },
-        { value: 393.700788, unit: "mils" },
+        { value: 393.700787, unit: "mils" },
         { value: 2.362205, unit: "picas" },
         { value: 118, unit: "pixels" },
         { value: 40, unit: "q" },
-        { value: 9999.984725, unit: "u" }]
+        { value: 10000, unit: "u" }]
     },
 
     { value: 10, unit: "inches decimal", roundDec: 6, convertedValues : [
@@ -29,14 +29,14 @@ var testMeasures = [
         { value: 140, unit: "agates" },
         { value: 254, unit: "bai" },
         { value: 25.4, unit: "cm" },
-        { value: 56.298485, unit: "ciceros" },
+        { value: 56.298592, unit: "ciceros" },
         { value: 720, unit: "custom" },
         { value: 1016, unit: "ha" },
         { value: 10000, unit: "mils" },
         { value: 60, unit: "picas" },
         { value: 3000, unit: "pixels" },
         { value: 1016, unit: "q" },
-        { value: 253999.611945, unit: "u" }]
+        { value: 254000, unit: "u" }]
     },
 
     { value: 10, unit: "inches", roundDec: 6, convertedValues : [
@@ -48,14 +48,14 @@ var testMeasures = [
         { value: 140, unit: "agates" },
         { value: 254, unit: "bai" },
         { value: 25.4, unit: "cm" },
-        { value: 56.298485, unit: "ciceros" },
+        { value: 56.298592, unit: "ciceros" },
         { value: 720, unit: "custom" },
         { value: 1016, unit: "ha" },
         { value: 10000, unit: "mils" },
         { value: 60, unit: "picas" },
         { value: 3000, unit: "pixels" },
         { value: 1016, unit: "q" },
-        { value: 253999.611945, unit: "u" }]
+        { value: 254000, unit: "u" }]
     },
     
     { value: 10, unit: "points", roundDec: 6, convertedValues : [
@@ -67,14 +67,14 @@ var testMeasures = [
         { value: 1.944444, unit: "agates" },
         { value: 3.527778, unit: "bai" },
         { value: 0.352778, unit: "cm" },
-        { value: 0.781923, unit: "ciceros" },
+        { value: 0.781925, unit: "ciceros" },
         { value: 10, unit: "custom" },
         { value: 14.111111, unit: "ha" },
         { value: 138.888889, unit: "mils" },
         { value: 0.833333, unit: "picas" },
         { value: 42, unit: "pixels" },
         { value: 14.111111, unit: "q" },
-        { value: 3527.772388, unit: "u" }]
+        { value: 3527.777778, unit: "u" }]
     },
 
     { value: 10, unit: "american points", roundDec: 6, convertedValues : [
@@ -86,14 +86,14 @@ var testMeasures = [
         { value: 1.93718, unit: "agates" },
         { value: 3.514598, unit: "bai" },
         { value: 0.35146, unit: "cm" },
-        { value: 0.779002, unit: "ciceros" },
+        { value: 0.779004, unit: "ciceros" },
         { value: 9.96264, unit: "custom" },
         { value: 14.058392, unit: "ha" },
         { value: 138.370001, unit: "mils" },
         { value: 0.83022, unit: "picas" },
         { value: 42, unit: "pixels" },
         { value: 14.058392, unit: "q" },
-        { value: 3514.592666, unit: "u" }]
+        { value: 3514.598035, unit: "u" }]
     },
     
     { value: 10, unit: "agates", roundDec: 6, convertedValues : [
@@ -105,14 +105,14 @@ var testMeasures = [
         { value: 10, unit: "agates" },
         { value: 18.142857, unit: "bai" },
         { value: 1.814286, unit: "cm" },
-        { value: 4.02132, unit: "ciceros" },
+        { value: 4.021328, unit: "ciceros" },
         { value: 51.428571, unit: "custom" },
         { value: 72.571429, unit: "ha" },
         { value: 714.285714, unit: "mils" },
         { value: 4.285714, unit: "picas" },
         { value: 214, unit: "pixels" },
         { value: 72.571429, unit: "q" },
-        { value: 18142.829425, unit: "u" }]
+        { value: 18142.857143, unit: "u" }]
     },
 
     { value: 10, unit: "bai", roundDec: 6, convertedValues : [
@@ -124,14 +124,14 @@ var testMeasures = [
         { value: 5.511811, unit: "agates" },
         { value: 10, unit: "bai" },
         { value: 1, unit: "cm" },
-        { value: 2.216476, unit: "ciceros" },
+        { value: 2.21648, unit: "ciceros" },
         { value: 28.346457, unit: "custom" },
         { value: 40, unit: "ha" },
-        { value: 393.700788, unit: "mils" },
+        { value: 393.700787, unit: "mils" },
         { value: 2.362205, unit: "picas" },
         { value: 118, unit: "pixels" },
         { value: 40, unit: "q" },
-        { value: 9999.984725, unit: "u" }]
+        { value: 10000, unit: "u" }]
     },
     
     { value: 10, unit: "cm", roundDec: 6, convertedValues : [
@@ -143,33 +143,33 @@ var testMeasures = [
         { value: 55.11811, unit: "agates" },
         { value: 100, unit: "bai" },
         { value: 10, unit: "cm" },
-        { value: 22.164758, unit: "ciceros" },
+        { value: 22.1648, unit: "ciceros" },
         { value: 283.464567, unit: "custom" },
         { value: 400, unit: "ha" },
         { value: 3937.007874, unit: "mils" },
         { value: 23.622047, unit: "picas" },
         { value: 1181, unit: "pixels" },
         { value: 400, unit: "q" },
-        { value: 99999.847223, unit: "u" }]
+        { value: 100000, unit: "u" }]
     },
     
     { value: 10, unit: "ciceros", roundDec: 6, convertedValues : [
-        { value: 45.116667, unit: "millimeters" },
-        { value: 1.776247, unit: "inches decimal" },
-        { value: 1.776247, unit: "inches" },
-        { value: 127.889764, unit: "points" },
-        { value: 128.369351, unit: "american points" },
-        { value: 24.867454, unit: "agates" },
-        { value: 45.116667, unit: "bai" },
-        { value: 4.511667, unit: "cm" },
+        { value: 45.116581, unit: "millimeters" },
+        { value: 1.776243, unit: "inches decimal" },
+        { value: 1.776243, unit: "inches" },
+        { value: 127.889522, unit: "points" },
+        { value: 128.369107, unit: "american points" },
+        { value: 24.867407, unit: "agates" },
+        { value: 45.116581, unit: "bai" },
+        { value: 4.511658, unit: "cm" },
         { value: 10, unit: "ciceros" },
-        { value: 127.889764, unit: "custom" },
-        { value: 180.466667, unit: "ha" },
-        { value: 1776.246722, unit: "mils" },
-        { value: 10.65748, unit: "picas" },
+        { value: 127.889522, unit: "custom" },
+        { value: 180.466325, unit: "ha" },
+        { value: 1776.243356, unit: "mils" },
+        { value: 10.65746, unit: "picas" },
         { value: 533, unit: "pixels" },
-        { value: 180.466667, unit: "q" },
-        { value: 45116.597816, unit: "u" }]
+        { value: 180.466325, unit: "q" },
+        { value: 45116.581246, unit: "u" }]
     },
     
     { value: 10, unit: "custom", roundDec: 6, convertedValues : [
@@ -181,14 +181,14 @@ var testMeasures = [
         { value: 1.944444, unit: "agates" },
         { value: 3.527778, unit: "bai" },
         { value: 0.352778, unit: "cm" },
-        { value: 0.781923, unit: "ciceros" },
+        { value: 0.781925, unit: "ciceros" },
         { value: 10, unit: "custom" },
         { value: 14.111111, unit: "ha" },
         { value: 138.888889, unit: "mils" },
         { value: 0.833333, unit: "picas" },
         { value: 42, unit: "pixels" },
         { value: 14.111111, unit: "q" },
-        { value: 3527.772388, unit: "u" }]
+        { value: 3527.777778, unit: "u" }]
     },
     
     { value: 10, unit: "ha", roundDec: 6, convertedValues : [
@@ -200,14 +200,14 @@ var testMeasures = [
         { value: 1.377953, unit: "agates" },
         { value: 2.5, unit: "bai" },
         { value: 0.25, unit: "cm" },
-        { value: 0.554119, unit: "ciceros" },
+        { value: 0.55412, unit: "ciceros" },
         { value: 7.086614, unit: "custom" },
         { value: 10, unit: "ha" },
         { value: 98.425197, unit: "mils" },
         { value: 0.590551, unit: "picas" },
         { value: 30, unit: "pixels" },
         { value: 10, unit: "q" },
-        { value: 2499.996181, unit: "u" }]
+        { value: 2500, unit: "u" }]
     },
     
     { value: 10, unit: "mils", roundDec: 6, convertedValues : [
@@ -219,14 +219,14 @@ var testMeasures = [
         { value: 0.14, unit: "agates" },
         { value: 0.254, unit: "bai" },
         { value: 0.0254, unit: "cm" },
-        { value: 0.056298, unit: "ciceros" },
+        { value: 0.056299, unit: "ciceros" },
         { value: 0.72, unit: "custom" },
         { value: 1.016, unit: "ha" },
         { value: 10, unit: "mils" },
         { value: 0.06, unit: "picas" },
         { value: 3, unit: "pixels" },
         { value: 1.016, unit: "q" },
-        { value: 253.999612, unit: "u" }]
+        { value: 254, unit: "u" }]
     },
     
     { value: 10, unit: "picas", roundDec: 6, convertedValues : [
@@ -238,14 +238,14 @@ var testMeasures = [
         { value: 23.333333, unit: "agates" },
         { value: 42.333333, unit: "bai" },
         { value: 4.233333, unit: "cm" },
-        { value: 9.383081, unit: "ciceros" },
+        { value: 9.383099, unit: "ciceros" },
         { value: 120, unit: "custom" },
         { value: 169.333333, unit: "ha" },
         { value: 1666.666667, unit: "mils" },
         { value: 10, unit: "picas" },
         { value: 500, unit: "pixels" },
         { value: 169.333333, unit: "q" },
-        { value: 42333.268658, unit: "u" }]
+        { value: 42333.333333, unit: "u" }]
     },
     
     { value: 10, unit: "pixels", roundDec: 6, convertedValues : [
@@ -264,7 +264,7 @@ var testMeasures = [
         { value: 0.2, unit: "picas" },
         { value: 10, unit: "pixels" },
         { value: 3.386667, unit: "q" },
-        { value: 846.665373, unit: "u" }]
+        { value: 846.666667, unit: "u" }]
     },
     
     { value: 10, unit: "q", roundDec: 6, convertedValues : [
@@ -276,27 +276,27 @@ var testMeasures = [
         { value: 1.377953, unit: "agates" },
         { value: 2.5, unit: "bai" },
         { value: 0.25, unit: "cm" },
-        { value: 0.554119, unit: "ciceros" },
+        { value: 0.55412, unit: "ciceros" },
         { value: 7.086614, unit: "custom" },
         { value: 10, unit: "ha" },
         { value: 98.425197, unit: "mils" },
         { value: 0.590551, unit: "picas" },
         { value: 30, unit: "pixels" },
         { value: 10, unit: "q" },
-        { value: 2499.996181, unit: "u" }]
+        { value: 2500, unit: "u" }]
     },
     
     { value: 10, unit: "u", roundDec: 6, convertedValues : [
         { value: 0.01, unit: "millimeters" },
         { value: 0.000394, unit: "inches decimal" },
         { value: 0.000394, unit: "inches" },
-        { value: 0.028347, unit: "points" },
+        { value: 0.028346, unit: "points" },
         { value: 0.028453, unit: "american points" },
         { value: 0.005512, unit: "agates" },
         { value: 0.01, unit: "bai" },
         { value: 0.001, unit: "cm" },
         { value: 0.002216, unit: "ciceros" },
-        { value: 0.028347, unit: "custom" },
+        { value: 0.028346, unit: "custom" },
         { value: 0.04, unit: "ha" },
         { value: 0.393701, unit: "mils" },
         { value: 0.002362, unit: "picas" },

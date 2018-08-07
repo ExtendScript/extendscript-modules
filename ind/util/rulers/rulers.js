@@ -62,8 +62,8 @@
         //  - - - - - - - - - - - - - -
 
         Rulers.mm2pt = function( num ) {
-            // 1 millimeter = 2.83464567 PostScript points
-            return num * 2.83464567;
+            // 1 millimeter = 2.8346456692913384 PostScript points
+            return num * 2.8346456692913384;
         };
 
         Rulers.inch2pt = function( num ) {
@@ -72,8 +72,8 @@
         };
 
         Rulers.ap2pt = function( num ) {
-            // 1 American Point = 0.99626401 points
-            return num * 0.99626401;
+            // 1 American Point = 0.9962640099626 points
+            return num * 0.9962640099626;
         };
 
         Rulers.ag2pt = function( num ) {
@@ -87,13 +87,13 @@
         };
 
         Rulers.cm2pt = function( num ) {
-            // 1 cm = 28.346456693 points
-            return num * 28.346456693;
+            // 1 cm = 28.346456692913385 points
+            return num * 28.346456692913385;
         };
 
         Rulers.c2pt = function( num ) {
-            // 1 ciceros = 12.7889764 points
-            return num * 12.7889764;
+            // 1 ciceros = 12.78895216411 points
+            return num * 12.78895216411;
         };
 
         Rulers.cstm2pt = function( num ) {
@@ -129,14 +129,14 @@
         };
 
         Rulers.u2pt = function( num ) {
-            // I assume that U is a micrometer
-            // 1 micrometer = 0.00283465 points
-            return num * 0.00283465;
+            // I assume that U is a micrometer/Microns(µ)
+            // 1 micrometer = 0.002834645669291339 points
+            return num * 0.002834645669291339;
         };
 
         Rulers.pt2mm = function( num ) {
-            // 1 millimeter = 2.83464567 PostScript points
-            return num / 2.83464567;
+            // 1 millimeter = 2.8346456692913384 PostScript points
+            return num / 2.8346456692913384;
         };
 
         Rulers.pt2inch = function( num ) {
@@ -145,8 +145,8 @@
         };
 
         Rulers.pt2ap = function( num ) {
-            // 1 American Point = 0.99626401 points
-            return num / 0.99626401;
+            // 1 American Point = 0.9962640099626 points
+            return num / 0.9962640099626;
         };
 
         Rulers.pt2ag = function( num ) {
@@ -160,13 +160,13 @@
         };
 
         Rulers.pt2cm = function( num ) {
-            // 1 cm = 28.346456693 points
-            return num / 28.346456693;
+            // 1 cm = 28.346456692913385 points
+            return num / 28.346456692913385;
         };
 
         Rulers.pt2c = function( num ) {
-            // 1 ciceros = 12.7889764 points
-            return num / 12.7889764;
+            // 1 ciceros = 12.78895216411 points
+            return num / 12.78895216411;
         };
 
         Rulers.pt2cstm = function( num ) {
@@ -204,8 +204,8 @@
 
         Rulers.pt2u = function( num ) {
             // I assume that U is a micrometer
-            // 1 micrometer = 0.00283465 points
-            return num / 0.00283465;
+            // 1 micrometer = 0.002834645669291339 points
+            return num / 0.002834645669291339;
         };
 
         //  M E A S U R E  2  P O I N T S
@@ -501,137 +501,11 @@
             };
         };
 
-        Rulers.niceNameFor = function( measureUnit, abbreviate ) {
-            var abbreviate = (abbreviate === true);
-            
-            // If no callback is defined return null
-            if( typeof failCallBack !== 'function') {
-                failCallBack = function( err ) {
-                    return null;
-                };
-            };
-
-            // Cast to string to parse a wide variety of input
-            // including the MeasurementUnits object itself
-            var stringUnits = String(measureUnit).toLowerCase();
-            switch(stringUnits) {
-                case "0":
-                case "millimeters":
-                case "mm":
-                case "millimeter":
-                case "zmms":
-                case "2053991795":
-                    return abbreviate ? "mm" : "millimeters";
-                    break;
-                case "1":
-                case "inches decimal":
-                case "inches_decimal":
-                case "inch": // shorthand to decimal
-                case "in":
-                case "i":
-                case "zoll":
-                case "pouce":
-                case "zind":
-                case "2053729892":
-                    return abbreviate ? "inch" : "inches";
-                    break;
-                case "inches":
-                case "zinc":
-                case "2053729891":
-                    return abbreviate ? "inch" : "inches";
-                    break;
-                case "2":
-                case "points":
-                case "pt":
-                case "zpoi":
-                case "2054188905":
-                    return abbreviate ? "pt" : "points";
-                    break;
-                case "american_points":
-                case "american points":
-                case "ap":
-                case "apt":
-                case "zapt":
-                case "1514238068":
-                    return abbreviate ? "ap" : "American points";
-                    break;
-                case "agates":
-                case "zagt":
-                case "ag":
-                case "2051106676":
-                    return abbreviate ? "ag" : "agates";
-                    break;
-                case "bai":
-                case "zbai":
-                case "2051170665":
-                    return abbreviate ? "bai" : "bai";
-                    break;
-                case "cm":
-                case "centimeter":
-                case "centimeters":
-                case "zcms":
-                case "2053336435":
-                    return abbreviate ? "cm" : "centimeters";
-                    break;
-                case "ciceros":
-                case "c":
-                case "zcic":
-                case "2053335395":
-                    return abbreviate ? "c" : "ciceros";
-                    break;
-                case "custom":
-                case "cstm":
-                case "1131639917":
-                    return abbreviate ? "cstm" : "custom";
-                    break;
-                case "ha":
-                case "h":
-                case "zha":
-                case "1516790048":
-                    return abbreviate ? "h" : "Ha";
-                    break;
-                case "mils":
-                case "mil":
-                case "thou":
-                case "zmil":
-                case "2051893612":
-                    return abbreviate ? "mil" : "mils";
-                    break;
-                case "picas":
-                case "pica":
-                case "p":
-                case "zpic":
-                case "2054187363":
-                    return abbreviate ? "p" : "picas";
-                    break;
-                case "pixels":
-                case "pixel":
-                case "px":
-                case "zpix":
-                case "2054187384":
-                    return abbreviate ? "px" : "pixels";
-                    break;
-                case "q":
-                case "zque":
-                case "2054255973":
-                    return abbreviate ? "q" : "Q";
-                    break;
-                case "u":
-                case "zju":
-                case "2051691808":
-                    return abbreviate ? "u" : "U";
-                    break;
-                default:
-                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
-                    break;
-            };
-
-        };
-
         // This function returns InDesign MeasurementUnits or null if not valid
         Rulers.indUnitsFrom = function( measureUnit, failCallBack ) {
-            
+
             // TODO: Add international string values (translations)
+            // - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
             // If no callback is defined return null
             if( typeof failCallBack !== 'function') {
@@ -749,6 +623,75 @@
                 case "zju":
                 case "2051691808":
                     return 2051691808; // MeasurementUnits.U;
+                    break;
+                default:
+                    return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
+                    break;
+            };
+        };
+
+        Rulers.niceNameFor = function( measureUnit, abbreviate ) {
+            var abbreviate = (abbreviate === true);
+            
+            // If no callback is defined return null
+            if( typeof failCallBack !== 'function') {
+                failCallBack = function( err ) {
+                    return null;
+                };
+            };
+
+            // Cast to string to parse a wide variety of input
+            // including the MeasurementUnits object itself
+            var stringUnits = Rulers.indUnitsFrom(measureUnit);
+
+            switch(stringUnits) {
+                case 2053991795:
+                    return abbreviate ? "mm" : "millimeters";
+                    break;
+                case 2053729892:
+                    return abbreviate ? "inch" : "inches";
+                    break;
+                case 2053729891:
+                    return abbreviate ? "inch" : "inches";
+                    break;
+                case 2054188905:
+                    return abbreviate ? "pt" : "points";
+                    break;
+                case 1514238068:
+                    return abbreviate ? "ap" : "American points";
+                    break;
+                case 2051106676:
+                    return abbreviate ? "ag" : "agates";
+                    break;
+                case 2051170665:
+                    return abbreviate ? "bai" : "bai";
+                    break;
+                case 2053336435:
+                    return abbreviate ? "cm" : "centimeters";
+                    break;
+                case 2053335395:
+                    return abbreviate ? "c" : "ciceros";
+                    break;
+                case 1131639917:
+                    return abbreviate ? "cstm" : "custom";
+                    break;
+                case 1516790048:
+                    return abbreviate ? "h" : "Ha";
+                    break;
+                case 2051893612:
+                    return abbreviate ? "mil" : "mils";
+                    break;
+                case 2054187363:
+                    return abbreviate ? "p" : "picas";
+                    break;
+                case 2054187384:
+                    return abbreviate ? "px" : "pixels";
+                    break;
+                case 2054255973:
+                    return abbreviate ? "q" : "Q";
+                    break;
+                case 2051691808:
+                    return abbreviate ? "u" : "U";
                     break;
                 default:
                     return failCallBack( new Error("Could not parse MeasurementUnits: " + typeof(measureUnit) + " " + stringUnits) );
