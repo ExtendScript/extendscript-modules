@@ -8,7 +8,7 @@
     };
 
     //--------------------------
-    // ___moduleName___ class
+    // Start ___moduleName___ class
 
     function moduleClass() {
         var ___moduleName___ = this;
@@ -23,7 +23,7 @@
     };
 
     //--------------------------
-    // End rulers
+    // End ___moduleName___ class
 
     Sky.setUtil(MODULE_PATH, new moduleClass() );
 
