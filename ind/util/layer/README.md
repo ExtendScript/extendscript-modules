@@ -8,14 +8,20 @@ Some layer utilities for InDesign
 
     npm install @extendscript/ind.util.layer
 
-## Functions
+## Use
 
-  * layer.getByName( `doc`, `layerName`, *`createBool`* )
-  * layer.getSelect( `doc`, `layerName`, *`createBool`* )
-  * layer.getSelectMove( `doc`, `layerName`, `afterlayerNo`, *`createBool`* )
-  * layer.locker( `layerRef`, *`lockBool`* )
-  * layer.move( `layerRef`, `afterlayerNo` )
-  * layer.select( `layerRef` )
+Load the module
+
+    var LayerUtil = Sky.getUtil("rulers");
+
+### Methods
+
+  * getByName( `doc`, `layerName`, *`createBool`* )
+  * getSelect( `doc`, `layerName`, *`createBool`* )
+  * getSelectMove( `doc`, `layerName`, `afterlayerNo`, *`createBool`* )
+  * locker( `layerRef`, *`lockBool`* )
+  * move( `layerRef`, `afterlayerNo` )
+  * select( `layerRef` )
 
 ## Test
 
