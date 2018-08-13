@@ -12,7 +12,7 @@ Some layer utilities for InDesign
 
 Load the module
 
-    var LayerUtil = Sky.getUtil("rulers");
+    var LayerUtil = Sky.getUtil("layer");
 
 ### Methods
 
