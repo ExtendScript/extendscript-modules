@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/<path>.___moduleName___",
+  "name": "@extendscript/ind.util.layers",
   "version": "0.1.0",
-  "description": "___description___",
-  "main": "___moduleName___.js",
+  "description": "Some layer utilities for InDesign",
+  "main": "layers.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -15,6 +15,9 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
+    "indesign",
+    "utility",
+    "layers"
   ],
   "author": "extendscript.org",
   "license": "MIT",

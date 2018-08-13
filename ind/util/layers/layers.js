@@ -1,6 +1,6 @@
 (function () {
     var VERSION = 0.1;
-    var MODULE_PATH = "___moduleName___";
+    var MODULE_PATH = "layers";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
     if( thisModule && thisModule.version >= VERSION) {
@@ -8,16 +8,16 @@
     };
 
     //--------------------------
-    // ___moduleName___ class
+    // layers class
 
     function moduleClass() {
-        var ___moduleName___ = this;
+        var layers = this;
 
-        ___moduleName___.version = VERSION;
-        ___moduleName___.description = "___description___";
+        layers.version = VERSION;
+        layers.description = "Some layer utilities for InDesign";
         
         // Module code here...
-        ___moduleName___.test = function() {
+        layers.test = function() {
             return true;
         };
     };

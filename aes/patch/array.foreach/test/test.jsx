@@ -1,5 +1,5 @@
-#include '../array.foreach.js'
-#include '../../json/json.js'
+#include './array.foreach.js'
+#include '././json/json.js'
 
 var items = ['item1', 'item2', 'item3'];
 var myCopy = new Array();

@@ -1,5 +1,5 @@
-#include '../array.filter.js'
-#include '../../json/json.js'
+#include './array.filter.js'
+#include '././json/json.js'
 
 function isBigEnough(value) {
   return value >= 10;
