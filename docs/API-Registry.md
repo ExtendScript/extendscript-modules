@@ -73,14 +73,14 @@ The `Sky` object is created by the [`Main Module`](../main). All sub-modules wil
     * [module.docbuilder](https://github.com/CoverBuilder/General-Document-Builder)
     * [module.slugs](https://github.com/CoverBuilder/Slug-Tools)
   * __util__
-    * [__util.characterStyle__](../ind/util/characterStyle)
+    * [__util.characterstyle__](../ind/util/characterstyle)
     * [__util.layer__](../ind/util/layer)
-    * [util.menuloader](../ind/util/menuloader)
-    * [__util.objectStyle__](../ind/util/objectStyle)
+    * [util.menu-loader](../ind/util/menuloader)
+    * [__util.objectstyle__](../ind/util/objectstyle)
     * [__util.page__](../ind/util/page)
-    * [__util.paragraphStyle__](../ind/util/paragraphStyle)
-    * [__util.rulers__](../ind/util/rulers)
-    * [__util.textFrame__](../ind/util/create)
+    * [__util.paragraphstyle__](../ind/util/paragraphstyle)
+    * [__util.rulers__](../ind/util/rulers)  
+    * [__util.pageitems__](../ind/util/pageitems)    
 
 ## Photoshop (ps)
   * __module__

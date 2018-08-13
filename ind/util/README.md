@@ -2,8 +2,9 @@
 
 This is a collection of utilities for [InDesign](https://en.wikipedia.org/wiki/Adobe_InDesign).
 
-  - [x] [Layer](layer)
-  - [x] [Rulers](rulers)
+  - [ ] [pageitems](pageitems)  
+  - [x] [layer](layer)  
+  - [x] [rulers](rulers)  
 
 ## More info
 
