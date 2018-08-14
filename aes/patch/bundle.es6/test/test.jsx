@@ -1,4 +1,4 @@
-#include '../bundle.es6.js'
+#include '../es6.js'
 
 var loaded = false;
 

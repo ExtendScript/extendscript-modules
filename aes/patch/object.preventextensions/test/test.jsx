@@ -1,4 +1,4 @@
-#include '../object.preventextensions.js'
+#include '../preventextensions.js'
 
 var obj = {};
 var obj2 = Object.preventExtensions(obj);

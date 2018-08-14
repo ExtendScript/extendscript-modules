@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.array.reduce",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Array.reduce()` method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
-  "main": "array.reduce.js",
+  "main": "reduce.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

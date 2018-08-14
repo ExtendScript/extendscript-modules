@@ -1,4 +1,4 @@
-#include '../object.assign.js'
+#include '../assign.js'
 
 var object1 = {
   a: 1,

@@ -1,4 +1,4 @@
-#include '../object.setprototypeof.js'
+#include '../setprototypeof.js'
 
 var proto = { y: 2 };  
 

@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.json.parserecurse",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An alternate `parse()` function that uses recursive descent instead of eval.",
-  "main": "json.parse-recurse.js",
+  "main": "parserecurse.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

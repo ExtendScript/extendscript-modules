@@ -1,4 +1,4 @@
-#include '../object.defineproperty.js'
+#include '../defineproperty.js'
 
 var object1 = {};
 

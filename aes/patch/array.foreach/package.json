@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.array.foreach",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `forEach()` method executes a provided function once for each array element.",
-  "main": "array.foreach.js",
+  "main": "foreach.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

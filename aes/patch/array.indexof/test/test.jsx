@@ -1,4 +1,4 @@
-#include './array.indexof.js'
+#include '../indexof.js'
 
 var testData = ['This','is','a','test','a'];
 

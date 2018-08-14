@@ -1,4 +1,4 @@
-#include '../object.isextensible.js'
+#include '../isextensible.js'
 
 var object1 = {};
 

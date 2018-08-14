@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.number.isfinite",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Number.isFinite()` method determines whether the passed value is a finite number.",
-  "main": "number.isfinite.js",
+  "main": "isfinite.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

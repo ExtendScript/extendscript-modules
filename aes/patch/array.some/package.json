@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.array.some",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Array.some()` method tests whether at least one element in the array passes the test implemented by the provided function.",
-  "main": "array.some.js",
+  "main": "some.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "buildenv": "if [ ! -f ./build-node-venv.sh ]; then curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./build-node-venv.sh; fi; chmod +x ./build-node-venv.sh && ./build-node-venv.sh",

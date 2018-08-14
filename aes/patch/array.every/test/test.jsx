@@ -1,4 +1,4 @@
-#include './array.every.js'
+#include '../every.js'
 
 function isBigEnough(element, index, array) {
   return element >= 10;

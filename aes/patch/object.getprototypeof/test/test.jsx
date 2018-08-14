@@ -1,5 +1,5 @@
-#include '../object.getprototypeof.js'
-#include '../../object.create/object.create.js'
+#include '../getprototypeof.js'
+#include '../../object.create/create.js'
 
 var pType = {};
 var obj1 = Object.create(pType);

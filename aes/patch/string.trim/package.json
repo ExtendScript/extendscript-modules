@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.string.trim",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "The trim() method removes whitespace from both ends of a string.",
-  "main": "string.trim.js",
+  "main": "trim.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

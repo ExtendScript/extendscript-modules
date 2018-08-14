@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.object.seal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.",
-  "main": "object.seal.js",
+  "main": "seal.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

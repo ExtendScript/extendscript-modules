@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.object.create",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `create()` method creates a new object with the specified prototype.",
-  "main": "object.create.js",
+  "main": "create.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

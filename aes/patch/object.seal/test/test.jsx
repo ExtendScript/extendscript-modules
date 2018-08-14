@@ -1,4 +1,4 @@
-#include '../object.seal.js'
+#include '../seal.js'
 
 var object1 = {
   property1: 42,

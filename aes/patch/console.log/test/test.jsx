@@ -1,4 +1,4 @@
-#include '../console.log.js'
+#include '../log.js'
 
 // Remove logfile if exist
 if( console.logFile.exists ) {

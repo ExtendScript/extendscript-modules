@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.object.defineproperties",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Object.defineProperties()` method defines new or modifies existing properties directly on an object, returning the object.",
-  "main": "object.defineproperties.js",
+  "main": "defineproperties.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

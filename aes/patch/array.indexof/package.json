@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.array.indexof",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `indexOf()` method searches the array for the specified item, and returns its position.",
-  "main": "array.indexof.js",
+  "main": "indexof.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

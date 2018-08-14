@@ -1,4 +1,4 @@
-#include '../bundle.array.js'
+#include '../array.js'
 
 var loaded = false;
 

@@ -1,4 +1,4 @@
-#include '../array.map.js'
+#include '../map.js'
 #include '../../json/json.js'
 
 var numbers = [1, 4, 9];

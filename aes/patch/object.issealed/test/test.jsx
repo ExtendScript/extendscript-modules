@@ -1,4 +1,4 @@
-#include '../object.issealed.js'
+#include '../issealed.js'
 
 const obj = {
   prop: 42

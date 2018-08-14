@@ -1,3 +1,3 @@
-#include '../json.parse-state.js'
+#include '../parsestate.js'
 
 $.writeln( undefined === true);

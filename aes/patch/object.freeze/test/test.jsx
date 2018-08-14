@@ -1,4 +1,4 @@
-#include '../object.freeze.js'
+#include '../freeze.js'
 
 const object1 = {
   property1: 42

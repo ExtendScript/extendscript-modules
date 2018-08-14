@@ -1,4 +1,4 @@
-#include '../object.getownpropertydescriptor.js'
+#include '../getownpropertydescriptor.js'
 
 var obj = {
   prop1: 42

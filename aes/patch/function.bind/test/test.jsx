@@ -1,4 +1,4 @@
-#include '../function.bind.js'
+#include '../bind.js'
 
 var module = {
   x: 42,

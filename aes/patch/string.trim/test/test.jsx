@@ -1,4 +1,4 @@
-#include '../string.trim.js'
+#include '../trim.js'
 
 var orig = '   foo  ';
 

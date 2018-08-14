@@ -1,4 +1,4 @@
-#include './array.find.js'
+#include '../find.js'
 
 var array1 = [5, 12, 8, 130, 44];
 

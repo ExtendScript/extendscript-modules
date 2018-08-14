@@ -1,4 +1,4 @@
-#include '../bundle.object.js'
+#include '../object.js'
 
 var loaded = false;
 

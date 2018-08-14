@@ -1,4 +1,4 @@
-#include '../array.lastindexof.js'
+#include '../lastindexof.js'
 
 var animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 

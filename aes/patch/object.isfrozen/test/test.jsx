@@ -1,4 +1,4 @@
-#include '../object.isfrozen.js'
+#include '../isfrozen.js'
 
 var object1 = {
   property1: 42

@@ -1,13 +1,13 @@
 {
   "name": "@extendscript/aes.patch.bundle.es6",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A collection of polyfills to bring ExtendScript to ES6 standards.",
-  "main": "bundle.es6.js",
+  "main": "es6.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
-    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.source.js -o ./bundle.es6.js"
+    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.js -o ./es6.js"
   },
   "repository": {
     "type": "git",

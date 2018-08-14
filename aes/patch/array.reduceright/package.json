@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.array.reduceright",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
-  "main": "array.reduceright.js",
+  "main": "reduceright.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

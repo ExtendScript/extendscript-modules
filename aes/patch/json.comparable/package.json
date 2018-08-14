@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.json.comparable",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Adds the `comparable()` method to JSON, which make it possible to compare two values on equality. It sorts arrays and objects before doing a `JSON.stringify()` comparison.",
-  "main": "json.comparable.js",
+  "main": "comparable.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

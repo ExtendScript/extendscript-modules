@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.object.getprototypeof",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Object.getPrototypeOf()` method returns the prototype (i.e. the value of the internal [[Prototype]] property) of the specified object.",
-  "main": "object.getprototypeof.js",
+  "main": "getprototypeof.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",

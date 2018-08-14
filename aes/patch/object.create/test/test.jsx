@@ -1,4 +1,4 @@
-#include '../object.create.js'
+#include '../create.js'
 
 var person = {
   isHuman: false,

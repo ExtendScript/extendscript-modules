@@ -1,4 +1,4 @@
-#include '../array.isarray.js'
+#include '../isarray.js'
 
 var testData = {
     "obj": { "this":"is", "a":"test", "object":true},

@@ -1,4 +1,4 @@
-#include '../object.getownpropertynames.js'
+#include '../getownpropertynames.js'
 #include '../../json/json.js'
 
 var myObj = { a: 1, b: 2, c: 3 };

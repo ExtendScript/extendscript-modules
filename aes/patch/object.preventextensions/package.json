@@ -1,8 +1,8 @@
 {
   "name": "@extendscript/aes.patch.object.preventextensions",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The `Object.preventExtensions()` method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).",
-  "main": "object.preventextensions.js",
+  "main": "preventextensions.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
