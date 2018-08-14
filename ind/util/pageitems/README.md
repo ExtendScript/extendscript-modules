@@ -1,18 +1,12 @@
-# ___moduleName___
+# pageitems
 
-> ___type___
+> InDesign Utility
 
-___description___
+Utilities that create or target page items in InDesign.
 
 # Install
 
-    npm install @extendscript/___path___.___moduleName___
-
-## Use
-
-Load the module by creating a reference.
-
-    var ___moduleName___ = Sky.getUtil("___moduleName___")
+    npm install @extendscript/ind.util.pageitems
 
 ## Test
 

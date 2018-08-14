@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/___path___.___moduleName___",
+  "name": "@extendscript/ind.util.pageitems",
   "version": "0.1.0",
-  "description": "___description___",
-  "main": "___moduleName___.js",
+  "description": "Utilities that create or target page items in InDesign.",
+  "main": "pageitems.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -15,6 +15,8 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
+    "indesign",
+    "pageitems"
   ],
   "author": "extendscript.org",
   "license": "MIT",
