@@ -1,13 +1,13 @@
 {
   "name": "@extendscript/aes.patch.bundle.array",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A collection of `Array` polyfills for Exendscript.",
   "main": "array.js",
   "scripts": {
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
-    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.array.js -o ./array.js"
+    "bundle": "exsbundlr --missing -i ./bundle.array.js -o ./array.js"
   },
   "repository": {
     "type": "git",
@@ -32,18 +32,18 @@
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
     "@extendscript/tap-es": ">=1.0.5",
-    "@extendscript/aes.patch.array.every": "^1.0.0",
-    "@extendscript/aes.patch.array.filter": "^1.0.0",
-    "@extendscript/aes.patch.array.find": "^1.0.0",
-    "@extendscript/aes.patch.array.foreach": "^1.0.0",
-    "@extendscript/aes.patch.array.from": "^1.0.0",
-    "@extendscript/aes.patch.array.indexof": "^1.0.0",
-    "@extendscript/aes.patch.array.isarray": "^1.0.0",
-    "@extendscript/aes.patch.array.lastindexof": "^1.0.0",
-    "@extendscript/aes.patch.array.map": "^1.0.0",
-    "@extendscript/aes.patch.array.reduce": "^1.0.0",
-    "@extendscript/aes.patch.array.reduceright": "^1.0.0",
-    "@extendscript/aes.patch.array.some": "^1.0.0",
-    "extendscript-bundlr": "^0.3.1"
+    "@extendscript/aes.patch.array.every": "^2.0.0",
+    "@extendscript/aes.patch.array.filter": "^2.0.0",
+    "@extendscript/aes.patch.array.find": "^2.0.0",
+    "@extendscript/aes.patch.array.foreach": "^2.0.0",
+    "@extendscript/aes.patch.array.from": "^2.0.0",
+    "@extendscript/aes.patch.array.indexof": "^2.0.0",
+    "@extendscript/aes.patch.array.isarray": "^2.0.0",
+    "@extendscript/aes.patch.array.lastindexof": "^2.0.0",
+    "@extendscript/aes.patch.array.map": "^2.0.0",
+    "@extendscript/aes.patch.array.reduce": "^2.0.0",
+    "@extendscript/aes.patch.array.reduceright": "^2.0.0",
+    "@extendscript/aes.patch.array.some": "^2.0.0",
+    "extendscript-bundlr": "^0.4.0"
   }
 }

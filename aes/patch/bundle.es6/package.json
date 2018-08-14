@@ -7,7 +7,7 @@
     "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js",
-    "bundle": "./node_modules/.bin/exsbundlr -i ./bundle.es6.js -o ./es6.js"
+    "bundle": "exsbundlr --missing -i ./bundle.es6.js -o ./es6.js"
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,10 @@
     "build-node-venv": "^1.0.3",
     "minimist": "^1.2.0",
     "@extendscript/tap-es": ">=1.0.5",
-    "@extendscript/aes.patch.bundle.es5": "^1.0.0",
-    "@extendscript/aes.patch.array.from": "^1.0.0",
-    "@extendscript/aes.patch.object.assign": "^1.0.0",
-    "@extendscript/aes.patch.number.isfinite": "^1.0.0",
-    "extendscript-bundlr": "^0.3.1"
+    "@extendscript/aes.patch.bundle.es5": ">=2.0.2",
+    "@extendscript/aes.patch.array.from": ">=2.0.0",
+    "@extendscript/aes.patch.object.assign": ">=2.0.0",
+    "@extendscript/aes.patch.number.isfinite": ">=2.0.0",
+    "extendscript-bundlr": "^0.4.0"
   }
 }
