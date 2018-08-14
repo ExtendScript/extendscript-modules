@@ -1,6 +1,6 @@
 # Boilerplate Module
 
-This is a boilerplate module for publushing into the [@extendscript](https://www.npmjs.com/org/extendscript) namespace. Please make sure you have read our [Code of Conduct](https://github.com/ExtendScript/organisation-rules/blob/master/CODE_OF_CONDUCT.md), [Contributing Guidelines](https://github.com/ExtendScript/organisation-rules/blob/master/CONTRIBUTING.md) and [Package Naming Conventions](./docs/Package-Naming-Conventions.md). Then publish to npm using the `--access public` flag:
+A boilerplate for publishing a module into the [@extendscript](https://www.npmjs.com/org/extendscript) namespace. Please make sure you have read our [Code of Conduct](https://github.com/ExtendScript/organisation-rules/blob/master/CODE_OF_CONDUCT.md), [Contributing Guidelines](https://github.com/ExtendScript/organisation-rules/blob/master/CONTRIBUTING.md) and [Package Naming Conventions](./docs/Package-Naming-Conventions.md). Then publish to npm using the `--access public` flag:
 
     npm publish --access public
 
