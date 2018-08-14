@@ -1,5 +1,7 @@
 # modules.init
 
+[![version](https://img.shields.io/npm/v/@extendscript/modules.init.svg)](https://www.npmjs.org/package/@extendscript/modules.init)
+
 This module creates the shared `Sky` object. A peer-dependency for all [ExtendScript Modules](../docs/API-Registry.md).
 
 

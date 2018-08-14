@@ -1,5 +1,7 @@
 # ___moduleName___
 
+[![version](https://img.shields.io/npm/v/@extendscript/___path___.___moduleName___.svg)](https://www.npmjs.org/package/@extendscript/___path___.___moduleName___)
+
 > ___type___
 
 ___description___

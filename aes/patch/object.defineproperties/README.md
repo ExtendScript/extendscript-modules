@@ -1,5 +1,7 @@
 # object.defineproperties
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.defineproperties.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.defineproperties)
+
 > ES5 Sham
 
 The `Object.defineProperties()` method defines new or modifies existing properties directly on an object, returning the object.

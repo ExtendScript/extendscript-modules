@@ -1,5 +1,7 @@
 # array.foreach
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.foreach.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.foreach)
+
 > ES5 Shim
 
 The `forEach()` method executes a provided function once for each array element.

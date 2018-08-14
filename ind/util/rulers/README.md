@@ -1,5 +1,7 @@
 # rulers
 
+[![version](https://img.shields.io/npm/v/@extendscript/ind.util.rulers.svg)](https://www.npmjs.org/package/@extendscript/ind.util.rulers)
+
 > InDesign Utility
 
 The rulers utility adds the `rulers.set()` method. This method sets rulers to the desired units. It returns the original ruler-settings which we can pass back to reset the rulers to original state.

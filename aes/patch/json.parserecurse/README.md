@@ -1,5 +1,7 @@
 # json.parserecurse
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.json.parserecurse.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.json.parserecurse)
+
 > Extension
 
 The `JSON.parseRecurse()` method is an alternate `JSON.parse()` function that uses recursive descent instead of eval.

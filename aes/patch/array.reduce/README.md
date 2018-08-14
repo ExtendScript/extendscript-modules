@@ -1,5 +1,7 @@
 # array.reduce
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.reduce.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.reduce)
+
 > ES5 Shim
 
 The `Array.reduce()` method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.

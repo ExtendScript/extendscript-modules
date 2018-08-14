@@ -1,5 +1,7 @@
 # number.isfinite
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.number.isfinite.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.number.isfinite)
+
 > ES6 Shim
 
 The `Number.isFinite()` method determines whether the passed value is a finite number.

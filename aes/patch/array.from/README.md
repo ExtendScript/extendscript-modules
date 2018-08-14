@@ -1,5 +1,7 @@
 # array.from
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.from.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.from)
+
 > ES6 Shim
 
 The `from()` method creates a new Array instance from an array-like or iterable object.

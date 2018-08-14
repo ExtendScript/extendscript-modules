@@ -1,5 +1,7 @@
 # function.bind
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.function.bind.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.function.bind)
+
 > ES5 Sham
 
 The `bind()` method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.

@@ -1,5 +1,7 @@
 # array.reduceright
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.reduceright.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.reduceright)
+
 > ES5 Shim
 
 The `reduceRight()` method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.

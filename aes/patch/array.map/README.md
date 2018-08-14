@@ -1,5 +1,7 @@
 # array.map
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.map.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.map)
+
 > ES5 Shim
 
 The Array.map() method creates a new array with the results of calling a provided function on every element in the calling array.

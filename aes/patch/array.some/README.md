@@ -1,5 +1,7 @@
 # array.some
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.some.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.some)
+
 > ES5 Shim
 
 The `Array.some()` method tests whether at least one element in the array passes the test implemented by the provided function.

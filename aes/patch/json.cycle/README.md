@@ -1,5 +1,7 @@
 # json.cycle
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.json.cycle.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.json.cycle)
+
 > Extension
 
 Adds `decycle()` and `retrocycle()` to JSON, which make it possible to encode cyclical structures and dags in JSON, and to then recover them.

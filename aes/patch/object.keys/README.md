@@ -1,5 +1,7 @@
 # object.keys
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.keys.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.keys)
+
 > ES5 Shim
 
 The `Object.keys()` method returns an array of a given object's own enumerable properties.

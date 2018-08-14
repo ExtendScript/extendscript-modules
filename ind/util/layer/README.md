@@ -1,5 +1,7 @@
 # layer
 
+[![version](https://img.shields.io/npm/v/@extendscript/ind.util.layer.svg)](https://www.npmjs.org/package/@extendscript/ind.util.layer)
+
 > InDesign Utility
 
 Some layer utilities for InDesign

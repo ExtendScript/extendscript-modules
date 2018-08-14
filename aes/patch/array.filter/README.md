@@ -1,5 +1,7 @@
 # array.filter
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.filter.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.filter)
+
 > ES5 Shim
 
 The `filter()` method creates a new array with all elements that pass the test implemented by the provided function.

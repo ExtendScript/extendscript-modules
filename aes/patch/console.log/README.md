@@ -1,5 +1,7 @@
 # console.log
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.console.log.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.console.log)
+
 > Fill
 
 A `console.log()` for ExtendScript.

@@ -1,5 +1,7 @@
 # object.issealed
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.issealed.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.issealed)
+
 > ES5 Sham
 
 The `Object.isSealed()` method determines if an object is sealed.

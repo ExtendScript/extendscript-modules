@@ -1,5 +1,7 @@
 # json.comparable
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.json.comparable.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.json.comparable)
+
 > Extension
 
 Adds the `comparable()` method to JSON, which make it possible to compare two values on equality. It sorts arrays and objects before doing a `JSON.stringify()` comparison.

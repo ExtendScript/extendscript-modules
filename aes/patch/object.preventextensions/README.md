@@ -1,5 +1,7 @@
 # object.preventextensions
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.preventextensions.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.preventextensions)
+
 > ES5 Sham
 
 The `Object.preventExtensions()` method prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).

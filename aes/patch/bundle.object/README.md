@@ -1,5 +1,7 @@
 # bundle.object
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.bundle.object.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.bundle.object)
+
 > Bundle
 
 A collection of `Object` polyfills for Exendscript.

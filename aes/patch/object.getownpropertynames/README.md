@@ -1,5 +1,7 @@
 # object.getownpropertynames
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.getownpropertynames.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.getownpropertynames)
+
 > ES5 Sham
 
 The `Object.getOwnPropertyNames()` method returns an array of all properties (including non-enumerable properties except for those which use Symbol) found directly upon a given object.

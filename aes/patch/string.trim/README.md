@@ -1,5 +1,7 @@
 # string.trim
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.string.trim.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.string.trim)
+
 > ES5 Shim
 
 The trim() method removes whitespace from both ends of a string.

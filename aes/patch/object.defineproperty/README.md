@@ -1,5 +1,7 @@
 # object.defineproperty
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.defineproperty.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.defineproperty)
+
 > ES5 Sham
 
 The static method `Object.defineProperty()` defines a new property directly on an object, or modifies an existing property on an object, and returns the object.

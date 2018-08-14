@@ -1,5 +1,7 @@
 # array.find
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.array.find.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.array.find)
+
 > ES5 Shim
 
 The `find()` method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned.

@@ -1,5 +1,7 @@
 # object.assign
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.assign.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.assign)
+
 > ES6 Shim
 
 The `assign()` method is used to copy values of all enumerable own properties from one or more source objects to a target object. It will return the target object.

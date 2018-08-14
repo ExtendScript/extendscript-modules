@@ -1,5 +1,7 @@
 # bundle.es5
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.bundle.es5.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.bundle.es5)
+
 > Bundle
 
 A collection of ES5 polyfills for Exendscript.

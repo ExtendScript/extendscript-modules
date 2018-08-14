@@ -1,5 +1,7 @@
 # object.create
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.create.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.create)
+
 > ES5 Shim
 
 The `create()` method creates a new object with the specified prototype.

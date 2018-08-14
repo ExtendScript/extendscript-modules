@@ -1,5 +1,7 @@
 # bundle.array
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.bundle.array.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.bundle.array)
+
 > Bundle
 
 A collection of `Array` polyfills for Exendscript.

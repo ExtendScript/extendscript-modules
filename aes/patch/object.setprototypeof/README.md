@@ -1,5 +1,7 @@
 # object.setprototypeof
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.setprototypeof.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.setprototypeof.trim)
+
 > ES5 Sham
 
 The `Object.setPrototypeOf()` method sets the prototype (i.e., the internal `Prototype` property) of a specified object to another object or null.

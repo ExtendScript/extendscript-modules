@@ -1,5 +1,7 @@
 # pageitems
 
+[![version](https://img.shields.io/npm/v/@extendscript/ind.util.pageitems.svg)](https://www.npmjs.org/package/@extendscript/ind.util.pageitems)
+
 > InDesign Utility
 
 Utilities that create or target page items in InDesign.

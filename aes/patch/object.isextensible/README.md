@@ -1,5 +1,7 @@
 # object.isextensible
 
+[![version](https://img.shields.io/npm/v/@extendscript/aes.patch.object.isextensible.svg)](https://www.npmjs.org/package/@extendscript/aes.patch.object.isextensible)
+
 > ES5 Sham
 
 The Object.isExtensible() method determines if an object is extensible (whether it can have new properties added to it).
