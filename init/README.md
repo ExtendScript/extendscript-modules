@@ -13,16 +13,16 @@ This module creates the shared `Sky` object. A peer-dependency for all [ExtendSc
 
 Import this init module and any other module you'd like to use for your project:
 
-1) Load the init module which creates the `Sky` object:
+  1. Load the init module which creates the `Sky` object:
 
     #include 'node_modules/@extendscript/modules.init/init.js'
 
-2) Add any other modules you'd like to use:
+  2. Add any other modules you'd like to use:
 
     #include 'node_modules/@extendscript/aes.bundle.array/array.js'
     #include 'node_modules/@extendscript/ind.util.rulers/rulers.js'
 
-3) Init the `Sky` to complete the setup:
+  3. Init the `Sky` to complete the setup:
 
     Sky.init();
 
