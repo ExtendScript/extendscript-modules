@@ -7,7 +7,26 @@ This module creates the shared `Sky` object. A peer-dependency for all [ExtendSc
 
 # Install
 
-    npm install @extendscript/modules.init --no-save
+    npm install @extendscript/modules.init
+
+## Use
+
+Import this init module and any other module you'd like to use for your project:
+
+1) Load the init module which creates the `Sky` object:
+
+    #include 'node_modules/@extendscript/modules.init/init.js'
+
+2) Add any other modules you'd like to use:
+
+    #include 'node_modules/@extendscript/aes.bundle.array/array.js'
+    #include 'node_modules/@extendscript/ind.util.rulers/rulers.js'
+
+3) Init the `Sky` to complete the setup:
+
+    Sky.init();
+
+> NOTE: The `init` function is generally used to load any required polyfills.  
 
 
 ## Test
