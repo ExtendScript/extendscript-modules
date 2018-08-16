@@ -5,10 +5,10 @@
 
 */
 
-$.global.hasOwnProperty('Sky')||(function(HOST, SELF) {  
+(function(HOST, SELF) {  
     // The HOST/SELF setup was suggested by Marc Autret
     // https://forums.adobe.com/thread/1111415
-    var VERSION = 1.0;
+    var VERSION = 2.1;
 
     if(HOST[SELF] && HOST[SELF].version > VERSION) return HOST[SELF];  
     HOST[SELF] = SELF;
@@ -71,15 +71,37 @@ $.global.hasOwnProperty('Sky')||(function(HOST, SELF) {
         return SELF;
     };
 
+    INNER.initQueue = function () {
+        var IQ = this;
+        IQ.queue = [];
+
+        IQ.add = function ( initFun ) {
+            if(typeof initFun === 'function') {
+                IQ.queue.push( initFun );
+            } else {
+                throw new Error("Only callable items like functions are allowed into the Init Queue. Ignored the request for " + typeof initFun );
+            };
+        };
+
+        IQ.run = function(){
+            for (var i = 0, len = IQ.queue.length; i < len; i++) {
+                IQ.queue[i]();
+            };
+        };
+    };
+
     //    P U B L I C 
     //---------------------
 
     SELF.patch = {};
     SELF.module = {};
     SELF.util = {};
-    
-    // generic unload pattern  
-    // ---  
+
+    SELF.IQ = new INNER.initQueue;
+    SELF.init = function() {
+        SELF.IQ.run();
+    };
+
     SELF.unload = function() {  
         var k;  
         for( k in INNER ) {  
