@@ -4,7 +4,7 @@ Here you can find some [modules](./docs/API-Registry.md) we host inside our [@ex
 
 ## Installing modules
 
-We only use npm to manage packages and versions. This means that after we install a peer we still need to finish it's installation by including it's main:
+We only use npm to manage packages and versions. This means that after we install a peer we still need to finish it's installation by including it's main entry point:
 
     #include 'node_modules/@extendscript/modules.init/init.js'
     #include 'node_modules/@extendscript/another.module/module.js'
