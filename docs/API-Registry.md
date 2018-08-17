@@ -1,9 +1,9 @@
 # API Registry
-To not pollute the global scope, and make it easy for modules to talk to eachother, it is recommended to attach methods to a shared global variable. We keep a registry of properties that might be loaded into the shared API called `Sky`.
+To not pollute the global scope, and make it easy for modules to interconnect, we attach all methods to a shared global variable. We keep a registry of properties that might be loaded into the shared API called `Sky`.
 
-    $.Sky
+    $.global.Sky
 
-The `Sky` object is created by the [`Main Module`](../main). All sub-modules will be loaded under `Sky.module` and `Sky.util`. The main module should therefore be a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of any ExtendScript Module.
+The `Sky` object is created by the [`modules.init`](../init) module. All sub-modules will be loaded under `Sky.module` and `Sky.util`. The main module should therefore be a [peer dependency](https://nodejs.org/en/blog/npm/peer-dependencies/) of any ExtendScript Module.
 
   * Properties in _italic_ do not exist but are reserved.
   * Properties in __bold__ are open to sub methods (preferred)
