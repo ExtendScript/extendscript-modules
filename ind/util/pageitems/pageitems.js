@@ -86,8 +86,13 @@
             // Parameter   : pageItems  : A page item or array of pageItems
             // Returns     : pageItems
             // Description : Updates bounding box of pageItems to SpreadPage bounds
-
+            
             var pageItems = ( Array.isArray(pageItems) ) ? pageItems : [ pageItems ];
+
+            for (var i = 0, len = pageItems.length; i < len; i++) {
+                var pageBounds = Sky.getUtil('page').getInfo( pageItems[i].parentPage ).bounds;
+                pageItems[i].bounds = pageBounds;
+            };
 
         };
 

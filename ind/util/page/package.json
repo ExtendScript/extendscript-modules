@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/___path___.___moduleName___",
+  "name": "@extendscript/ind.util.page",
   "version": "0.1.0",
-  "description": "___description___",
-  "main": "___moduleName___.js",
+  "description": "Some page tools for InDesign",
+  "main": "page.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -15,7 +15,7 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
-    "___moduleName___"
+    "page"
   ],
   "author": "extendscript.org",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "@extendscript/tap-es": ">=1.0.5"
   },
   "peerDependencies": {
-    "@extendscript/modules.init": ">=2.1.0"
+    "@extendscript/modules.init": ">=2.1.0",
+    "@extendscript/ind.util.rulers": ">=4.0.0"
   }
 }

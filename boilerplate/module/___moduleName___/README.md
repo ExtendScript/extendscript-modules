@@ -6,9 +6,13 @@
 
 ___description___
 
-# Install
+## Install
 
     npm install @extendscript/___path___.___moduleName___
+
+## Include
+
+    #include 'node_modules/@extendscript/___path___.___moduleName___/___moduleName___.js'
 
 ## Use
 
