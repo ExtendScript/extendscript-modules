@@ -6,9 +6,17 @@
 
 Utilities that create or target page items in InDesign.
 
-# Install
+## Install
 
     npm install @extendscript/ind.util.pageitems
+
+## Include
+
+    #include 'node_modules/@extendscript/ind.util.pageitems/pageitems.js'
+
+## Use
+
+    var Pageitems = Sky.getUtil("pageitems");
 
 ## Test
 

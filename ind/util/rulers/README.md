@@ -10,6 +10,10 @@ The rulers utility adds the `rulers.set()` method. This method sets rulers to th
 
     npm install @extendscript/ind.util.rulers
 
+## Include
+
+    #include 'node_modules/@extendscript/ind.util.rulers/rulers.js'
+
 ## Use
 
 Load the module

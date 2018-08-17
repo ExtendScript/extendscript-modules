@@ -12,6 +12,10 @@ Source: [jib:stackoverflow](https://stackoverflow.com/questions/201183/how-to-de
 
     npm install @extendscript/aes.patch.json.comparable
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.json.comparable/comparable.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

@@ -28,6 +28,6 @@
     "@extendscript/tap-es": ">=1.0.5"
   },
   "peerDependencies": {
-    "@extendscript/modules.init": ">=2.0.0"
+    "@extendscript/modules.init": ">=2.1.0"
   }
 }

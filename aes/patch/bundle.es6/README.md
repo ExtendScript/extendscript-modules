@@ -11,6 +11,10 @@ A collection of ES6 polyfills for Exendscript.
 
     npm install @extendscript/aes.patch.bundle.es6
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.bundle.es6/es6.js'
+
 ## Update Bundle
 
     npm run bundle

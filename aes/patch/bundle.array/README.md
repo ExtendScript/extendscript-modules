@@ -11,6 +11,10 @@ A collection of `Array` polyfills for Exendscript.
 
     npm install @extendscript/aes.patch.bundle.array
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.bundle.array/array.js'
+
 ## Update Bundle
 
     npm run bundle

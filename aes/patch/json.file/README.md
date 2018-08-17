@@ -10,6 +10,10 @@ Adds the `openFile()` and `saveFile()` methods to JSON
 
     npm install @extendscript/aes.patch.json.file
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.json.file/file.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

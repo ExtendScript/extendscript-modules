@@ -12,6 +12,10 @@ Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 
     npm install @extendscript/aes.patch.object.assign
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.object.assign/assign.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

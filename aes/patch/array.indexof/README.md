@@ -12,6 +12,10 @@ Source: [ps-scripting-es5shim](https://github.com/EugenTepin/ps-scripting-es5shi
 
     npm install @extendscript/aes.patch.array.indexof
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.array.indexof/indexof.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

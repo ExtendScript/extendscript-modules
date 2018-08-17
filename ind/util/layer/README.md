@@ -6,9 +6,13 @@
 
 Some layer utilities for InDesign
 
-# Install
+## Install
 
     npm install @extendscript/ind.util.layer
+
+## Include
+
+    #include 'node_modules/@extendscript/ind.util.layer/layer.js'
 
 ## Use
 

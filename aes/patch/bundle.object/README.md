@@ -11,6 +11,10 @@ A collection of `Object` polyfills for Exendscript.
 
     npm install @extendscript/aes.patch.bundle.object
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.bundle.object/object.js'
+
 ## Update Bundle
 
     npm run bundle

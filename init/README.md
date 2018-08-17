@@ -5,9 +5,13 @@
 This module creates the shared `Sky` object. A peer-dependency for most [ExtendScript Modules](../docs/API-Registry.md).
 
 
-# Install
+## Install
 
     npm install @extendscript/modules.init
+
+## Include 
+
+    #include 'node_modules/@extendscript/modules.init/init.js'  
 
 ## Use
 

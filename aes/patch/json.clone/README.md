@@ -11,6 +11,10 @@ Adds the `clone()` method to JSON
 
     npm install @extendscript/aes.patch.json.clone
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.json.clone/clone.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

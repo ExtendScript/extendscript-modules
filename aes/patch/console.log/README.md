@@ -12,6 +12,10 @@ Source: [Bruno Herfst](https://gist.github.com/GitBruno/b00528511c1ecd43bc76481c
 
     npm install @extendscript/aes.patch.console.log
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.console.log/log.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):

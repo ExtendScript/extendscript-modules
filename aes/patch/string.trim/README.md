@@ -12,6 +12,10 @@ Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 
     npm install @extendscript/aes.patch.string.trim
 
+## Include
+
+    #include 'node_modules/@extendscript/aes.patch.string.trim/trim.js'
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):
