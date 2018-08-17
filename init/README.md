@@ -2,7 +2,7 @@
 
 [![version](https://img.shields.io/npm/v/@extendscript/modules.init.svg)](https://www.npmjs.org/package/@extendscript/modules.init)
 
-This module creates the shared `Sky` object. A peer-dependency for all [ExtendScript Modules](../docs/API-Registry.md).
+This module creates the shared `Sky` object. A peer-dependency for most [ExtendScript Modules](../docs/API-Registry.md).
 
 
 # Install
@@ -26,7 +26,7 @@ Import this init module and any other module you'd like to use for your project:
 
     Sky.init();
 
-> NOTE: The `init` function is generally used to load any required polyfills.  
+> The `init` function is used to load any initialisation processes of _loaded_ modules. Meaning this module does not make use of it and is not specifically required.
 
 
 ## Test
