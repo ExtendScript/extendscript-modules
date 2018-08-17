@@ -17,13 +17,85 @@
         pageitems.description = "Utilities that create or target page items in InDesign.";
         
         // This might be useful as a separate module?
+        // Yes, the pages module will need this too...
         function boundsClass() {
             var bounds = this;
+            
             bounds.getBoundsRelative2Page = function( ){ };
+            
             bounds.getBoundsRelative2Spread = function( ){ };
-            bounds.getBoundsInfo = function( ){ };
-            bounds.getBoundsOfset = function( ){ };
-            bounds.zeroBounds = function( ){ };
+            
+            bounds.getInfo = function( bounds ){
+                // This functions receives bounds (y1, x1, y2, x2)
+                // and returns an object with bounds and info as below
+                var topLeftY   = bounds[0];
+                var topLeftX   = bounds[1];
+                var botRightY  = bounds[2];
+                var botRightX  = bounds[3];
+                var height     = Math.abs(botRightY - topLeftY);
+                var width      = Math.abs(botRightX - topLeftX);
+                var halfWidth  = 0;
+                var halfHeight = 0;
+
+                if(width > 0) {
+                    halfWidth = width/2;
+                };
+                if(height > 0) {
+                    halfHeight = height/2;
+                };
+
+                return { bounds    : bounds,
+                         height    : height,
+                         width     : width,
+                         topLeft   : {x: topLeftX                , y: topLeftY               } ,
+                         topCenter : {x: topLeftX + halfWidth    , y: topLeftY               } ,
+                         topRight  : {x: botRightX               , y: topLeftY               } ,
+                         midLeft   : {x: topLeftX                , y: topLeftY  + halfHeight } ,
+                         midCenter : {x: topLeftX + halfWidth    , y: topLeftY  + halfHeight } ,
+                         midRight  : {x: botRightX               , y: topLeftY  + halfHeight } ,
+                         botLeft   : {x: topLeftX                , y: botRightY              } ,
+                         botCenter : {x: topLeftX + halfWidth    , y: botRightY              } ,
+                         botRight  : {x: botRightX               , y: botRightY              } };
+            };
+
+            bounds.getOfset = function( itemBounds, relativeToBounds ){
+                // BEWARE: This function expects both bounds to be in the same
+                //  X-Y coordinate space, and use the same measure unit!
+                //
+                //   X--------X--------X
+                //   |  |   |   |      |
+                //   |--X---X---X------|
+                //   |  |   |   |      |
+                //   |--X---X---X------|
+                //   X  |   |   |      X
+                //   |--X---X---X------|
+                //   |  |   |   |      |
+                //   |  |   |   |      |
+                //   |  |   |   |      |
+                //   X--------X--------X
+                //
+                // Fetch Bounds Info
+                var relBounds  = bounds.getInfo(relativeToBounds);
+                var itemBounds = bounds.getInfo(itemBounds);
+
+                return { bounds    : itemBounds.bounds,
+                         height    : itemBounds.height,
+                         width     : itemBounds.width,
+                         topLeft   : { x: itemBounds.topLeft.x   - relBounds.topLeft.x    , y: itemBounds.topLeft.y   - relBounds.topLeft.y    } ,
+                         topCenter : { x: itemBounds.topCenter.x - relBounds.topCenter.x  , y: itemBounds.topCenter.y - relBounds.topCenter.y  } ,
+                         topRight  : { x: itemBounds.topRight.x  - relBounds.topRight.x   , y: itemBounds.topRight.y  - relBounds.topRight.y   } ,
+                         midLeft   : { x: itemBounds.midLeft.x   - relBounds.midLeft.x    , y: itemBounds.midLeft.y   - relBounds.midLeft.y    } ,
+                         midCenter : { x: itemBounds.midCenter.x - relBounds.midCenter.x  , y: itemBounds.midCenter.y - relBounds.midCenter.y  } ,
+                         midRight  : { x: itemBounds.midRight.x  - relBounds.midRight.x   , y: itemBounds.midRight.y  - relBounds.midRight.y   } ,
+                         botLeft   : { x: itemBounds.botLeft.x   - relBounds.botLeft.x    , y: itemBounds.botLeft.y   - relBounds.botLeft.y    } ,
+                         botCenter : { x: itemBounds.botCenter.x - relBounds.botCenter.x  , y: itemBounds.botCenter.y - relBounds.botCenter.y  } ,
+                         botRight  : { x: itemBounds.botRight.x  - relBounds.botRight.x   , y: itemBounds.botRight.y  - relBounds.botRight.y   } };
+            };
+
+            bounds.normalise = function( boundsArr ){
+                // Zero bounds
+                return [0, 0, boundsArr[2]-boundsArr[0], boundsArr[3]-boundsArr[1]];
+            };
         };
 
         pageitems.bounds = new boundsClass();
