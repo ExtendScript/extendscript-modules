@@ -91,13 +91,13 @@
             // Returns     : pageItems
             // Description : Updates bounding box of pageItems to SpreadPage bleed
 
+            var PageUtil = Sky.getUtil("page");
             var pageItems = ( Array.isArray(pageItems) ) ? pageItems : [ pageItems ];
 
             for (var i = 0, len = pageItems.length; i < len; i++) {
-                var pageRef = ( typeof SpreadPage === undefined ) ? pageItems[i].parentPage : SpreadPage;
-                var pageBounds = pageRef.bounds;
-                // var bleedInfo  = 
-                // pageItems[i].bounds = pageBounds;
+                var pageRef  = ( typeof SpreadPage === undefined ) ? pageItems[i].parentPage : SpreadPage;
+                var pageInfo = PageUtil.getInfo( pageRef );
+                pageItems[i].bounds = pageInfo.bleedBounds;
             };
         };
 
