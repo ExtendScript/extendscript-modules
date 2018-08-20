@@ -1,6 +1,6 @@
-# page
+# pages
 
-[![version](https://img.shields.io/npm/v/@extendscript/ind.util.page.svg)](https://www.npmjs.org/package/@extendscript/ind.util.page)
+[![version](https://img.shields.io/npm/v/@extendscript/ind.util.pages.svg)](https://www.npmjs.org/package/@extendscript/ind.util.pages)
 
 > Utility
 
@@ -8,17 +8,17 @@ Some page tools for InDesign
 
 ## Install
 
-    npm install @extendscript/ind.util.page
+    npm install @extendscript/ind.util.pages
 
 ## Include
 
-    #include 'node_modules/@extendscript/ind.util.page/page.js'
+    #include 'node_modules/@extendscript/ind.util.pages/pages.js'
 
 ## Use
 
 Load the module by creating a reference.
 
-    var page = Sky.getUtil("page")
+    var page = Sky.getUtil("pages")
 
 ## Test
 

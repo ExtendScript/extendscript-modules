@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/ind.util.page",
-  "version": "0.1.0",
+  "name": "@extendscript/ind.util.pages",
+  "version": "1.0.0",
   "description": "Some page tools for InDesign",
-  "main": "page.js",
+  "main": "pages.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -15,7 +15,7 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
-    "page"
+    "pages"
   ],
   "author": "extendscript.org",
   "license": "MIT",
@@ -24,10 +24,14 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "@extendscript/tap-es": ">=1.0.5"
+    "@extendscript/tap-es": ">=1.0.5",
+    "@extendscript/modules.init": ">=2.1.0",
+    "@extendscript/ind.util.rulers": ">=4.0.0",
+    "@extendscript/ind.util.bounds": ">=1.1.0"
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.1.0",
-    "@extendscript/ind.util.rulers": ">=4.0.0"
+    "@extendscript/ind.util.rulers": ">=4.0.0",
+    "@extendscript/ind.util.bounds": ">=1.1.0"
   }
 }

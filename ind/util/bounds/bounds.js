@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 1.0;
+    var VERSION = 1.1;
     var MODULE_PATH = "bounds";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
@@ -86,6 +86,16 @@
         bounds.normalise = function( boundsArr ){
             // Zero bounds
             return [0, 0, boundsArr[2]-boundsArr[0], boundsArr[3]-boundsArr[1]];
+        };
+        
+        bounds.grow = function( boundsArr1, boundsArr2 ){
+            // Grow bounds
+            return [boundsArr1[0]-boundsArr2[0], boundsArr1[1]-boundsArr2[1], boundsArr1[2]+boundsArr2[2], boundsArr1[3]+boundsArr2[3] ];
+        };
+        
+        bounds.shrink = function( boundsArr1, boundsArr2 ){
+            // Shrink bounds
+            return [boundsArr1[0]+boundsArr2[0], boundsArr1[1]+boundsArr2[1], boundsArr1[2]-boundsArr2[2], boundsArr1[3]-boundsArr2[3] ];
         };
     };
     //--------------------------
