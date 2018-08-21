@@ -4,9 +4,9 @@ As tests may be run by different people on different platforms the results are l
 
 ## bounds.js
 
-> Version 1.0.0
+> Version 1.1.0
 
 - ✔ Darwin indesign-13 test-relativeOfset.jsx: bounds [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-offset.jsx: bounds [pass: 1, fail: 0]
 - ✔ Darwin indesign-13 test-normalise.jsx: bounds [pass: 1, fail: 0]
 - ✔ Darwin indesign-13 test-getInfo.jsx: bounds [pass: 1, fail: 0]
-

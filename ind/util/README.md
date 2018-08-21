@@ -4,7 +4,7 @@ This is a collection of utilities for [InDesign](https://en.wikipedia.org/wiki/A
 
   - [x] [bounds](bounds)  
   - [ ] [pageitems](pageitems)  
-  - [ ] [pages](pages)  
+  - [x] [pages](pages)  
   - [x] [layer](layer)  
   - [x] [rulers](rulers)  
 

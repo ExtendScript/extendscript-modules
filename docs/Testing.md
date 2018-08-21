@@ -42,3 +42,16 @@ Copy the two lines under Tests and **add** them to the `results_log.md` under th
 Thanks!
 
 > The `results.md` file is automatically excluded from Git
+
+# Creating Tests
+
+Add your ExtendScript test files with `.jsx` extension to the test folder and prepend the name with test. Then the `test.js` script as defined in the `package.json` will glob them together:
+
+    + test  
+      - test-function01-case01.jsx
+      - test-function01-case02.jsx
+      - test-function02-case01.jsx
+
+> As we use markdown in the reports it is advised to not use underscores in the file name
+
+Append `$.write( Boolean )` at end in extendscript code of each test because the `test.js` script defines a `Boolean` comparator for the tap test. (You can change this course, up to you) 

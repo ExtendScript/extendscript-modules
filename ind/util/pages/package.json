@@ -24,10 +24,11 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "@extendscript/tap-es": ">=1.0.5",
-    "@extendscript/modules.init": ">=2.1.0",
+    "@extendscript/aes.patch.json": "^2.0.0",
+    "@extendscript/ind.util.bounds": ">=1.1.0",
     "@extendscript/ind.util.rulers": ">=4.0.0",
-    "@extendscript/ind.util.bounds": ">=1.1.0"
+    "@extendscript/modules.init": ">=2.1.0",
+    "@extendscript/tap-es": ">=1.0.5"
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.1.0",

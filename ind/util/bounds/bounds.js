@@ -83,21 +83,27 @@
                      botRight  : { x: itemBounds.botRight.x  - relBounds.botRight.x   , y: itemBounds.botRight.y  - relBounds.botRight.y   } };
         };
 
-        bounds.normalise = function( boundsArr ){
-            // Zero bounds
-            return [0, 0, boundsArr[2]-boundsArr[0], boundsArr[3]-boundsArr[1]];
+        bounds.offset = function( boundsArr, offset ) {
+            // Param boundsArr: Array in format [y1, x1, y2, x2]
+            // Param offset: Array or Number (Optional) x_y or [x, y]
+            if (offset === undefined) offset = [0,0];
+            if (typeof offset === "number") offset = [offset,offset];
+            var updatedBounds = [0,0,0,0];
+            updatedBounds[0] = boundsArr[0] + offset[1];
+            updatedBounds[1] = boundsArr[1] + offset[0];
+            updatedBounds[2] = boundsArr[2] + offset[1];
+            updatedBounds[3] = boundsArr[3] + offset[0];
+            return updatedBounds;
         };
-        
-        bounds.grow = function( boundsArr1, boundsArr2 ){
-            // Grow bounds
-            return [boundsArr1[0]-boundsArr2[0], boundsArr1[1]-boundsArr2[1], boundsArr1[2]+boundsArr2[2], boundsArr1[3]+boundsArr2[3] ];
-        };
-        
-        bounds.shrink = function( boundsArr1, boundsArr2 ){
-            // Shrink bounds
-            return [boundsArr1[0]+boundsArr2[0], boundsArr1[1]+boundsArr2[1], boundsArr1[2]-boundsArr2[2], boundsArr1[3]-boundsArr2[3] ];
+
+        bounds.normalise = function( boundsArr, offset ) {
+            // Param boundsArr: Array in format [y1, x1, y2, x2]
+            // Param offset: Array or Number (Optional) x_y or [x, y]
+            var normalBounds = [0, 0, boundsArr[2]-boundsArr[0], boundsArr[3]-boundsArr[1]];
+            return bounds.offset( normalBounds, offset);
         };
     };
+
     //--------------------------
     // End bounds class
 
