@@ -22,12 +22,12 @@ Load the module
 
 ### Methods
 
-  * getByName( `doc`, `layerName`, *`createBool`* )
-  * getSelect( `doc`, `layerName`, *`createBool`* )
-  * getSelectMove( `doc`, `layerName`, `afterlayerNo`, *`createBool`* )
+  * get( `Doc`, `layerRefOrName`, *`createBool`* )
+  * select( `Doc`, `layerRefOrName`, *`createBool`* )
+  * move( `Doc`, `layerRefOrName`, `afterlayerNo`, *`createBool`* ) 
+  * moveAndSelect( `Doc`, `layerRefOrName`, `afterLayerNo`, *`createBool`* )
   * locker( `layerRef`, *`lockBool`* )
-  * move( `layerRef`, `afterlayerNo` )
-  * select( `layerRef` )
+  * validOr( `LayerRef`, `orValue`)
 
 ## Test
 

@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 0.1;
+    var VERSION = 1.0;
     var MODULE_PATH = "layer";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
@@ -16,51 +16,97 @@
         layerModule.version = VERSION;
         layerModule.description = "Some layer utilities for InDesign";
 
-        layerModule.getByName = function( doc, layerName, createBool ) {
+
+        layerModule.getByName = function( Doc, layerName, createBool ) {
             // Returns requested layer reference || undefined,
             // if createBool == true; returns new layer with layerName
 
             // Parse input
-            if (!doc.isValid) return new Error("Not a valid document...");
+            if (!Doc.isValid) return new Error("Not a valid document...");
             var createBool = createBool === true;
             var layerName = String(layerName);
 
-            for (var i=0; i < doc.layers.length; i++) {
-                if (doc.layers[i].name == layerName) return doc.layers[i];
+            for (var i=0; i < Doc.layers.length; i++) {
+                if (Doc.layers[i].name == layerName) return Doc.layers[i];
             };
 
             if( createBool ) {
-                return doc.layers.add({name:layerName});
+                return Doc.layers.add({name:layerName});
             } else {
                 return undefined;
             };
         };
 
-        layerModule.getSelect = function( doc, layerName, createBool ) {
-            var layerRef = layerModule.getByName( doc, layerName, createBool );
-            if( layerRef.isValid ) {
-                return layerModule.select( layerRef );
+        layerModule.get = function( Doc, layerRefOrName, createBool ) {
+            // Returns requested layer reference || undefined,
+            // if createBool == true; returns new layer with layerName
+            var createBool = createBool === true;
+
+            if (typeof layerRefOrName === 'string' || layerRefOrName instanceof String ) {
+                // type of string
+                return layerModule.getByName( Doc, layerRefOrName, createBool );
             } else {
-                return layerRef;
+                if( layerRefOrName && layerRefOrName.constructor.name === "Layer" ) {
+                    // type of layer-ref
+                    if( layerRefOrName.isValid ) return layerRefOrName;
+                    return layerModule.getByName( Doc, layerRefOrName.name, createBool );
+                } else {
+                    // Not a layer
+                    return undefined;
+                };
             };
         };
 
-        layerModule.getSelectMove = function( doc, layerName, afterlayerNo, createBool ) {
-            var layerRef = layerModule.getSelect(doc, layerName, createBool);
-            if( layerRef.isValid ) {
-                return layerModule.move( layerRef, afterlayerNo);
-            } else {
-                return layerRef;
+        layerModule.select = function( Doc, layerRefOrName, createBool ) {
+            // returns LayerRef or Error
+            var createBool = createBool === true;
+            var LayerRef = layerModule.get( Doc, layerRefOrName, createBool );
+            try {
+                Doc.activeLayer = LayerRef;
+                return LayerRef;
+            } catch ( error ) {
+                return error;
             };
         };
 
-        layerModule.locker = function( layerRef, lockBool ) {
+        layerModule.move = function( Doc, layerRefOrName, afterLayerNo, createBool ) {
+            // returns LayerRef or Error
+            var createBool = createBool === true;
+            var LayerRef = layerModule.get( Doc, layerRefOrName, createBool );
+
+            if( LayerRef === undefined ) {
+                return new Error("Could not resolve layer reference.");
+            };
+
+            try {
+                LayerRef.move( LocationOptions.AFTER, Doc.layers[afterLayerNo] );
+                return LayerRef;
+            } catch ( error ) {
+                return error;
+            };
+        };
+
+        layerModule.moveAndSelect = function( Doc, layerRefOrName, afterLayerNo, createBool ) {
+            var createBool = createBool === true;
+            var LayerRef = layerModule.select(Doc, layerRefOrName, createBool);
+            if( LayerRef.isValid ) {
+                return layerModule.move( Doc, LayerRef, afterLayerNo);
+            } else {
+                if (LayerRef instanceof Error) {
+                    return LayerRef;
+                } else {
+                    return new Error("Could not resolve layer reference.");
+                };
+            };
+        };
+
+        layerModule.locker = function( LayerRef, lockBool ) {
             // lockBool: True:  layer will be locked
             // lockBool: False: layer will be unlocked
             // lockBool: Not true nor false: Layer lock will be toggled
             
             // Returns: The previous lock state
-            var prevLockState = layerRef.locked;
+            var prevLockState = LayerRef.locked;
 
             if(typeof lockBool !== 'boolean'){
                 // Toggle!
@@ -68,33 +114,17 @@
             };
 
             if(lockBool){
-                layerRef.locked = true;
+                LayerRef.locked = true;
                 return prevLockState;
             } else {
-                layerRef.locked = false;
+                LayerRef.locked = false;
                 return prevLockState;
             };
         };
 
-        layerModule.move = function( layerRef, afterlayerNo ) {
-            // returns layerRef or Error
-            try {
-                layerRef.move( LocationOptions.AFTER, layerRef.parent.layers[afterlayerNo] );
-                return layerRef
-            } catch ( error ) {
-                return error;
-            };
-        };
-
-        layerModule.select = function( layerRef ) {
-            // returns layerRef or Error
-            try {
-                var doc = layerRef.parent;
-                doc.activeLayer = layerRef;
-                return layerRef;
-            } catch ( error ) {
-                return error;
-            };
+        layerModule.validOr = function( LayerRef, orValue ) {
+            return ( LayerRef && LayerRef.constructor.name === "Layer" && 
+                     LayerRef.isValid ) ? LayerRef : orValue;
         };
 
     }; // End moduleClass

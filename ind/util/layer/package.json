@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/ind.util.layer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Some layer utilities for InDesign",
   "main": "layer.js",
   "scripts": {
@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "@extendscript/tap-es": ">=1.0.5"
+    "@extendscript/tap-es": ">=1.0.5",
+    "@extendscript/modules.init": ">=2.0.0"
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.0.0"

@@ -4,6 +4,12 @@ As tests may be run by different people on different platforms the results are l
 
 ## layer.js
 
-> Version 1.0.0
+> Version 1
 
 - ✔ Darwin indesign-13: layer [pass: 1, fail: 0]
+
+> Version 2
+
+- ✔ Darwin indesign-13 test-validOr.jsx: layer [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-moveAndSelect.jsx: layer [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-locker.jsx: layer [pass: 1, fail: 0]
