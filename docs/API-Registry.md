@@ -63,11 +63,13 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
       * [patch.string.trim](../aes/patch/string.trim)
   * __module__
   * __util__
+      * [__util.jaw](../aes/util/jaw)
       * [__util.schema__](../aes/util/schema)
         * [util.schema.document](../aes/util/schema/document)
 
 ## Script UI (sui)
   * __module__
+    * [module.jaxon](../sui/module/jaxon)
   * __util__
 
 ## InDesign (ind)
@@ -78,7 +80,7 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
     * [util.bounds](../ind/util/bounds)
     * [util.characterstyle](../ind/util/characterstyle)
     * [util.layer](../ind/util/layer)
-    * [util.menu-loader](../ind/util/menuloader)
+    * [util.menuloader](../ind/util/menuloader)
     * [util.objectstyle](../ind/util/objectstyle)
     * [util.pages](../ind/util/pages)
     * [util.paragraphstyle](../ind/util/paragraphstyle)
