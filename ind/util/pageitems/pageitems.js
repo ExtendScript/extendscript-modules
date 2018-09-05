@@ -16,6 +16,11 @@
         pageitems.version = VERSION;
         pageitems.description = "Utilities that create or target page items in InDesign.";
 
+        // Load any needed modules
+        pageitems.layer = Sky.getUtil("layer");
+
+        // We need to test if requirements are loaded!
+
         pageitems.getParentPage = function ( PageItem ) {
 
             switch ( PageItem.constructor.name ) {
@@ -127,36 +132,64 @@
             // Returns     : New Rectangle or error
             // Description : Adds a new rectangle on SpreadPage at myBounds
 
-            var PageUtil = Sky.getUtil("pages");
+            var pageKind = SpreadPage.constructor.name;
+            var Spread   = (pageKind === "Page") ? SpreadPage.parent : SpreadPage;
+            var Doc      = Spread.parent;
 
-            var pageInfo = PageUtil.getInfo(SpreadPage);
+            // It would be cool if there was a function that
+            // processes the Options object automatically as JSON schema.
 
-            if
+            // Setting good standard values is important as users can have different presets.
 
-            infoPage.kind  = pageSpread.constructor.name;
-            infoPage.units = units;
-            var spread    = (infoPage.kind === "Page") ? pageSpread.parent : pageSpread;
+            var initProps = {
+                itemLayer          : (Options.layer)        ? Options.layer        : Doc.activeLayer,
+                appliedObjectStyle : (Options.objectStyle)  ? Options.objectStyle  : Spread.parent.objectStyles.item(0)
+            };
+
+            // appliedObjectStyle is king. So we need to first apply appliedObjectStyle and then add any custom over-rides
+            var overRideProps = {
+                geometricBounds    : (Options.bounds)       ? Options.bounds       : [0,0,0.25,0.25],
+                fillColor          : (Options.fillColor)    ? Options.fillColor    : "None",
+                strokeColor        : (Options.strokeColor)  ? Options.strokeColor  : ( parseFloat(Options.strokeWeight) > 0)  ? "Black"  : "None",
+                strokeWeight       : (Options.strokeWeight) ? Options.strokeWeight : 0
+            };
+
+            // It would be cool to have a width and height parameter as well as x and y instead of bounds?
+            // So we can give the bounds OR width height with optional x, y?
 
             try {
-                // Create rectangle on layer
-                // var rect = myPage.rectangles.add(myLayer,{geometricBounds:myBounds, appliedObjectStyle: myPage.parent.parent.objectStyles.item(0), fillColor:myColour.fill, strokeColor:myColour.stroke});
+                var rect = SpreadPage.rectangles.add( initProps );
+                return pageitems.updateProps( rect, overRideProps );
             } catch( error ){
                 return error;
             };
+        };
+
+        pageitems.updateProps = function( pageItems, updateProps ) {
+            // This tool can quickly set a bunch of properties
+            var pageArray = ( Array.isArray(pageItems) ) ? pageItems : [ pageItems ];
+
+            for (var i = 0, len = pageArray.length; i < len; i++) {
+                for(var propName in updateProps) {
+                    pageArray[i][propName] = updateProps[propName];
+                };
+            };
+
+            return pageItems;
         };
 
         pageitems.addRect2Page = function( SpreadPage, Options ){
             // Parameter   : SpreadPage : A spread or page
             // Returns     : New Rectangle or Error
             // Description : Adds a new rectangle to the bounds of SpreadPage
-            return pageitems.boundsToPage( SpreadPage, pageitems.addRect(SpreadPage, Options) );
+            return pageitems.boundsToRef( pageitems.addRect(SpreadPage, Options), SpreadPage );
         };
     
         pageitems.addRect2Bleed = function( SpreadPage, Options ){
             // Parameter   : SpreadPage : A spread or page
             // Returns     : New Rectangle or Error
             // Description : Adds a new rectangle to the bleed bounds of SpreadPage
-            return pageitems.boundsToBleed( SpreadPage, pageitems.addRect(SpreadPage, Options) );
+            return pageitems.boundsToBleed( pageitems.addRect(SpreadPage, Options), SpreadPage );
         };
     
         pageitems.bounds2Ref = function( pageItems, Reference ){
