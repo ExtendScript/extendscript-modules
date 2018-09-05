@@ -37,8 +37,10 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
       * [patch.json.cycle](../aes/patch/json.cycle)
       * [patch.json.equals](../aes/patch/json.equals)
       * [patch.json.file](../aes/patch/json.file)
+      * [patch.json.instantiate](../aes/patch/json.instantiate)
       * [patch.json.parserecurse](../aes/patch/json.parserecurse)
       * [patch.json.parsestate](../aes/patch/json.parsestate)
+      * [patch.json.validate](../aes/patch/json.validate)
     * __patch.number__
       * [patch.number.isfinite](../aes/patch/number.isfinite)
     * __patch.object__
