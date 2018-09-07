@@ -1,5 +1,7 @@
 #include "test-header.js"
 
+var Bounds = Sky.getUtil("bounds");
+
 var Doc = app.documents.add();
 with( Doc.documentPreferences ){
     pageHeight = "100mm";
@@ -10,9 +12,12 @@ with( Doc.documentPreferences ){
     documentSlugTopOffset = "10mm";
 };
 
-var rect = Pageitems.addRect( Doc.pages[0], {strokeWeight: "0.25mm"} ); 
-var strokePoints = parseFloat(rect.strokeWeight);
+// Set rulers to mm to test our rectangle size
+Rulers.set( app.activeDocument, "MM");
+
+var rect = Pageitems.addRectToPage( Doc.pages[0] ); 
+var rectWidth = Bounds.getInfo(rect.geometricBounds).width;
 
 Doc.close(SaveOptions.NO);
 
-$.writeln( strokePoints === 0.70866141732283 );
+$.writeln( Number(rectWidth) === 100 );

@@ -28,11 +28,13 @@
     "@extendscript/tap-es": ">=1.0.5",
     "@extendscript/modules.init": ">=2.1.0",
     "@extendscript/aes.patch.bundle.array": ">=2.0.1",
-    "@extendscript/ind.util.layer": ">=1.0.0"
+    "@extendscript/ind.util.pages": ">=1.0.1",
+    "@extendscript/ind.util.rulers": ">=4.0.0",
+    "@extendscript/ind.util.bounds": ">=1.1.0"
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.1.0",
     "@extendscript/aes.patch.bundle.array": ">=2.0.1",
-    "@extendscript/ind.util.layer": ">=1.0.0"
+    "@extendscript/ind.util.pages": ">=1.0.0"
   }
 }

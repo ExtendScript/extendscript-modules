@@ -10,9 +10,9 @@ with( Doc.documentPreferences ){
     documentSlugTopOffset = "10mm";
 };
 
-var rect = Pageitems.addRect( Doc.pages[0], {strokeWeight: "0.25mm"} ); 
-var strokePoints = parseFloat(rect.strokeWeight);
+var tf = Pageitems.addTextFrame( Doc.pages[0], {contents: "OK", autoSize: "HEIGHT_AND_WIDTH"} );
+var contents = tf.contents;
 
 Doc.close(SaveOptions.NO);
 
-$.writeln( strokePoints === 0.70866141732283 );
+$.writeln( contents === "OK" );
