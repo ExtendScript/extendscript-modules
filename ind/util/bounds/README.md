@@ -18,7 +18,7 @@ Some utils for transforming InDesign bounds arrays.
 
 Load the module by creating a reference.
 
-    var bounds = Sky.getUtil("bounds")
+    var Bounds = Sky.getUtil("bounds")
 
 ### getInfo( `bounds` )
 
