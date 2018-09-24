@@ -8,7 +8,7 @@
 (function(HOST, SELF) {  
     // The HOST/SELF setup was suggested by Marc Autret
     // https://forums.adobe.com/thread/1111415
-    var VERSION = 2.1;
+    var VERSION = 2.2;
 
     if(HOST[SELF] && HOST[SELF].version > VERSION) return HOST[SELF];  
     HOST[SELF] = SELF;
@@ -28,22 +28,29 @@
                 "undefined" === typeof hanger[key] && upsert && (hanger[key] = isNaN(path[i + 1]) && {} || []); // If next key is an integer - create an array, else create an object.
                 if("undefined" === typeof (hanger = hanger[key])) {
                     break;
-                }
+                };
             } else {
                 err = new TypeError("Cannot read property " + key + " of " + (null === hanger && 'null' || typeof hanger));
                 break;
-            }
-        }
+            };
+        };
         if(callback) {
-            return callback(err && String(err), !err && hanger);
+            return callback(err, hanger);
         } else {
             return err || hanger;
-        }
+        };
     };
 
     INNER.get = function( hanger, path, callback ) {
+        var err = null;
         var pathArr = path && path.split(".") || [];
-        return INNER.manage(hanger, pathArr, pathArr.length, callback, false);
+        var result = INNER.manage(hanger, pathArr, pathArr.length, undefined, false);
+        if(!result) err = new TypeError("Could not load " + hanger.name + " " + path);
+        if(callback) {
+            return callback(err, result);
+        } else {
+            return err || result;
+        };
     };
 
     INNER.set = function ( hanger, path, value, callback ) {
@@ -70,7 +77,7 @@
 
         return SELF;
     };
-
+    
     INNER.initQueue = function () {
         var IQ = this;
         IQ.queue = [];
@@ -93,9 +100,9 @@
     //    P U B L I C 
     //---------------------
 
-    SELF.patch = {};
-    SELF.module = {};
-    SELF.util = {};
+    SELF.patch  = { name: "patch"   };
+    SELF.module = { name: "module"  };
+    SELF.util   = { name: "utility" };
 
     SELF.IQ = new INNER.initQueue;
     SELF.init = function() {

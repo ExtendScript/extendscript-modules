@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/modules.init",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "This module creates the shared `Sky` object. A peer-dependency for all ExtendScript Modules.",
   "main": "init.js",
   "scripts": {

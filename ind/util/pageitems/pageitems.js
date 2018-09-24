@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 0.2;
+    var VERSION = 0.3;
     var MODULE_PATH = "pageitems";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
@@ -16,8 +16,14 @@
         pageitems.version = VERSION;
         pageitems.description = "Utilities that create or target page items in InDesign.";
 
+        // Throws an error when dependency is not loaded...
+        var LoadCallback = function (err, module){
+            if( err instanceof Error || err instanceof TypeError ) throw err;
+            return module;
+        };
+
         // Load any needed modules
-        var PageUtil = Sky.getUtil("pages");
+        var PageUtil = Sky.getUtil("pages", LoadCallback );
 
         // We need to test if requirements are loaded!
 

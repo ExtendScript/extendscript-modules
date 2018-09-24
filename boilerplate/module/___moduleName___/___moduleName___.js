@@ -16,6 +16,12 @@
         ___moduleName___.version = VERSION;
         ___moduleName___.description = "___description___";
         
+        // Throws an error when dependency is not loaded...
+        var LoadCallback = function (err, module){
+            if( err instanceof Error || err instanceof TypeError ) throw err;
+            return module;
+        };
+
         // Module code here...
         ___moduleName___.test = function() {
             return true;
