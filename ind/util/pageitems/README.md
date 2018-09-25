@@ -20,45 +20,34 @@ Utilities that create or target page items in InDesign.
 
 ### Get Parent
 
+Returns the requested Parent or `Error`:
+
   * getParentPage ( `PageItem` )
-
-Returns the parent page of `PageItem` or `Error` 
-
   * getParentSpread ( `PageItem` )
-
-Returns the parent spread of `PageItem` or `Error` 
-
   * getParentDoc ( `PageItem` )
-
-Returns the parent document of `PageItem` or `Error` 
+ 
 
 ### Add Pageitem
 
+Adds a new PageItem on `SpreadPage`:
+
   * addTextFrame ( `SpreadPage`, `Options` )
-
-Adds and returns a new Textframe on `SpreadPage`
-
   * addRect ( `SpreadPage`, `Options` )
 
-Adds and returns a new Rectangle on `SpreadPage`
+Adds a new PageItem on `SpreadPage` using `SpreadPage` bounds:
 
   * addRectToPage ( `SpreadPage`, `Options` )
-
-Adds and returns a new rectangle to the bounds of `SpreadPage`
-
   * addRectToBleed ( `SpreadPage`, `Options` )
-
-Adds and returns anew rectangle to the bleed bounds of SpreadPage
 
 ### Update Bounds
 
+Sets bounding box of `pageItems` to `Reference` bounds. (Any reference that has the `geometricBounds` property, uses parentPage if `undefined`):
+
   * boundsToRef ( `pageItems`, `Reference` )
 
-Set bounding box of pageItems to Reference bounds; Any reference that has the `geometricBounds` property, uses parentPage if not defined.
+Updates bounding box of `pageItems` to `SpreadPage` bleed:
 
   * boundsToBleed ( `pageItems `, `SpreadPage` )
-
-Updates bounding box of `pageItems` to `SpreadPage` bleed.
 
 
 ## Test

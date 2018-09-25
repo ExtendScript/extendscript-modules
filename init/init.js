@@ -45,7 +45,7 @@
         var err = null;
         var pathArr = path && path.split(".") || [];
         var result = INNER.manage(hanger, pathArr, pathArr.length, undefined, false);
-        if(!result) err = new TypeError("Could not load " + hanger.name + " " + path);
+        if(!result) err = new TypeError("Could not get " + hanger.name + " " + path);
         if(callback) {
             return callback(err, result);
         } else {
