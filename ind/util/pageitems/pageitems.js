@@ -16,16 +16,30 @@
         pageitems.version = VERSION;
         pageitems.description = "Utilities that create or target page items in InDesign.";
 
-        // Throws an error when dependency is not loaded...
         var LoadCallback = function (err, module){
-            if( err instanceof Error || err instanceof TypeError ) throw err;
+            // Throws an error when dependency could not be loaded...
+            if( err instanceof Error || err instanceof TypeError ) {
+                throw new TypeError( err.message, $.fileName, $.line);
+            };
             return module;
         };
 
         // Load any needed modules
         var PageUtil = Sky.getUtil("pages", LoadCallback );
 
-        // We need to test if requirements are loaded!
+        pageitems.updateProps = function( pageItems, UpdateProps ) {
+            // This tool can quickly set a bunch of properties
+            var itemsArray = ( Array.isArray(pageItems) ) ? pageItems : [ pageItems ];
+            if (typeof UpdateProps !== 'object') throw new Error("Update props expects an Object but received " + typeof UpdateProps);
+
+            for (var i = 0, len = itemsArray.length; i < len; i++) {
+                for(var propName in UpdateProps) {
+                    itemsArray[i][propName] = UpdateProps[propName];
+                };
+            };
+
+            return pageItems;
+        };
 
         pageitems.getParentPage = function ( PageItem ) {
 
@@ -238,18 +252,18 @@
             };
         };
 
-        pageitems.updateProps = function( pageItems, UpdateProps ) {
-            // This tool can quickly set a bunch of properties
-            var itemsArray = ( Array.isArray(pageItems) ) ? pageItems : [ pageItems ];
-            if (typeof UpdateProps !== 'object') throw new Error("Update props expects an Object but received " + typeof UpdateProps);
-
-            for (var i = 0, len = itemsArray.length; i < len; i++) {
-                for(var propName in UpdateProps) {
-                    itemsArray[i][propName] = UpdateProps[propName];
-                };
-            };
-
-            return pageItems;
+        pageitems.addRectToPage = function( SpreadPage, Options ){
+            // Parameter   : SpreadPage : A spread or page
+            // Returns     : New Rectangle or Error
+            // Description : Adds a new rectangle to the bounds of SpreadPage
+            return pageitems.boundsToRef( pageitems.addRect(SpreadPage, Options), SpreadPage );
+        };
+    
+        pageitems.addRectToBleed = function( SpreadPage, Options ){
+            // Parameter   : SpreadPage : A spread or page
+            // Returns     : New Rectangle or Error
+            // Description : Adds a new rectangle to the bleed bounds of SpreadPage
+            return pageitems.boundsToBleed( pageitems.addRect(SpreadPage, Options), SpreadPage );
         };
 
         pageitems.boundsToRef = function( pageItems, Reference ){
@@ -270,20 +284,6 @@
                 _pageItems[i].geometricBounds = refBounds;
             };
             return pageItems;
-        };
-
-        pageitems.addRectToPage = function( SpreadPage, Options ){
-            // Parameter   : SpreadPage : A spread or page
-            // Returns     : New Rectangle or Error
-            // Description : Adds a new rectangle to the bounds of SpreadPage
-            return pageitems.boundsToRef( pageitems.addRect(SpreadPage, Options), SpreadPage );
-        };
-    
-        pageitems.addRectToBleed = function( SpreadPage, Options ){
-            // Parameter   : SpreadPage : A spread or page
-            // Returns     : New Rectangle or Error
-            // Description : Adds a new rectangle to the bleed bounds of SpreadPage
-            return pageitems.boundsToBleed( pageitems.addRect(SpreadPage, Options), SpreadPage );
         };
 
         pageitems.boundsToBleed = function( pageItems, SpreadPage ){

@@ -18,17 +18,47 @@ Utilities that create or target page items in InDesign.
 
     var Pageitems = Sky.getUtil("pageitems");
 
-### getParentPage ( `PageItem` )
+### Get Parent
+
+  * getParentPage ( `PageItem` )
 
 Returns the parent page of `PageItem` or `Error` 
 
-### getParentSpread ( `PageItem` )
+  * getParentSpread ( `PageItem` )
 
 Returns the parent spread of `PageItem` or `Error` 
 
-### getParentDoc ( `PageItem` )
+  * getParentDoc ( `PageItem` )
 
 Returns the parent document of `PageItem` or `Error` 
+
+### Add Pageitem
+
+  * addTextFrame ( `SpreadPage`, `Options` )
+
+Adds and returns a new Textframe on `SpreadPage`
+
+  * addRect ( `SpreadPage`, `Options` )
+
+Adds and returns a new Rectangle on `SpreadPage`
+
+  * addRectToPage ( `SpreadPage`, `Options` )
+
+Adds and returns a new rectangle to the bounds of `SpreadPage`
+
+  * addRectToBleed ( `SpreadPage`, `Options` )
+
+Adds and returns anew rectangle to the bleed bounds of SpreadPage
+
+### Update Bounds
+
+  * boundsToRef ( `pageItems`, `Reference` )
+
+Set bounding box of pageItems to Reference bounds; Any reference that has the `geometricBounds` property, uses parentPage if not defined.
+
+  * boundsToBleed ( `pageItems `, `SpreadPage` )
+
+Updates bounding box of `pageItems` to `SpreadPage` bleed.
 
 
 ## Test
