@@ -10,7 +10,7 @@ The first step is to add your module to the [API Registry](./API-Registry.md)
 
 ## Stage 2. Write-n-Test
 
-There are multipple ways to write and validate your code. See our [Testing Guide](./Testing.md) for testing guidelines. It is recommended to use our [Boilerplate Module](../boilerplates/module).
+There are multipple ways to write and validate your code. See our [Testing Guide](./Testing.md) for testing guidelines. It is recommended to use our [Boilerplate Module](../boilerplate/module).
 
 ## Stage 3. Check Package
 
