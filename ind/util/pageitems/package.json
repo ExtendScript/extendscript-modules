@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/ind.util.pageitems",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Utilities that create or target page items in InDesign.",
   "main": "pageitems.js",
   "scripts": {

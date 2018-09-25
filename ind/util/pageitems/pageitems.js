@@ -79,15 +79,18 @@
                 case "TextFrame":
                     if( PageItem.parentPage ) {
                         return PageItem.parentPage;  
-                    // If item is in the slug or paste board it does not have a parent page
                     } else if (PageItem.parent.constructor.name === "Spread" ) {
-
-                        // TODO: We should check the x,y value and get the closest page
-                        
-                        return PageItem.parent.pages[0];
-                    
+                        // As Marc Autret would do it (https://forums.adobe.com/thread/1880486)
+                        var pIndex = 0;
+                        var x = PageItem.resolve(AnchorPoint.centerAnchor,CoordinateSpaces.SPREAD_COORDINATES)[0][0];
+                        var allPages = PageItem.parent.pages.everyItem().getElements();
+                        for (var d = 1/0, i = 0; i < allPages.length; i++) { 
+                            diff = Math.abs(x - allPages[i].resolve(AnchorPoint.centerAnchor,CoordinateSpaces.SPREAD_COORDINATES)[0][0]);  
+                            if( diff < d ){ d=diff; pIndex=i; }
+                        };
+                        return PageItem.parent.pages[pIndex];
                     } else {
-                       return new Error("Page item does not have a parent page " + PageItem.constructor.name );
+                       return new Error("Page item does not have a parent page or spread. Found " + PageItem.parent.constructor.name );
                     };
                     break;
                 case "Character":
@@ -237,9 +240,6 @@
                 strokeColor        : (Options.hasOwnProperty("strokeColor")  ) ? Options.strokeColor  : ( parseFloat(Options.strokeWeight) > 0)  ? "Black"  : "None",
                 strokeWeight       : (Options.hasOwnProperty("strokeWeight") ) ? Options.strokeWeight : 0
             };
-
-            // It would be cool if we could pass any props automatically?
-            // For prop in Options?
 
             // It would be cool to have a width and height parameter as well as x and y instead of bounds?
             // So we can give the bounds OR width height with optional x, y? x, y and width height would over-ride bounds.

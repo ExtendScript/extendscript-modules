@@ -4,7 +4,7 @@ As tests may be run by different people on different platforms the results are l
 
 ## init.js
 
-> Version 2.1.0
+> Version 2.2.0
 
 - ✔ Darwin illustrator-22 load-test.jsx: init [pass: 1, fail: 0]
 - ✔ Darwin illustrator-21 load-test.jsx: init [pass: 1, fail: 0]

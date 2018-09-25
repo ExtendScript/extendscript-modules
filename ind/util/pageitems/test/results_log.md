@@ -4,4 +4,9 @@ As tests may be run by different people on different platforms the results are l
 
 ## pageitems.js
 
-> Version 0
+> Version 1.0.0
+
+- ✔ Darwin indesign-13 test-getParentPage-pasteBoard.jsx: pageitems [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-addTextFrame.jsx: pageitems [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-addRectToPage.jsx: pageitems [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-addRect.jsx: pageitems [pass: 1, fail: 0]
