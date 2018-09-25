@@ -151,33 +151,31 @@
                 // autoGrow       : boolean
             // Returns     : New TextFrame
             // Description : Adds a new TextFrame on SpreadPage
-
+            
+            var overRideProps = {};
             var Options  = (typeof Options === 'object') ? Options : {}; // optional
-
             var pageKind = SpreadPage.constructor.name;
             var Spread   = (pageKind === "Page") ? SpreadPage.parent : SpreadPage;
             var Doc      = Spread.parent;
+
+            // Setting good standard values is important as users can have different presets        
+            // We need to first apply appliedObjectStyle and then add any custom over-rides
 
             var initProps = {
                 itemLayer          : (Options.layer)         ? Options.layer         : Doc.activeLayer,
                 appliedObjectStyle : (Options.objectStyle)   ? Options.objectStyle   : Spread.parent.objectStyles.item(0),
                 label              : (Options.label)         ? Options.label         : "",
-                contents           : (Options.contents)      ? Options.contents      : "",
                 rotationAngle      : (Options.rotationAngle) ? Options.rotationAngle : 0
             };
 
-            // appliedObjectStyle is king. So we need to first apply appliedObjectStyle and then add any custom over-rides
-
-            var overRideProps = {};
-            if( Options.hasOwnProperty("bounds")       ) overRideProps.geometricBounds = Options.bounds;
-            if( Options.hasOwnProperty("fillColor")    ) overRideProps.fillColor       = Options.fillColor;
-            if( Options.hasOwnProperty("strokeColor")  ) overRideProps.strokeColor     = Options.strokeColor;
-            if( Options.hasOwnProperty("strokeWeight") ) overRideProps.strokeWeight    = Options.strokeWeight;
+            for(var k in Options) {
+                if ( k != "objectStyle" && k != "appliedParagraphStyle" && k != "autoSize") overRideProps[k] = Options[k];
+            };
 
             var tf = pageitems.updateProps( SpreadPage.textFrames.add( initProps ), overRideProps );
             // Apply paragraphStyle to contents
-            if( Options.myParagraphStyle ) {
-                tf.paragraphs.everyItem().appliedParagraphStyle = Options.myParagraphStyle;
+            if( Options.appliedParagraphStyle ) {
+                tf.paragraphs.everyItem().appliedParagraphStyle = Options.appliedParagraphStyle;
             };
 
             if( Options.autoSize ) {
@@ -216,32 +214,25 @@
             // Returns     : New Rectangle or error
             // Description : Adds a new rectangle on SpreadPage at myBounds
 
+            var overRideProps = {};
             var Options  = (typeof Options === 'object') ? Options : {}; // optional
-            
             var pageKind = SpreadPage.constructor.name;
             var Spread   = (pageKind === "Page") ? SpreadPage.parent : SpreadPage;
             var Doc      = Spread.parent;
 
-            // It would be cool if there was a function that
-            // processes the Options object automatically as JSON schema.
-
-            // Setting good standard values is important as users can have different presets.
-
+            // Setting good standard values is important as users can have different presets        
+            // We need to first apply appliedObjectStyle and then add any custom over-rides
+    
             var initProps = {
                 itemLayer          : (Options.hasOwnProperty("layer")       ) ? Options.layer        : Doc.activeLayer,
                 appliedObjectStyle : (Options.hasOwnProperty("objectStyle") ) ? Options.objectStyle  : Spread.parent.objectStyles.item(0)
             };
 
-            // appliedObjectStyle is king. So we need to first apply appliedObjectStyle and then add any custom over-rides
-
-            var overRideProps = {
-                geometricBounds    : (Options.hasOwnProperty("bounds")       ) ? Options.bounds       : [0,0,0.25,0.25],
-                fillColor          : (Options.hasOwnProperty("fillColor")    ) ? Options.fillColor    : "None",
-                strokeColor        : (Options.hasOwnProperty("strokeColor")  ) ? Options.strokeColor  : ( parseFloat(Options.strokeWeight) > 0)  ? "Black"  : "None",
-                strokeWeight       : (Options.hasOwnProperty("strokeWeight") ) ? Options.strokeWeight : 0
+            for(var k in Options) {
+                if ( k != "objectStyle") overRideProps[k] = Options[k];
             };
 
-            // It would be cool to have a width and height parameter as well as x and y instead of bounds?
+            // It would be cool add a custom width and height parameter as well as x and y instead of bounds?
             // So we can give the bounds OR width height with optional x, y? x, y and width height would over-ride bounds.
 
             try {
