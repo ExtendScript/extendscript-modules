@@ -138,20 +138,20 @@
         pageitems.addTextFrame = function( SpreadPage, Options ){
             // Parameter   : SpreadPage : A spread or page
             // Parameter   : Options    : optional object with optional properties:
-                // bounds         : desired bounds
-                // layer          : stringName or layer reference
-                // rotationAngle  : number
-                // label          : string
-                // fillColor      : stringName of swatch reference
-                // strokeColor    : stringName of swatch reference
-                // strokeWidth    : width of the stroke in points
-                // objectStyle    : stringName or style reference
-                // contents       : string
-                // paragraphStyle : string or reference
-                // autoGrow       : boolean
+                // geometricBounds    : desired bounds
+                // itemLayer          : stringName or layer reference
+                // rotationAngle      : number
+                // label              : string
+                // fillColor          : stringName of swatch reference
+                // strokeColor        : stringName of swatch reference
+                // strokeWidth        : width of the stroke in points
+                // appliedObjectStyle : stringName or style reference
+                // contents           : string
+                // paragraphStyle     : string or reference
+                // autoSizingType     : string
             // Returns     : New TextFrame
             // Description : Adds a new TextFrame on SpreadPage
-            
+
             var overRideProps = {};
             var Options  = (typeof Options === 'object') ? Options : {}; // optional
             var pageKind = SpreadPage.constructor.name;
@@ -162,14 +162,14 @@
             // We need to first apply appliedObjectStyle and then add any custom over-rides
 
             var initProps = {
-                itemLayer          : (Options.layer)         ? Options.layer         : Doc.activeLayer,
-                appliedObjectStyle : (Options.objectStyle)   ? Options.objectStyle   : Spread.parent.objectStyles.item(0),
-                label              : (Options.label)         ? Options.label         : "",
-                rotationAngle      : (Options.rotationAngle) ? Options.rotationAngle : 0
+                itemLayer          : (Options.itemLayer)          ? Options.itemLayer          : Doc.activeLayer,
+                appliedObjectStyle : (Options.appliedObjectStyle) ? Options.appliedObjectStyle : Spread.parent.objectStyles.item(0),
+                label              : (Options.label)              ? Options.label              : "",
+                rotationAngle      : (Options.rotationAngle)      ? Options.rotationAngle      : 0
             };
 
             for(var k in Options) {
-                if ( k != "objectStyle" && k != "appliedParagraphStyle" && k != "autoSize") overRideProps[k] = Options[k];
+                if ( k != "appliedObjectStyle" && k != "appliedParagraphStyle" && k != "autoSizingType") overRideProps[k] = Options[k];
             };
 
             var tf = pageitems.updateProps( SpreadPage.textFrames.add( initProps ), overRideProps );
@@ -178,8 +178,8 @@
                 tf.paragraphs.everyItem().appliedParagraphStyle = Options.appliedParagraphStyle;
             };
 
-            if( Options.autoSize ) {
-                switch( Options.autoSize ) {
+            if( Options.autoSizingType ) {
+                switch( Options.autoSizingType ) {
                     case "HEIGHT_ONLY":
                          tf.textFramePreferences.autoSizingType = AutoSizingTypeEnum.HEIGHT_ONLY;
                         break;
@@ -203,14 +203,14 @@
         pageitems.addRect = function( SpreadPage, Options ){
             // Parameter   : SpreadPage : A spread or page
             // Parameter   : Options    : Optional object with optional properties:
-                // bounds         : desired bounds
-                // layer          : stringName or layer reference
-                // rotationAngle  : number
-                // label          : string
-                // fillColor      : stringName of swatch reference
-                // strokeColor    : stringName of swatch reference
-                // strokeWidth    : width of the stroke in points
-                // objectStyle    : stringName or style reference
+                // geometricBounds    : desired bounds
+                // itemLayer          : stringName or layer reference
+                // rotationAngle      : number
+                // label              : string
+                // fillColor          : stringName of swatch reference
+                // strokeColor        : stringName of swatch reference
+                // strokeWidth        : width of the stroke in points
+                // appliedObjectStyle : stringName or style reference
             // Returns     : New Rectangle or error
             // Description : Adds a new rectangle on SpreadPage at myBounds
 
@@ -224,12 +224,12 @@
             // We need to first apply appliedObjectStyle and then add any custom over-rides
     
             var initProps = {
-                itemLayer          : (Options.hasOwnProperty("layer")       ) ? Options.layer        : Doc.activeLayer,
-                appliedObjectStyle : (Options.hasOwnProperty("objectStyle") ) ? Options.objectStyle  : Spread.parent.objectStyles.item(0)
+                itemLayer          : (Options.hasOwnProperty("itemLayer")          ) ? Options.itemLayer          : Doc.activeLayer,
+                appliedObjectStyle : (Options.hasOwnProperty("appliedObjectStyle") ) ? Options.appliedObjectStyle : Spread.parent.objectStyles.item(0)
             };
 
             for(var k in Options) {
-                if ( k != "objectStyle") overRideProps[k] = Options[k];
+                if ( k != "appliedObjectStyle") overRideProps[k] = Options[k];
             };
 
             // It would be cool add a custom width and height parameter as well as x and y instead of bounds?

@@ -10,7 +10,7 @@ with( Doc.documentPreferences ){
     documentSlugTopOffset = "10mm";
 };
 
-var tf = Pageitems.addTextFrame( Doc.pages[0], {contents: "OK", autoSize: "HEIGHT_AND_WIDTH"} );
+var tf = Pageitems.addTextFrame( Doc.pages[0], {contents: "OK", autoSizingType: "HEIGHT_AND_WIDTH"} );
 var contents = tf.contents;
 
 Doc.close(SaveOptions.NO);
