@@ -79,13 +79,14 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
   * __util__
     * [util.bounds](../ind/util/bounds)
     * [util.characterstyle](../ind/util/characterstyle)
+    * [util.font](../ind/util/font)  
     * [util.layer](../ind/util/layer)
     * [util.menuloader](../ind/util/menuloader)
     * [util.objectstyle](../ind/util/objectstyle)
+    * [util.pageitems](../ind/util/pageitems) 
     * [util.pages](../ind/util/pages)
     * [util.paragraphstyle](../ind/util/paragraphstyle)
-    * [util.rulers](../ind/util/rulers)  
-    * [util.pageitems](../ind/util/pageitems)    
+    * [util.rulers](../ind/util/rulers)    
 
 ## Photoshop (ps)
   * __module__
