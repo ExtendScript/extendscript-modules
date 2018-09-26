@@ -90,6 +90,18 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
 ## Photoshop (ps)
   * __module__
     * [_module.docbuilder_](https://github.com/GitBruno/General-Document-Builder)
+    * [module.jam](../ps/module/jam)
+      * [jam.actions](../ps/module/jam/jam.actions)
+      * [jam.books](../ps/module/jam/jam.books)
+      * [jam.colors](../ps/module/jam/jam.colors)
+      * [jam.engine](../ps/module/jam/jam.engine)
+      * [jam.helpers](../ps/module/jam/jam.helpers)
+      * [jam.json](../ps/module/jam/jam.json)
+      * [jam.layers](../ps/module/jam/jam.layers)
+      * [jam.shapes](../ps/module/jam/jam.shapes)
+      * [jam.styles](../ps/module/jam/jam.styles)
+      * [jam.text](../ps/module/jam/jam.text)
+      * [jam.utils](../ps/module/jam/jam.utils)
   * __util__
 
 ## Illustrator (ai)

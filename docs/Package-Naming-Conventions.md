@@ -22,8 +22,8 @@ Following the Package Target, we add a 'Package Subject' (target object). Or wha
 
     patch  : Polyfills
     util   : Utilities
-    tools  : Tools
-    bundle : Bundle of different modules packaged as one
+    module : Modules
+    bundle : Bundle of packages
 
 ## 3. Package Verb (Action)
 
@@ -31,5 +31,5 @@ The name of your object or module. It is generally preferable to use an active v
 
 ## Sample
 
-Now from the above let's say we have created a generic document builder for InDesign. In that case, the package name should be: `ind.tools.documentBuilder` so the complete [scoped name](https://docs.npmjs.com/misc/scope) becomes `@extendscript/ind.tools.documentBuilder`
+Now from the above let's say we have created a generic document builder for InDesign. In that case, the package name should be: `ind.module.documentBuilder` so the complete [scoped name](https://docs.npmjs.com/misc/scope) becomes `@extendscript/ind.module.documentBuilder`
 
