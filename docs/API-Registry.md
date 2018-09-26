@@ -75,7 +75,7 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
 ## InDesign (ind)
   * __module__
     * [module.docbuilder](https://github.com/CoverBuilder/General-Document-Builder)
-    * [module.slugs](https://github.com/CoverBuilder/Slug-Tools)
+    * [module.slugs](../ind/module/slugs)
   * __util__
     * [util.bounds](../ind/util/bounds)
     * [util.characterstyle](../ind/util/characterstyle)
