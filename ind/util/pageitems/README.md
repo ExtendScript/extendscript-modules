@@ -16,7 +16,7 @@ Utilities that create or target page items in InDesign.
 
 ## Use
 
-    var Pageitems = Sky.getUtil("pageitems");
+    var PageItems = Sky.getUtil("pageitems");
 
 ### Get Parent
 
