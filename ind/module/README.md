@@ -2,7 +2,7 @@
 
 This is a collection of modules for [InDesign](https://en.wikipedia.org/wiki/Adobe_InDesign).
 
-  - [ ] [slugs](slugs)
+  - [ ] [outerspace](outerspace)
 
 ## More info
 

@@ -740,6 +740,15 @@
         };
     };
 
+    Rulers.sameUnits = function( Doc ){
+        // Checks if both rulers are set to the same measure
+        // Return boolean
+        if(Doc.viewPreferences.horizontalMeasurementUnits == Doc.viewPreferences.verticalMeasurementUnits) {
+            return true;
+        };
+        return false;
+    };
+
     //--------------------------
     // End rulers
 

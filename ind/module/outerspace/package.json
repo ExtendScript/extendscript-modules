@@ -1,8 +1,8 @@
 {
-  "name": "@extendscript/ind.module.slugs",
+  "name": "@extendscript/ind.module.outerspace",
   "version": "0.1.0",
-  "description": "Slug tools for InDesign",
-  "main": "slugs.js",
+  "description": "Bleed and Slug tools for InDesign",
+  "main": "outerspace.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
     "prepublishOnly": "npm config set scope extendscript",
@@ -15,7 +15,8 @@
   "keywords": [
     "extendscript",
     "extendscript-modules",
-    "slugs"
+    "slug",
+    "bleed"
   ],
   "author": "extendscript.org",
   "license": "MIT",
@@ -24,9 +25,13 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "@extendscript/tap-es": ">=1.0.5"
+    "@extendscript/tap-es": ">=1.0.5",
+    "@extendscript/modules.init": ">=2.2.0",
+    "@extendscript/ind.util.rulers": ">=4.0.0"
   },
   "peerDependencies": {
-    "@extendscript/modules.init": ">=2.2.0"
+    "@extendscript/modules.init": ">=2.2.0",
+    "@extendscript/ind.util.rulers": ">=4.0.0"
   }
 }
+z

@@ -24,7 +24,13 @@
             return module;
         };
 
-        // Module code here...
+        // Load any needed dependencies
+        // var Module = Sky.getUtil( "module", LoadCallback );
+
+        //- - - - - - - - - - - - - - - - - - - - - - 
+        // Module code from here...
+        //- - - - - - - - - - - - - - - - - - - - - - 
+
         ___moduleName___.test = function() {
             return true;
         };
