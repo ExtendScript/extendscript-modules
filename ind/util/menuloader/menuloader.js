@@ -18,27 +18,27 @@
 
         menuloader.version = VERSION;
         menuloader.description = "Load your own menus in InDesign.";
-        
-        menuloader.load = function( menuSetup ) {
+
+        menuloader.loadItem = function( menuSetup ) {
             // Enable ExtendScript localisation engine
             $.localize = true;
 
             try{
                 var MainMenu = app.menus.item( '$ID/Main' );
-                var menuHandlers = {
+                var MenuItemActionHandlers = {
                     'onInvoke' : function() {
                         app.doScript(menuSetup.invokeFunction, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
-                    }};
+                    };
+                };
 
-                var menuInstaller = menuInstaller || ( function( MenuActionHandlers ) {
+                var menuInstaller = menuInstaller || ( function( MenuItemActionHandlers ) {
+                    
+                    var MenuAction = app.scriptMenuActions.itemByName( menuSetup.menuName );
+                    MenuAction = MenuAction.isValid ? MenuAction : app.scriptMenuActions.add( menuSetup.menuName );
 
-                    var MenuAction = app.scriptMenuActions.add( menuSetup.menuName );
-
-                    var eventListener;
-        
-                    for( eventListener in MenuActionHandlers ) {
-                        MenuAction.eventListeners.add( eventListener, MenuActionHandlers[eventListener] );
-                    }
+                    for( var eventListener in MenuItemActionHandlers ) {
+                        MenuAction.eventListeners.add( eventListener, MenuItemActionHandlers[eventListener] );
+                    };
         
                     var location = MainMenu;            
                     for (var i = 0; i < menuSetup.locationPath.length; i++) {
@@ -51,7 +51,7 @@
 
                     return true;
 
-                })(menuHandlers);
+                })( MenuItemActionHandlers );
             } catch ( err ) {
                 alert("Can't load menu " + String(menuSetup.menuName) + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")");
             };
