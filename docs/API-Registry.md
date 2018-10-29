@@ -70,6 +70,7 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
 ## Script UI (sui)
   * __module__
     * [module.jaxon](../sui/module/jaxon)
+    * [module.groupList](../sui/module/grouplist)
   * __util__
 
 ## InDesign (ind)
