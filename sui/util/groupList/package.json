@@ -1,0 +1,33 @@
+{
+  "name": "@extendscript/sui.util.groupList",
+  "version": "0.1.0",
+  "description": "Attaches a scrollable panel/group list to a SUI Window.",
+  "main": "groupList.js",
+  "scripts": {
+    "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "extendscript-modules",
+    "groupList",
+    "SUI Window"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "@extendscript/tap-es": ">=1.0.5"
+  },
+  "peerDependencies": {
+    "@extendscript/modules.init": ">=2.2.0"
+  }
+}
