@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 0.3;
+    var VERSION = 0.4;
     var MODULE_PATH = "pageitems";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
@@ -288,7 +288,7 @@
             for (var i = 0, len = pageItems.length; i < len; i++) {
                 var pageRef  = ( typeof SpreadPage === undefined ) ? pageItems[i].parentPage : SpreadPage;
                 var pageInfo = PageUtil.getInfo( pageRef );
-                pageItems[i].bounds = pageInfo.bleedBounds;
+                pageItems[i].geometricBounds = pageInfo.bleedBounds;
             };
         };
     };

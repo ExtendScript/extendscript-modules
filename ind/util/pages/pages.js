@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 1.0;
+    var VERSION = 1.1;
     var MODULE_PATH = "pages";
 
     var thisModule = Sky.getUtil(MODULE_PATH);
@@ -15,6 +15,25 @@
 
         pages.version = VERSION;
         pages.description = "Some page tools for InDesign";
+
+        pages.getBounds = function( pageSpread ) {
+            // This functions returns the bounds of the spread or page in current measure units
+            if(pageSpread.constructor.name == "Spread") {
+                var bounds = [0,0,0,0]; //[y1, x1, y2, x2]
+                for (var i = 0; i < pageSpread.pages.length; i++) { 
+                    var pBounds = pageSpread.pages[i].bounds;
+                    if (bounds[0] > pBounds[0]) bounds[0] = pBounds[0];
+                    if (bounds[1] > pBounds[1]) bounds[1] = pBounds[1];
+                    if (bounds[2] < pBounds[2]) bounds[2] = pBounds[2];
+                    if (bounds[3] < pBounds[3]) bounds[3] = pBounds[3];
+                };
+                return bounds;
+            } else if(pageSpread.constructor.name == "Page") {
+                return pageSpread.bounds;
+            } else {
+                return new TypeError("pages.getBounds: Expected typeof Page or Spread but received " + pageSpread.constructor.name);
+            };
+        };
 
         pages.getInfo = function( pageSpread, units ) {
             // Creates and returned the page info object
@@ -34,9 +53,11 @@
 
             // set-n-safe original rulers
             var prevRulers = RulerUtil.set(parentDoc, units);
-            
+            var pageSpreadBounds = pages.getBounds( pageSpread );
+
             // measure the page
-            var boundsInfo = BoundsUtil.getInfo(pageSpread.bounds);
+            var boundsInfo = BoundsUtil.getInfo( pageSpreadBounds ); 
+
             // Update infoPage with measures
             infoPage.bounds = boundsInfo.bounds;
             infoPage.width  = boundsInfo.width;
