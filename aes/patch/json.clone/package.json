@@ -32,5 +32,8 @@
   },
   "peerDependencies": {
     "@extendscript/aes.patch.json": "^1.0.0"
+  },
+  "dependencies": {
+    "@extendscript/aes.patch.json": "^2.0.0"
   }
 }

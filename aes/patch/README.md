@@ -59,12 +59,15 @@ Modules that we get used to in other environments.
 ## Extensions
 Extensions to existing objects
 
-  - [ ] [JSON.clone](json.clone)
+  - [x] [JSON.clone](json.clone)
+  - [ ] [JSON.comparable](json.comparable)
   - [ ] [JSON.cycle](json.cycle)
-  - [ ] [JSON.file](json.file)
   - [ ] [JSON.equals](json.equals)
+  - [ ] [JSON.file](json.file)
+  - [ ] [JSON.instantiate](json.instantiate)
   - [ ] [JSON.parseRecurse](json.parserecurse)
   - [ ] [JSON.parseState](json.parsestate)
+  - [ ] [JSON.validate](json.validate)
 
 
 ## More info

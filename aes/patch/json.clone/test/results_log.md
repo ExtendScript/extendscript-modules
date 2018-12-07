@@ -4,4 +4,6 @@ As tests may be run by different people on different platforms the results are l
 
 ## json.clone.js
 
-> Version 0
+> Version 1.0
+
+- ✔ Darwin indesign-13: json.clone [pass: 1, fail: 0]
