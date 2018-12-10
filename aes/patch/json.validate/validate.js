@@ -142,7 +142,7 @@ JSON.validate = function(instance, schema, path) {
                 addError('The instance can only have up to ' + j + ' items.');
 
             else for (i = 0; i < l; i ++)
-                errors = errors.concat(validate(
+                errors = errors.concat(JSON.validate(
                     instance[i],
                     itemsIsArray ? items[i] || additionalIsObject && additional || {} : items,
                     path + '[' + i + ']'
@@ -198,7 +198,7 @@ JSON.validate = function(instance, schema, path) {
                         }
                     });
                 } else {
-                    errors = errors.concat(validate(instance, dependency, path));
+                    errors = errors.concat(JSON.validate(instance, dependency, path));
                 };
             };
 
@@ -225,7 +225,7 @@ JSON.validate = function(instance, schema, path) {
                     schemas.push(additional);
 
                 schemas.forEach(function(schema) {
-                    errors = errors.concat(validate(instance[key], schema, path ? path + '.' + key : key));
+                    errors = errors.concat(JSON.validate(instance[key], schema, path ? path + '.' + key : key));
                 });
             };
         });
@@ -275,7 +275,7 @@ JSON.validate = function(instance, schema, path) {
 
     if (schema.allOf) {
         schema.allOf.forEach(function(schema) {
-            errors = errors.concat(validate(instance, schema, path));
+            errors = errors.concat(JSON.validate(instance, schema, path));
         });
     };
 
@@ -283,7 +283,7 @@ JSON.validate = function(instance, schema, path) {
         items = schema.anyOf;
         l = items.length;
         for(i = 0, found = 0; i < l && !found; i++)
-            if (!validate(instance, items[i], path).length)
+            if (!JSON.validate(instance, items[i], path).length)
                 found = 1;
 
         if (!found) addError('The instance must validate against at least one schema defined by the "anyOf" keyword.');
@@ -293,7 +293,7 @@ JSON.validate = function(instance, schema, path) {
         items = schema.oneOf;
         l = items.length;
         for (i = 0, found = 0; i < l; i++)
-            if (!validate(instance, items[i], path).length) {
+            if (!JSON.validate(instance, items[i], path).length) {
                 if (found) {
                     addError('The instance must validate against exactly one schema defined by the "oneOf" keyword.');
                     break;
