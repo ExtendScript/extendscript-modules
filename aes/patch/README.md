@@ -67,7 +67,7 @@ Extensions to existing objects
   - [x] [JSON.instantiate](json.instantiate)
   - [ ] [JSON.parseRecurse](json.parserecurse)
   - [ ] [JSON.parseState](json.parsestate)
-  - [ ] [JSON.validate](json.validate)
+  - [x] [JSON.validate](json.validate)
 
 
 ## More info
