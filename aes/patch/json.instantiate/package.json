@@ -24,13 +24,21 @@
   "bugs": {
     "url": "https://github.com/ExtendScript/extendscript-modules/issues"
   },
+  "contributors": [
+    "Tom Arad <tom@arad.rocks> (https://github.com/tomarad/JSON-Schema-Instantiator)"
+  ],
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
+    "@extendscript/aes.patch.json": ">=1.0.0",
+    "@extendscript/aes.patch.array.foreach": ">=2.0.0",
+    "@extendscript/aes.patch.array.isarray": ">=2.0.0",
+    "@extendscript/tap-es": ">=1.0.5",
     "build-node-venv": "^1.0.3",
-    "minimist": "^1.2.0",
-    "@extendscript/tap-es": ">=1.0.5"
+    "minimist": "^1.2.0"
   },
   "peerDependencies": {
-    "@extendscript/aes.patch.json": "^1.0.0"
+    "@extendscript/aes.patch.json": ">=1.0.0",
+    "@extendscript/aes.patch.array.foreach": ">=2.0.0",
+    "@extendscript/aes.patch.array.isarray": ">=2.0.0"
   }
 }

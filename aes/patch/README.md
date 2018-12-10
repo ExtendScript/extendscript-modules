@@ -64,7 +64,7 @@ Extensions to existing objects
   - [ ] [JSON.cycle](json.cycle)
   - [ ] [JSON.equals](json.equals)
   - [ ] [JSON.file](json.file)
-  - [ ] [JSON.instantiate](json.instantiate)
+  - [x] [JSON.instantiate](json.instantiate)
   - [ ] [JSON.parseRecurse](json.parserecurse)
   - [ ] [JSON.parseState](json.parsestate)
   - [ ] [JSON.validate](json.validate)

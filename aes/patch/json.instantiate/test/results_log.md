@@ -4,4 +4,6 @@ As tests may be run by different people on different platforms the results are l
 
 ## json.instantiate.js
 
-> Version 0
+> Version 1.0.0
+
+  - ✔ Darwin indesign-13: json.instantiate [pass: 1, fail: 0]

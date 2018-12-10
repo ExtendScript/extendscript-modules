@@ -16,6 +16,31 @@ Source: [tomarad/JSON-Schema-Instantiator](https://github.com/tomarad/JSON-Schem
 
     #include 'node_modules/@extendscript/aes.patch.json.instantiate/instantiate.js'
 
+## Use
+
+    var schema = {
+        "type": "object",
+        "properties": {
+            "title": {
+                "type": "string",
+                "default": "Example"
+            },
+            "description": {
+                "type": "string"
+            }
+        },
+        "required": ["title"]
+    };
+
+    instance = JSON.instantiate(schema);
+    // instance === { title: "Example", description: "" }
+
+    instance = JSON.instantiate(schema, {requiredPropertiesOnly: false});
+    // instance === { title: "Example", description: "" }
+
+    instance = JSON.instantiate(schema, {requiredPropertiesOnly: true});
+    // instance === { title: "Example" }
+
 ## Test
 
 You can test the code against a range of [targets](https://github.com/nbqx/fakestk/blob/master/resources/versions.json):
