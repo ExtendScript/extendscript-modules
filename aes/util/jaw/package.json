@@ -1,0 +1,33 @@
+{
+  "name": "@extendscript/aes.util.jaw",
+  "version": "0.1.0",
+  "description": "Jaw is a data controller that wraps JSON objects with JSON-schema. It provides an easy to use, chaining API for managing JSON instances in ExtendScript.",
+  "main": "jaw.js",
+  "scripts": {
+    "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "extendscript-modules",
+    "object-manager",
+    "JSON"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "@extendscript/tap-es": ">=1.0.5"
+  },
+  "peerDependencies": {
+    "@extendscript/modules.init": ">=2.2.0"
+  }
+}

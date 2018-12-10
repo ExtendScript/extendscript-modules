@@ -1,0 +1,36 @@
+{
+  "name": "@extendscript/aes.patch.json.equals",
+  "version": "1.0.0",
+  "description": "Adds `equals()` to JSON. Checks deep equality between two JSON objects.",
+  "main": "equals.js",
+  "scripts": {
+    "node-env": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
+    "test": "node ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtendScript/extendscript-modules.git"
+  },
+  "keywords": [
+    "extendscript",
+    "polyfill",
+    "shim",
+    "json",
+    "equals"
+  ],
+  "author": "extendscript.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExtendScript/extendscript-modules/issues"
+  },
+  "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
+  "devDependencies": {
+    "build-node-venv": "^1.0.3",
+    "minimist": "^1.2.0",
+    "@extendscript/tap-es": ">=1.0.5"
+  },
+  "peerDependencies": {
+    "@extendscript/aes.patch.json": "^1.0.0"
+  }
+}
