@@ -64,7 +64,7 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
       * [patch.string.trim](../aes/patch/string.trim)
   * __module__
   * __util__
-      * [__util.jaw](../aes/util/jaw)
+      * [__util__.jaw](../aes/util/jaw)
       * [__util.schema__](../aes/util/schema)
         * [util.schema.document](../aes/util/schema/document)
 
