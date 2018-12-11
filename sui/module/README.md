@@ -2,7 +2,7 @@
 
 This is a collection of modules for ScriptUI.
 
-  - [ ] [module.jaxon](jaxon) 
+  - [x] [module.jaxon](jaxon) 
 
 ## More info
 
