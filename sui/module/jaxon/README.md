@@ -4,7 +4,7 @@
 
 > Module
 
-ExtendScript Preset Manager
+Jaxon is an ExtendScript Preset Manager that uses [JSON-schema](http://json-schema.org/) to keep presets validated. It loads/saves presets to and from the user data-folder.
 
 ## Install
 
@@ -16,9 +16,21 @@ ExtendScript Preset Manager
 
 ## Use
 
-Load the module by creating a reference.
+1. Load the module by creating a reference.
 
-    var jaxon = Sky.getUtil("jaxon")
+    `var Jaxon = Sky.getUtil("jaxon")`
+
+2. Create a new Preset Manager by initialising the filename and JSON-Schema:
+
+    `var presetManager = Jaxon.init( "file_name.json", schema);`
+
+3. Create `get()` and `set()` functions that move data in and out of your interface and attach them to your `DataPort`
+
+    `var MyDataPort = { getData: get, renderData: set }`
+
+4. Now attach the widget to your interface:
+
+    `presetManager.Widget.attachTo( Window, KeyID, MyDataPort );`
 
 ## Test
 
