@@ -2,7 +2,8 @@
 
 This is a collection of utilities for [ExtendScript](https://en.wikipedia.org/wiki/ExtendScript).
 
-  * [`schema`](./schema/README.md)
+  * [x] [`jaw`](./jaw)
+  * [ ] [`schema`](./schema)
 
 ## More info
 
