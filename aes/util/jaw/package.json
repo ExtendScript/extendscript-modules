@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/aes.util.jaw",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Jaw is a data controller that wraps JSON objects with JSON-schema. It provides an easy to use, chaining API for managing JSON instances in ExtendScript.",
   "main": "jaw.js",
   "scripts": {
@@ -25,9 +25,20 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
+    "@extendscript/aes.patch.array.foreach": ">=2.0.0",
+    "@extendscript/aes.patch.array.indexof": ">=2.0.0",
+    "@extendscript/aes.patch.array.isarray": ">=2.0.0",
+    "@extendscript/aes.patch.json": ">=2.0.0",
+    "@extendscript/aes.patch.json.clone": ">=1.0.1",
+    "@extendscript/aes.patch.json.instantiate": ">=1.0.0",
+    "@extendscript/aes.patch.json.validate": ">=1.0.1",
+    "@extendscript/aes.patch.object.keys": ">=2.0.0",
     "@extendscript/tap-es": ">=1.0.5"
   },
   "peerDependencies": {
-    "@extendscript/modules.init": ">=2.2.0"
+    "@extendscript/modules.init": ">=2.2.0",
+    "@extendscript/aes.patch.json.clone": ">=1.0.1",
+    "@extendscript/aes.patch.json.instantiate": ">=1.0.0",
+    "@extendscript/aes.patch.json.validate": ">=1.0.1"
   }
 }
