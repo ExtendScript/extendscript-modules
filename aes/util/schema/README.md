@@ -1,4 +1,4 @@
-# aes.schema
+# schema
 
 [![version](https://img.shields.io/npm/v/@extendscript/aes.schema.svg)](https://www.npmjs.org/package/@extendscript/aes.schema)
 
