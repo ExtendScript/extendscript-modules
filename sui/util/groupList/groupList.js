@@ -31,14 +31,14 @@
         // Module code from here...
         //- - - - - - - - - - - - - - - - - - - - - - 
 
-        groupList.attach = function( SuiLocation, pgCreator, Opions  ) {
-            // PARAM attachTo  : ScripUI Group, Panel or Window : 
-            // PARAM pgCreator : Function : Creates a new panel or group (List Item for the panelGroupList)
-            // PARAM Options   : Object   : Option that update Settings.
-            // RETURNS         : A ScriptUI group
+        groupList.attach = function( SuiLocation, pgCreator, Opions ) {
+            // PARAM SuiLocation  : ScripUI Group, Panel or Window : 
+            // PARAM pgCreator    : Function : Creates a new panel or group (List Item for the panelGroupList)
+            // PARAM Options      : Object   : Option that update Settings.
+            // RETURNS            : A new ScriptUI Group (Child of param SuiLocation)
 
-            // USE: This class returns a panel list with the add and remove buttons added.
-            // It also adds a scrollbar if item count exceeds height count.
+            // This class returns a panel list with add/remove ([+][-]) buttons before or after each list item.
+            // It generates a scrollbar scrollCount is exceeded.
             /*
 
                 +------------------------------+
@@ -61,9 +61,13 @@
             // Set standards
             //--
             // Toggle visibility of the scrollbar.
-            Settings.useScroll = (typeof Options.useScroll == 'boolean')? Options.useScroll : true;
-            // The item count when the scrollbar kicks in (when useScroll is set to True)
-            Settings.scrollCount = 3; // Minimum value is 1
+            Settings.useScroll = (typeof Options.useScroll == 'boolean')? Options.useScroll : false;
+            // The item count when the scrollbar kicks in (when useScroll is set to true)
+            Settings.maxItems = (typeof Options.useScroll == 'integer')? Options.useScroll : 1; // Minimum value is 1
+            // Scroll speed, how many panels move on each click
+            Settings.scrollCount = 3; // Minimum value is 1, maximum value is maxItems
+            // [+][-] buttons left or right?
+            Settings.buttonsLeft = (typeof Options.buttonsLeft == 'boolean')? Options.buttonsLeft : false;
 
             // RETURN GroupList.attach
             // --

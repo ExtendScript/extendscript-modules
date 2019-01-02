@@ -29,6 +29,7 @@ Modules that faithfully represent newer ECMAScript features.
   - [x] [Array.some](array.some)
   - [x] [JSON](json)
   - [x] [Number.isFinite](number.isfinite)
+  - [x] [Number.isInteger](number.isinteger)
   - [x] [Object.assign](object.assign)
   - [x] [Object.create](object.create)
   - [x] [Object.keys](object.keys)
