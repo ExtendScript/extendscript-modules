@@ -4,7 +4,7 @@
 
 > InDesign Utility
 
-Load your own menus in InDesign.
+Load an InDesign menu item.
 
 ## Install
 

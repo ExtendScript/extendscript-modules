@@ -29,5 +29,8 @@
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.1.0"
+  },
+  "dependencies": {
+    "@extendscript/modules.init": "^2.2.0"
   }
 }
