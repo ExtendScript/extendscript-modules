@@ -9,19 +9,17 @@ var sayHello = function() {
 
 var testMenu = {
     locationPath: ["File"],
-    beforeAfter:  undefined,
-    reference: undefined,
     menuName: "MenuLoader Test",
     invokeFunction: sayHello
 };
 
-MenuLoader.loadSetup(testMenu);
+MenuLoader.load(testMenu, false);
 
-var menu = MenuLoader.getMenuItem( testMenu.menuName );
+var menu = MenuLoader.getMenu( testMenu );
 
 var loaded = menu.isValid;
 
-MenuLoader.unloadSetup(testMenu);
+MenuLoader.unload(testMenu, false);
 
 var unloaded = !menu.isValid;
 

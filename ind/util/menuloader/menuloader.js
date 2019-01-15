@@ -1,5 +1,5 @@
 (function () {
-    var VERSION = 1.1;
+    var VERSION = 0.3;
     var MODULE_PATH = "menuloader";
     
     // This module is inspired by a post from Marc Autret (Indiscripts)
@@ -7,7 +7,7 @@
 
     var thisModule = Sky.getUtil(MODULE_PATH);
     if( thisModule && thisModule.version >= VERSION) {
-      //return;
+        return;
     };
 
     //--------------------------
@@ -19,148 +19,129 @@
         menuloader.version = VERSION;
         menuloader.description = "Load an InDesign menu item.";
 
-        menuloader.getMenuItem = function( menuName ) {
-            var MainMenu = app.menus.item( '$ID/Main' );
-            if(!MainMenu.isValid){
+        menuloader.getMenu = function( MenuTemplate ) {
+            var location = app.menus.item( '$ID/Main' );
+            for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
+                location = location.submenus.item( MenuTemplate.locationPath[i] );
+            };
+
+            if(!location.isValid){
                 return new Error( "InDesign main menu $ID/Main does not resolve into object.");
             };
-            return MainMenu.submenus.itemByName( menuName );
+
+            return location.menuElements.itemByName( MenuTemplate.menuName );
         };
 
-        menuloader.unload = function( submenu ) {
-            if(!submenu.isValid){
-                return new Error( "submenu " + submenu.name + " does not resolve to object." );
+        menuloader.unloadElement = function( Element ) {
+            if(!Element.isValid){
+                return new Error( "Element does not resolve to object." );
             };
 
-            if(submenu.hasOwnProperty('submenus')) {
-                // Clean sub menus recursively
-                var subCount = submenu.submenus.count();
-                for (var i = subCount - 1; i >= 0; i--) {
-                    var subSubMenu  = submenu.submenus[i];
-                    var subSubCount = subSubMenu.submenus.count();
-                    if(subSubCount > 0) {
-                        menuloader.unload( subSubMenu );
+            try {
+                if(Element.hasOwnProperty('menuElements')) {
+                    // Clean subitems recursively
+                    var subCount = Element.menuElements.count();
+                    for (var i = subCount - 1; i >= 0; i--) {
+                        var subElement = Element.menuElements[i];
+                        if( subElement.menuElements.count() > 0 ) {
+                            menuloader.unloadElement( subElement );
+                        };
                     };
                 };
-            };
+            } catch(e) { };
 
-            if(submenu.hasOwnProperty('menuElements')) {
-                // Then the rest of the menu elements
-                var elementCount = submenu.menuElements.count();
-                for (var j = elementCount - 1; j >= 0; j--) {
-                    try {
-                        app.scriptMenuActions.item(submenu.menuElements[j].name).remove();
-                    } catch(e) {  };
-                    try {
-                        submenu.menuElements[j].remove();
-                    } catch(e) { };
-                };
-            };
-
-            try {
-                submenu.submenus.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.menuSeparators.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.menuElements.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.menuItems.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.eventListeners.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.events.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.everyItem().remove();
-            } catch(e) { };
-            try {
-                submenu.remove();
-            } catch(e) { };
+            Element.remove();
         };
 
-        menuloader.loadSetup = function( MenuSetup ) {
+        menuloader.load = function( MenuTemplate, alertUser ) {
             // Enable ExtendScript localisation engine
             $.localize = true;
+            var alertUser = (typeof alertUser === 'boolean')? alertUser : true;
 
             try{
                 var MainMenu = app.menus.item( '$ID/Main' );
+
                 var MenuHandlers = {
                     'onInvoke' : function() {
-                        app.doScript(MenuSetup.invokeFunction, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
+                        try {
+                            // prevent undo - CS5+
+                            app.doScript(MenuTemplate.invokeFunction, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
+                        } catch(e){
+                            alert("ExtendScript Menu Error:\n" + e.message +  " (Line " + e.line + " in file " + e.fileName + ")"); // Let us know what is going on.
+                        }
                     }
                 };
 
                 var menuInstaller = menuInstaller || ( function( MenuHandlers ) {
                     
-                    var MenuAction = app.scriptMenuActions.itemByName( MenuSetup.menuName );
-                    MenuAction = MenuAction.isValid ? MenuAction : app.scriptMenuActions.add( MenuSetup.menuName );
-
-                    for( var event in MenuHandlers ) {
-                        MenuAction.eventListeners.add( event, MenuHandlers[event] );
+                    var MenuAction = app.scriptMenuActions.add( MenuTemplate.menuName );
+                    for( var eventHandler in MenuHandlers ) {
+                        MenuAction.eventListeners.add( eventHandler, MenuHandlers[eventHandler] );
                     };
         
                     var location = MainMenu;
-                    for (var i = 0; i < MenuSetup.locationPath.length; i++) {
-                        location = location.submenus.item( MenuSetup.locationPath[i] );
+                    for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
+                        location = location.submenus.item( MenuTemplate.locationPath[i] );
                     };
 
                     var refItem  = location.submenus.lastItem();
-                    if( MenuSetup.reference ) {
-                        refItem  = location.menuItems.item( MenuSetup.reference );
+                    if( MenuTemplate.reference ) {
+                        refItem  = location.menuItems.item( MenuTemplate.reference );
                     };
 
                     var beforeAfter = LocationOptions.after;
-                    if( MenuSetup.beforeAfter ) {
-                        beforeAfter  = location.menuItems.item( MenuSetup.beforeAfter );
+                    if( MenuTemplate.beforeAfter ) {
+                        beforeAfter  = location.menuItems.item( MenuTemplate.beforeAfter );
                     };
 
                     if(location === MainMenu) {
-                        return location.submenus.add( MenuSetup.menuName, beforeAfter, refItem );
-                    } else {
-                        return location.menuItems.add( MenuAction, beforeAfter, refItem );
+                        location = location.submenus.add( MenuTemplate.menuName, LocationOptions.before, location.submenus.lastItem() );
                     };
+
+                    location.menuItems.add( MenuAction, beforeAfter, refItem );
+
+                    return true;
 
                 })( MenuHandlers );
             } catch ( err ) {
-                alert("Unable to load menu " + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")")
+                if(alertUser) alert("Unable to load menu " + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")")
                 return err;
             };
         };
 
-        menuloader.unloadSetup = function( MenuSetup ) {
+        menuloader.unload = function( MenuTemplate, alertUser ) {
             // Enable ExtendScript localisation engine
             $.localize = true;
+            var alertUser = (typeof alertUser === 'boolean')? alertUser : true;
+            
+            var MainMenu = app.menus.item( '$ID/Main' );
+            if(!MainMenu.isValid){
+                return new Error("InDesign main menu $ID/Main does not resolve into object.");
+            };
 
+            var Submenu = MainMenu;
             try{
-                var MainMenu = app.menus.item( '$ID/Main' );
-                if(!MainMenu.isValid){
-                    return new Error("InDesign main menu $ID/Main does not resolve into object.");
-                };
-
-                var Submenu = MainMenu;
-                for (var i = 0; i < MenuSetup.locationPath.length; i++) {
-                    Submenu = Submenu.submenus.item( MenuSetup.locationPath[i] );
-                };
-
-                Submenu = Submenu.menuItems.itemByName( MenuSetup.menuName );
-
-                if(Submenu.isValid){
-                    menuloader.unload(Submenu);
+                for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
+                    Submenu = Submenu.submenus.item( MenuTemplate.locationPath[i] );
                 };
             } catch ( err ) {
-                alert("Unable to unload menu " + String(MenuSetup.menuName) + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")");
+                if(alertUser) alert("Unable to unload menu " + String(MenuTemplate.menuName) + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")");
                 return err;
+            };
+
+            if(Submenu.isValid) {
+                menuloader.unloadElement(
+                    Submenu.menuElements.itemByName(MenuTemplate.menuName)
+                );
+            } else {
+                if(alertUser) alert("Unable to unload menu " + String(MenuTemplate.menuName) + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")");
+                return new Error("Menu location does not seem to resolve to a valid menu option.");
             };
         };
 
-        menuloader.newSetup = function(){
+        menuloader.getMenuTemplate = function(){
             return {
-                locationPath: [],
+                locationPath: [], // Empty === Main
                 beforeAfter:  undefined,
                 reference: undefined,
                 menuName: undefined,
