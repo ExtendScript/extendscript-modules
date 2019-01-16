@@ -7,11 +7,7 @@ var sayHello = function() {
     alert( "Hello!" );
 };
 
-var testMenu = {
-    locationPath: [], // Main!!
-    menuName: "MenuLoader Main Test",
-    invokeFunction: sayHello
-};
+var testMenu = new MenuLoader.menuTemplate("MenuLoader Main Test", {fun: sayHello});
 
 MenuLoader.load(testMenu, false);
 

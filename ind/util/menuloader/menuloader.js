@@ -7,7 +7,7 @@
 
     var thisModule = Sky.getUtil(MODULE_PATH);
     if( thisModule && thisModule.version >= VERSION) {
-        return;
+        //return;
     };
 
     //--------------------------
@@ -21,8 +21,8 @@
 
         menuloader.getMenu = function( MenuTemplate ) {
             var location = app.menus.item( '$ID/Main' );
-            for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
-                location = location.submenus.item( MenuTemplate.locationPath[i] );
+            for (var i = 0; i < MenuTemplate.path.length; i++) {
+                location = location.submenus.item( MenuTemplate.path[i] );
             };
 
             if(!location.isValid){
@@ -65,7 +65,7 @@
                     'onInvoke' : function() {
                         try {
                             // prevent undo - CS5+
-                            app.doScript(MenuTemplate.invokeFunction, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
+                            app.doScript(MenuTemplate.fun, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
                         } catch(e){
                             alert("ExtendScript Menu Error:\n" + e.message +  " (Line " + e.line + " in file " + e.fileName + ")"); // Let us know what is going on.
                         }
@@ -80,25 +80,25 @@
                     };
         
                     var location = MainMenu;
-                    for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
-                        location = location.submenus.item( MenuTemplate.locationPath[i] );
+                    for (var i = 0; i < MenuTemplate.path.length; i++) {
+                        location = location.submenus.item( MenuTemplate.path[i] );
                     };
 
                     var refItem  = location.submenus.lastItem();
-                    if( MenuTemplate.reference ) {
-                        refItem  = location.menuItems.item( MenuTemplate.reference );
+                    if( MenuTemplate.ref ) {
+                        refItem  = location.menuItems.item( MenuTemplate.ref );
                     };
 
-                    var beforeAfter = LocationOptions.after;
-                    if( MenuTemplate.beforeAfter ) {
-                        beforeAfter  = location.menuItems.item( MenuTemplate.beforeAfter );
+                    var loc = LocationOptions.after;
+                    if( MenuTemplate.loc ) {
+                        loc  = location.menuItems.item( MenuTemplate.loc );
                     };
 
                     if(location === MainMenu) {
                         location = location.submenus.add( MenuTemplate.menuName, LocationOptions.before, location.submenus.lastItem() );
                     };
 
-                    location.menuItems.add( MenuAction, beforeAfter, refItem );
+                    location.menuItems.add( MenuAction, loc, refItem );
 
                     return true;
 
@@ -121,8 +121,8 @@
 
             var Submenu = MainMenu;
             try{
-                for (var i = 0; i < MenuTemplate.locationPath.length; i++) {
-                    Submenu = Submenu.submenus.item( MenuTemplate.locationPath[i] );
+                for (var i = 0; i < MenuTemplate.path.length; i++) {
+                    Submenu = Submenu.submenus.item( MenuTemplate.path[i] );
                 };
             } catch ( err ) {
                 if(alertUser) alert("Unable to unload menu " + String(MenuTemplate.menuName) + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")");
@@ -139,16 +139,44 @@
             };
         };
 
-        menuloader.getMenuTemplate = function(){
-            return {
-                locationPath: [], // Empty === Main
-                beforeAfter:  undefined,
-                reference: undefined,
-                menuName: undefined,
-                invokeFunction: undefined,
-                menuSub: []
+        menuloader.menuTemplate = function( menuName, Options ) {
+            if (!(this instanceof menuloader.menuTemplate)) {
+                throw new Error("menuTemplate should be created using new operator.");
+            };
+
+            var Menu = this;
+            var Options = (typeof Options === 'object') ? Options : {};
+
+            Menu.menuName = String( menuName );
+
+            // Array, Empty === Main
+            Menu.path = (Options.hasOwnProperty('path')) ? [].concat(Options.path) : [];
+            Menu.loc  = (Options.hasOwnProperty('loc' )) ? Options.loc  : undefined;
+            Menu.ref  = (Options.hasOwnProperty('ref' )) ? Options.ref  : undefined;
+            Menu.fun  = (Options.hasOwnProperty('fun' )) ? Options.fun  : undefined;
+            Menu.sub  = (Options.hasOwnProperty('sub' )) ? Options.sub  : [];
+
+            // Menu Tools
+            //- - - - - -
+            Menu.addElement = function( elementTemplate ) {
+                Menu.sub.push( elementTemplate );
+            };
+
+            // Element Templates
+            //- - - - - - - - - -
+            Menu.createItem = function( caption, fun, subName ) {
+                // subName is optional
+                var subName = (typeof subName === 'string')? subName : "";
+                return { caption: String(caption), fun: fun,  subName: String(subName) };
+            };
+
+            Menu.createSeparator = function( subName ) {
+                // subName is optional
+                var subName = (typeof subName === 'string')? subName : "";
+                return { separator: true, subName: subName };
             };
         };
+
     };
 
     //--------------------------
