@@ -1,13 +1,17 @@
 (function () {
-    var VERSION = 0.3;
+    var VERSION = 0.4;
     var MODULE_PATH = "menuloader";
     
-    // This module is inspired by a post from Marc Autret (Indiscripts)
+    // This module is inspired by posts from Marc Autret (Indiscripts)
     // http://www.indiscripts.com/post/2010/02/how-to-create-your-own-indesign-menus
+    // http://www.indiscripts.com/post/2011/12/indesign-scripting-forum-roundup-2
+
+    // ---
+    // Note:  menus/submenus are application-persistent
 
     var thisModule = Sky.getUtil(MODULE_PATH);
     if( thisModule && thisModule.version >= VERSION) {
-        //return;
+        return;
     };
 
     //--------------------------
@@ -18,6 +22,19 @@
 
         menuloader.version = VERSION;
         menuloader.description = "Load an InDesign menu item.";
+
+        menuloader.funWrapper = function( fun, menuName ) {
+            // Wrap the given function in a try-catch statement and add single undo for user action.
+            // So we don't halt the whole application on error and user can undo any manu action.
+            return function () {
+                try {
+                    // prevent undo - CS5+
+                    app.doScript(fun, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
+                } catch(e) {
+                    alert(menuName + " generated an error:\n" + e.message +  " (Line " + e.line + " in file " + e.fileName + ")");
+                };
+            };
+        };
 
         menuloader.getMenu = function( MenuTemplate ) {
             var location = app.menus.item( '$ID/Main' );
@@ -54,31 +71,19 @@
         };
 
         menuloader.load = function( MenuTemplate, alertUser ) {
+            // Make sure old menu is removed before building a new one
+            menuloader.unload( MenuTemplate, alertUser );
+
             // Enable ExtendScript localisation engine
             $.localize = true;
+            var AT_END = LocationOptions.atEnd;
             var alertUser = (typeof alertUser === 'boolean')? alertUser : true;
 
             try{
                 var MainMenu = app.menus.item( '$ID/Main' );
 
-                var MenuHandlers = {
-                    'onInvoke' : function() {
-                        try {
-                            // prevent undo - CS5+
-                            app.doScript(MenuTemplate.fun, ScriptLanguage.JAVASCRIPT, undefined, UndoModes.ENTIRE_SCRIPT, "Expand State Abbreviations");
-                        } catch(e){
-                            alert("ExtendScript Menu Error:\n" + e.message +  " (Line " + e.line + " in file " + e.fileName + ")"); // Let us know what is going on.
-                        }
-                    }
-                };
-
-                var menuInstaller = menuInstaller || ( function( MenuHandlers ) {
+                var menuInstaller = menuInstaller || ( function() {
                     
-                    var MenuAction = app.scriptMenuActions.add( MenuTemplate.menuName );
-                    for( var eventHandler in MenuHandlers ) {
-                        MenuAction.eventListeners.add( eventHandler, MenuHandlers[eventHandler] );
-                    };
-        
                     var location = MainMenu;
                     for (var i = 0; i < MenuTemplate.path.length; i++) {
                         location = location.submenus.item( MenuTemplate.path[i] );
@@ -98,11 +103,63 @@
                         location = location.submenus.add( MenuTemplate.menuName, LocationOptions.before, location.submenus.lastItem() );
                     };
 
-                    location.menuItems.add( MenuAction, loc, refItem );
+                    // Load Menu
+                    if(MenuTemplate.sub.length === 0) {
+
+                        // There is no sub menu, load default action
+                        var fun = menuloader.funWrapper( MenuTemplate.fun, MenuTemplate.menuName );
+                        MenuTemplate.action = app.scriptMenuActions.add( MenuTemplate.menuName );
+                        MenuTemplate.action.addEventListener('onInvoke', fun);
+                        location.menuItems.add( MenuTemplate.action, loc, refItem );
+
+                    } else { // Load with Sub Menu!
+                        
+                        location = location.submenus.add( MenuTemplate.menuName, loc, refItem );
+
+                        // (Re)set the menu actions
+                        // ---
+                        var subItem, i = MenuTemplate.sub.length;
+                        while( i-- ) {
+                            subItem = MenuTemplate.sub[i];
+                            if( subItem.separator ) continue;
+
+                            if( typeof subItem.fun === 'function') {
+                                // Create the corresponding action
+                                // ---
+                                var fun = menuloader.funWrapper( subItem.fun, MenuTemplate.menuName + " - " + subItem.caption );
+                                subItem.action = app.scriptMenuActions.add( subItem.caption );
+                                subItem.action.addEventListener('onInvoke', fun);
+                            };
+                        };
+
+                        // Build Sub Menu
+                        // ---
+                        // Fill menu with respect to MenuTemplate order
+                        // (Possible submenus are specified in .subName and created on the fly)
+                        // ---
+                        var s, n = MenuTemplate.sub.length, subs = {}, sub = null;
+                        for( i=0 ; i < n ; ++i ) {
+                            subItem = MenuTemplate.sub[i];
+
+                            // Target the desired submenu
+                            // ---
+                            sub = (s=subItem.subName) ? ( subs[s] || (subs[s]=location.submenus.add( s, AT_END )) ) : location;
+
+                            // Connect the related action OR create a separator
+                            // ---
+                            if( subItem.separator ) {
+                                sub.menuSeparators.add( AT_END );
+                            } else {
+                                sub.menuItems.add( subItem.action, AT_END );
+                            };
+                        };
+                        // End Build Sub Menu
+
+                    }; // End Load Menu
 
                     return true;
 
-                })( MenuHandlers );
+                })(); // invoke!!
             } catch ( err ) {
                 if(alertUser) alert("Unable to load menu " + "\n" + err.message + " (Line " + err.line + " in file " + err.fileName + ")")
                 return err;
@@ -151,10 +208,10 @@
 
             // Array, Empty === Main
             Menu.path = (Options.hasOwnProperty('path')) ? [].concat(Options.path) : [];
+            Menu.sub  = (Options.hasOwnProperty('sub' )) ? [].concat(Options.sub)  : [];
             Menu.loc  = (Options.hasOwnProperty('loc' )) ? Options.loc  : undefined;
             Menu.ref  = (Options.hasOwnProperty('ref' )) ? Options.ref  : undefined;
             Menu.fun  = (Options.hasOwnProperty('fun' )) ? Options.fun  : undefined;
-            Menu.sub  = (Options.hasOwnProperty('sub' )) ? Options.sub  : [];
 
             // Menu Tools
             //- - - - - -

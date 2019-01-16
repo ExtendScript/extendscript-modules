@@ -9,13 +9,13 @@ var sayHello = function() {
 
 var testMenu = new MenuLoader.menuTemplate("MenuLoader Test", {path: "File", fun: sayHello});
 
-MenuLoader.load(testMenu, false);
+MenuLoader.load(testMenu, true);
 
 var menu = MenuLoader.getMenu( testMenu );
 
 var loaded = menu.isValid;
 
-MenuLoader.unload(testMenu, false);
+MenuLoader.unload(testMenu, true);
 
 var unloaded = !menu.isValid;
 
