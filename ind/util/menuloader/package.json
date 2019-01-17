@@ -1,7 +1,7 @@
 {
   "name": "@extendscript/ind.util.menuloader",
-  "version": "0.1.0",
-  "description": "Load your own menus in InDesign.",
+  "version": "1.0.0",
+  "description": "A tool to load InDesign menus.",
   "main": "menuloader.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
@@ -16,7 +16,9 @@
     "extendscript",
     "extendscript-modules",
     "indesign",
-    "menu"
+    "menu",
+    "submenu",
+    "load"
   ],
   "author": "extendscript.org",
   "license": "MIT",
@@ -25,12 +27,10 @@
   },
   "homepage": "https://github.com/ExtendScript/extendscript-modules#readme",
   "devDependencies": {
-    "@extendscript/tap-es": ">=1.0.5"
+    "@extendscript/tap-es": ">=1.0.5",
+    "@extendscript/modules.init": ">=2.1.0"
   },
   "peerDependencies": {
     "@extendscript/modules.init": ">=2.1.0"
-  },
-  "dependencies": {
-    "@extendscript/modules.init": "^2.2.0"
   }
 }

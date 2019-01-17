@@ -7,16 +7,9 @@ var sayHello = function() {
     alert( "Hello!" );
 };
 
-var testMenu = new MenuLoader.menuTemplate("MenuLoader Main Test", {fun: sayHello});
+var testMenu = new MenuLoader.template("MenuLoader Main Test", {fun: sayHello});
 
-MenuLoader.load(testMenu, false);
-
-var menu = MenuLoader.getMenu( testMenu );
-
-var loaded = menu.isValid;
-
-MenuLoader.unload(testMenu, false);
-
-var unloaded = !menu.isValid;
+var loaded = testMenu.load().isLoaded();
+var unloaded = !testMenu.unload().isLoaded();
 
 $.writeln( loaded === true && unloaded === true);

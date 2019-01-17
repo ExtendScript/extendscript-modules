@@ -196,8 +196,8 @@
             };
         };
 
-        menuloader.menuTemplate = function( menuName, Options ) {
-            if (!(this instanceof menuloader.menuTemplate)) {
+        menuloader.template = function( menuName, Options ) {
+            if (!(this instanceof menuloader.template)) {
                 throw new Error("menuTemplate should be created using new operator.");
             };
 
@@ -209,14 +209,15 @@
             // Array, Empty === Main
             Menu.path = (Options.hasOwnProperty('path')) ? [].concat(Options.path) : [];
             Menu.sub  = (Options.hasOwnProperty('sub' )) ? [].concat(Options.sub)  : [];
-            Menu.loc  = (Options.hasOwnProperty('loc' )) ? Options.loc  : undefined;
             Menu.ref  = (Options.hasOwnProperty('ref' )) ? Options.ref  : undefined;
+            Menu.loc  = (Options.hasOwnProperty('loc' )) ? Options.loc  : undefined;
             Menu.fun  = (Options.hasOwnProperty('fun' )) ? Options.fun  : undefined;
 
             // Menu Tools
             //- - - - - -
             Menu.addElement = function( elementTemplate ) {
                 Menu.sub.push( elementTemplate );
+                return Menu;
             };
 
             // Element Templates
@@ -232,6 +233,29 @@
                 var subName = (typeof subName === 'string')? subName : "";
                 return { separator: true, subName: subName };
             };
+
+            Menu.load = function( alertUser ) {
+                menuloader.load( Menu, alertUser );
+                return Menu;
+            };
+
+            Menu.unload = function( alertUser ) {
+                menuloader.unload( Menu, alertUser );
+                return Menu;
+            };
+
+            Menu.getLoaded = function(){
+                return menuloader.getMenu(Menu);
+            };
+
+            Menu.isLoaded = function(){
+                var loadedMenu = menuloader.getMenu(Menu);
+                if( loadedMenu.isValid ) {
+                    return true;
+                };
+                return false;
+            };
+
         };
 
     };

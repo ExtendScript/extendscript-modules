@@ -7,7 +7,7 @@ var sayHello = function() {
     alert( "Hello!" );
 };
 
-var testMenu = new MenuLoader.menuTemplate("MenuLoader Test", {path: "File", fun: sayHello});
+var testMenu = new MenuLoader.template("MenuLoader Test", {path: "File", fun: sayHello});
 
 MenuLoader.load(testMenu, true);
 
@@ -16,7 +16,6 @@ var menu = MenuLoader.getMenu( testMenu );
 var loaded = menu.isValid;
 
 MenuLoader.unload(testMenu, true);
-
 var unloaded = !menu.isValid;
 
 $.writeln( loaded === true && unloaded === true);

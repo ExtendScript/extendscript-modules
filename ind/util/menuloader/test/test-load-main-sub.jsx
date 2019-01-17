@@ -11,16 +11,13 @@ var Options = {
     ]
 };
 
-var testMenu = new MenuLoader.menuTemplate("MenuLoader Sub Test", Options);
+var testMenu = new MenuLoader.template("MenuLoader Sub Test", Options);
 
-MenuLoader.load(testMenu, false);
+testMenu.load();
 
 var menu = MenuLoader.getMenu( testMenu );
 
 var loaded = menu.isValid;
-
-MenuLoader.unload(testMenu, false);
-
-var unloaded = !menu.isValid;
+var unloaded = !testMenu.unload().isLoaded();
 
 $.writeln( loaded === true && unloaded === true);
