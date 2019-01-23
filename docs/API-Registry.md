@@ -30,8 +30,11 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
       * [patch.bundle.es6](../aes/patch/bundle.es6)
     * __patch.console__
       * [patch.console.log](../aes/patch/console.log)
+    * [__patch__.deepequal](../aes/patch.deepequal)
     * __patch.function__
       * [patch.function.bind](../aes/patch/function.bind)
+    * [__patch__.gettype](../aes/patch.getype) 
+    * [__patch__.isarraylike](../aes/patch.isarraylike)  
     * [__patch.json__](../aes/patch/json)
       * [patch.json.clone](../aes/patch/json.clone)
       * [patch.json.comparable](../aes/patch/json.comparable)
@@ -73,7 +76,7 @@ The `Sky` object is created by the [`modules.init`](../init) module. All sub-mod
   * __module__
     * [module.jaxon](../sui/module/jaxon)
   * __util__
-    * [module.groupList](../sui/module/grouplist)
+    * [util.groupList](../sui/module/grouplist)
 
 ## InDesign (ind)
   * __module__
