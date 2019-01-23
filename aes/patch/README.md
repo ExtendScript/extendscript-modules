@@ -56,6 +56,9 @@ Modules that partially implements newer ECMAScript features.
 Modules that we get used to in other environments.
 
   - [x] [console.log](console.log)
+  - [ ] [deepEqual](console.log)
+  - [ ] [getType](gettype)
+  - [ ] [isArrayLike](isArrayLike)
 
 ## Extensions
 Extensions to existing objects
