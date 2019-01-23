@@ -1,10 +1,11 @@
 {
   "name": "@extendscript/modules.init",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "This module creates the shared `Sky` object. A peer-dependency for all ExtendScript Modules.",
   "main": "init.js",
   "scripts": {
     "buildEnv": "curl https://raw.githubusercontent.com/ES-Collection/build-node-venv/master/build-node-venv.sh > ./.bnv.sh && chmod +x ./.bnv.sh && ./.bnv.sh && rm ./.bnv.sh",
+    "prepublishOnly": "npm config set scope extendscript",
     "test": "node ./test/test.js"
   },
   "repository": {

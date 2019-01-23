@@ -8,7 +8,7 @@
 (function(HOST, SELF) {  
     // The HOST/SELF setup was suggested by Marc Autret
     // https://forums.adobe.com/thread/1111415
-    var VERSION = 2.2;
+    var VERSION = 2.4;
 
     if(HOST[SELF] && HOST[SELF].version > VERSION) return HOST[SELF];  
     HOST[SELF] = SELF;
@@ -146,6 +146,17 @@
 
     SELF.setUtil = function( path, value, callback ) {
         return INNER.set(SELF.util, path, value, callback);
+    };
+
+    SELF.throwCallback = function( fileName, line ) {
+        // Sky.throwCallback($.fileName, $.line)
+        // Throw an error when dependency could not be loaded...
+        return function ( err, module ) {
+            if( err instanceof Error || err instanceof TypeError ) {
+                throw new TypeError( err.message, fileName, line );
+            };
+            return module;
+        };
     };
 
 })($.global,{toString:function(){return 'Sky';}});
