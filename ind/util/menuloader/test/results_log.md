@@ -10,3 +10,12 @@ As tests may be run by different people on different platforms the results are l
 - ✔ Darwin indesign-13 test-load-main-sub.jsx: menuloader [pass: 1, fail: 0]
 - ✔ Darwin indesign-13 test-load-file.jsx: menuloader [pass: 1, fail: 0]
 - ✔ Darwin indesign-13 test-load-file-sub.jsx: menuloader [pass: 1, fail: 0]
+- ✖ Darwin indesign-13 test-load-file-after.jsx: menuloader [pass: 0, fail: 1]
+
+> Version 1.0.1
+
+- ✔ Darwin indesign-13 test-load-main.jsx: menuloader [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-load-main-sub.jsx: menuloader [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-load-file.jsx: menuloader [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-load-file-sub.jsx: menuloader [pass: 1, fail: 0]
+- ✔ Darwin indesign-13 test-load-file-after.jsx: menuloader [pass: 1, fail: 0]

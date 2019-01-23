@@ -1,6 +1,6 @@
 {
   "name": "@extendscript/ind.util.menuloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tool to load InDesign menus.",
   "main": "menuloader.js",
   "scripts": {

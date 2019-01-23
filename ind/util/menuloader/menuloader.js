@@ -89,14 +89,14 @@
                         location = location.submenus.item( MenuTemplate.path[i] );
                     };
 
-                    var refItem  = location.submenus.lastItem();
+                    var refItem = location.submenus.lastItem();
                     if( MenuTemplate.ref ) {
-                        refItem  = location.menuItems.item( MenuTemplate.ref );
+                        refItem = location.menuItems.item( MenuTemplate.ref );
                     };
 
                     var loc = LocationOptions.after;
                     if( MenuTemplate.loc ) {
-                        loc  = location.menuItems.item( MenuTemplate.loc );
+                        loc = MenuTemplate.loc;
                     };
 
                     if(location === MainMenu) {
