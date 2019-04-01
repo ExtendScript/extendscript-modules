@@ -5,7 +5,7 @@ This is a collection of utilities for [InDesign](https://en.wikipedia.org/wiki/A
   - [x] [bounds](bounds)  
   - [ ] [font](font)
   - [x] [layer](layer)  
-  - [ ] [menuloader](menuloader)
+  - [x] [menuloader](menuloader)
   - [x] [pageitems](pageitems)  
   - [x] [pages](pages)  
   - [x] [rulers](rulers) 
